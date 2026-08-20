@@ -2,279 +2,253 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>ترف العود | عود يليق بالذوق الرفيع</title>
-
-<meta name="description" content="ترف العود — مختارات من العود والمعمول بأسعار خاصة. اطلب مباشرة عبر واتساب.">
-<meta name="theme-color" content="#090806">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<title>ترف العود | لأن العود ترف</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap');
+
 :root{
-  --bg:#080705;
-  --bg2:#0e0b08;
-  --panel:#15100c;
-  --panel2:#1d1510;
-  --gold:#c99b54;
-  --gold2:#f1d59a;
-  --cream:#f8f0e3;
-  --muted:#9d8e7c;
-  --line:rgba(241,213,154,.13);
-  --green:#25d366;
-  --danger:#b85c3e;
-  --shadow:0 30px 90px rgba(0,0,0,.55);
+  --cream:#f3ede3;
+  --cream2:#e8dfd2;
+  --paper:#fbf7f0;
+  --brown:#4a3428;
+  --brown2:#6d4c38;
+  --gold:#b39158;
+  --gold2:#d4bd91;
+  --red:#641d24;
+  --red2:#812b32;
+  --text:#302821;
+  --muted:#776b60;
+  --border:#ded1c0;
+  --shadow:0 22px 60px rgba(66,43,27,.14);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
+  font-family:Cairo,sans-serif;
   background:
-    radial-gradient(circle at 0 0,rgba(144,99,42,.17),transparent 27%),
-    radial-gradient(circle at 100% 10%,rgba(107,68,27,.12),transparent 30%),
-    var(--bg);
-  color:var(--cream);
-  font-family:"IBM Plex Sans Arabic","Cairo",sans-serif;
-  overflow-x:hidden;
+    radial-gradient(circle at 10% 10%,rgba(179,145,88,.08),transparent 25%),
+    var(--cream);
+  color:var(--text);
+  line-height:1.8;
 }
 
-body.lock{overflow:hidden}
-
-a{text-decoration:none;color:inherit}
-
-button,input,select{font:inherit}
-
-button{cursor:pointer}
-
-.container{
-  width:min(1220px,calc(100% - 32px));
-  margin:auto;
+button,input,textarea,select{
+  font-family:inherit;
 }
 
-/* =========================
-   announcement
-========================= */
+button{
+  cursor:pointer;
+}
 
-.announcement{
-  height:35px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#050403;
-  border-bottom:1px solid var(--line);
-  color:#d9bd84;
-  font-size:11px;
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
 /* =========================
-   header
+   TOP
 ========================= */
 
-.header{
+.top{
+  background:var(--brown);
+  color:#f6ead9;
+  text-align:center;
+  padding:7px 15px;
+  font-size:12px;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+  height:78px;
   position:sticky;
   top:0;
   z-index:100;
-  height:82px;
-  background:rgba(8,7,5,.76);
-  backdrop-filter:blur(22px);
-  border-bottom:1px solid var(--line);
+  background:rgba(243,237,227,.94);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(74,52,40,.12);
 }
 
 .nav{
+  max-width:1280px;
   height:100%;
+  padding:0 22px;
+  margin:auto;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:25px;
+  align-items:center;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
-  font-weight:800;
-  font-size:21px;
+  gap:11px;
 }
 
-.brand-symbol{
-  width:45px;
-  height:45px;
-  border:1px solid #b98c4a;
+.brand-icon{
+  width:46px;
+  height:46px;
   border-radius:50%;
+  background:var(--red);
+  color:#ead39e;
   display:grid;
   place-items:center;
-  color:var(--gold2);
-  font-family:"Playfair Display",serif;
-  font-size:21px;
-  box-shadow:inset 0 0 25px rgba(201,155,84,.08);
+  font-family:Georgia,serif;
+  font-size:22px;
+  box-shadow:0 8px 22px rgba(100,29,36,.25);
 }
 
-.nav-center{
-  display:flex;
-  align-items:center;
-  gap:31px;
-  color:#bfb1a1;
-  font-size:13px;
+.brand-name{
+  color:var(--brown);
+  font-size:20px;
+  font-weight:900;
 }
 
-.nav-center a{
-  position:relative;
-  transition:.2s;
-}
-
-.nav-center a:hover{color:var(--gold2)}
-
-.nav-center a:after{
-  content:"";
-  position:absolute;
-  right:0;
-  bottom:-9px;
-  width:0;
-  height:1px;
-  background:var(--gold2);
-  transition:.25s;
-}
-
-.nav-center a:hover:after{width:100%}
-
-.nav-actions{
-  display:flex;
-  gap:9px;
-}
-
-.icon-btn{
-  width:43px;
-  height:43px;
-  border-radius:13px;
-  border:1px solid var(--line);
-  background:#120e0b;
-  color:var(--cream);
-  display:grid;
-  place-items:center;
-  transition:.2s;
-}
-
-.icon-btn:hover{
-  border-color:rgba(241,213,154,.35);
-  transform:translateY(-2px);
-}
-
-.cart-count{
-  position:absolute;
-  margin-top:-29px;
-  margin-right:-28px;
-  background:var(--gold2);
-  color:#17100a;
-  width:17px;
-  height:17px;
-  border-radius:50%;
+.brand-sub{
+  display:block;
+  color:var(--muted);
   font-size:9px;
+  line-height:1;
+}
+
+.links{
+  display:flex;
+  gap:28px;
+  color:var(--brown);
+  font-size:14px;
+  font-weight:600;
+}
+
+.links a:hover{
+  color:var(--red);
+}
+
+.cart-button{
+  border:0;
+  background:var(--red);
+  color:#fff;
+  padding:10px 17px;
+  border-radius:30px;
   font-weight:800;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.cart-number{
+  width:23px;
+  height:23px;
+  background:#ecd19b;
+  color:var(--red);
+  border-radius:50%;
   display:grid;
   place-items:center;
+  font-size:11px;
 }
 
 /* =========================
-   hero
+   HERO
 ========================= */
 
 .hero{
-  min-height:calc(100vh - 117px);
+  min-height:700px;
+  position:relative;
+  overflow:hidden;
   display:flex;
   align-items:center;
-  padding:70px 0 90px;
-  position:relative;
+  background:
+    linear-gradient(110deg,#806a52 0%,#5a4434 48%,#32251e 100%);
 }
 
-.hero:before{
+.hero-art{
+  position:absolute;
+  inset:0;
+  opacity:.75;
+}
+
+.hero-art svg{
+  width:100%;
+  height:100%;
+}
+
+.hero::after{
   content:"";
   position:absolute;
-  width:650px;
-  height:650px;
-  border-radius:50%;
-  background:rgba(159,109,45,.07);
-  filter:blur(90px);
-  top:-250px;
-  right:-180px;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(40,28,20,.08),rgba(40,28,20,.62));
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:65px;
-  align-items:center;
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1280px;
+  width:100%;
+  margin:auto;
+  padding:90px 22px;
+  color:white;
 }
 
 .hero-copy{
-  position:relative;
-  z-index:2;
+  max-width:650px;
 }
 
-.mini-label{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:var(--gold2);
-  font-size:12px;
-  font-weight:700;
-  margin-bottom:17px;
-}
-
-.mini-label:before{
-  content:"";
-  width:25px;
-  height:1px;
-  background:var(--gold);
+.kicker{
+  color:#e3c88f;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
 }
 
 .hero h1{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(54px,7.5vw,96px);
-  line-height:.98;
-  letter-spacing:-2px;
-  margin-bottom:25px;
-}
-
-.hero h1 em{
-  color:var(--gold2);
-  font-style:normal;
-}
-
-.hero-intro{
-  max-width:600px;
-  color:#d0c2b0;
-  font-size:18px;
-  line-height:2;
-}
-
-.hero-sub{
-  color:var(--muted);
-  font-size:12px;
+  font-size:clamp(55px,9vw,105px);
+  line-height:.95;
   margin-top:12px;
-  max-width:560px;
+  font-weight:900;
 }
 
-.hero-buttons{
+.hero h1 span{
+  color:#e2c38b;
+}
+
+.hero-title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(42px,6vw,75px);
+  color:#f5e8d1;
+  margin-top:5px;
+}
+
+.hero p{
+  font-size:17px;
+  color:#f5eadd;
+  margin:25px 0 30px;
+}
+
+.actions{
   display:flex;
-  gap:10px;
   flex-wrap:wrap;
-  margin-top:30px;
+  gap:12px;
 }
 
 .btn{
   border:0;
-  border-radius:14px;
-  padding:13px 21px;
+  padding:13px 24px;
+  border-radius:30px;
   font-weight:800;
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
   transition:.25s;
 }
 
@@ -282,1096 +256,1020 @@ button{cursor:pointer}
   transform:translateY(-3px);
 }
 
-.btn-gold{
-  color:#171008;
-  background:linear-gradient(135deg,#f5daa0,#a97836);
-  box-shadow:0 16px 35px rgba(201,155,84,.16);
+.primary{
+  background:#e8c88e;
+  color:#4c3425;
 }
 
-.btn-outline{
-  background:#120e0b;
-  border:1px solid var(--line);
-  color:var(--cream);
-}
-
-.hero-note{
-  margin-top:22px;
-  display:flex;
-  align-items:center;
-  gap:17px;
-  color:#827568;
-  font-size:11px;
-}
-
-.hero-note span{
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-
-/* hero visual */
-
-.hero-photo{
-  height:620px;
-  border-radius:40px;
-  overflow:hidden;
-  position:relative;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(180deg,rgba(0,0,0,.05) 20%,rgba(0,0,0,.9) 100%),
-    url("https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1600&q=92")
-    center/cover;
-  box-shadow:var(--shadow);
-}
-
-.hero-photo:before{
-  content:"";
-  position:absolute;
-  inset:16px;
-  border:1px solid rgba(241,213,154,.18);
-  border-radius:30px;
-}
-
-.hero-photo-text{
-  position:absolute;
-  bottom:30px;
-  right:30px;
-  left:30px;
-}
-
-.hero-photo-text small{
-  color:#d4bd91;
-  font-size:11px;
-}
-
-.hero-photo-text h2{
-  font-family:"Playfair Display",serif;
-  font-size:34px;
-  margin-top:3px;
-}
-
-.hero-photo-text p{
-  color:#a99b8b;
-  font-size:11px;
+.secondary{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.4);
+  color:white;
 }
 
 /* =========================
-   ticker
-========================= */
-
-.ticker{
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  overflow:hidden;
-  background:#0c0907;
-}
-
-.ticker-track{
-  display:flex;
-  width:max-content;
-  animation:ticker 30s linear infinite;
-}
-
-.ticker-item{
-  padding:16px 35px;
-  color:#bda16e;
-  font-size:12px;
-  white-space:nowrap;
-}
-
-.ticker-item b{color:var(--gold2)}
-
-@keyframes ticker{
-  from{transform:translateX(0)}
-  to{transform:translateX(50%)}
-}
-
-/* =========================
-   sections
+   SECTION
 ========================= */
 
 .section{
-  padding:105px 0;
+  max-width:1280px;
+  margin:95px auto;
+  padding:0 22px;
 }
 
-.section-top{
+.section-head{
   display:flex;
   justify-content:space-between;
   align-items:end;
-  margin-bottom:35px;
   gap:25px;
-}
-
-.section-kicker{
-  color:var(--gold2);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.3px;
-  margin-bottom:7px;
+  margin-bottom:35px;
 }
 
 .section-title{
-  font-size:38px;
-  line-height:1.25;
+  font-size:43px;
+  color:var(--brown);
+  line-height:1.2;
+  margin-top:5px;
 }
 
 .section-description{
+  max-width:530px;
   color:var(--muted);
-  font-size:12px;
-  max-width:420px;
-  line-height:1.9;
 }
 
 /* =========================
-   products
+   OIL MABKHARA
 ========================= */
 
-.product-grid{
+.mabkhara{
+  min-height:550px;
+  position:relative;
+  overflow:hidden;
+  border-radius:38px;
+  background:
+    linear-gradient(115deg,#351b18,#6b2228 45%,#301719);
+  box-shadow:var(--shadow);
+}
+
+.mabkhara svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+.mabkhara-content{
+  position:relative;
+  z-index:3;
+  padding:70px;
+  max-width:610px;
+  color:white;
+}
+
+.mabkhara-content h2{
+  font-size:48px;
+  line-height:1.2;
+  margin:10px 0 20px;
+}
+
+.mabkhara-content p{
+  color:#f1ded5;
+  font-size:16px;
+}
+
+.line{
+  width:70px;
+  height:4px;
+  background:#c04c50;
+  border-radius:10px;
+  margin:20px 0;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:16px;
+  gap:22px;
 }
 
 .product{
-  background:linear-gradient(180deg,#1a130e,#100c09);
-  border:1px solid var(--line);
+  background:var(--paper);
+  border:1px solid var(--border);
   border-radius:25px;
   overflow:hidden;
-  position:relative;
-  transition:.35s;
+  box-shadow:0 8px 25px rgba(61,43,29,.06);
+  transition:.3s;
 }
 
 .product:hover{
-  transform:translateY(-8px);
-  border-color:rgba(241,213,154,.32);
-  box-shadow:0 25px 55px rgba(0,0,0,.3);
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
 }
 
-.product-image{
-  height:310px;
-  overflow:hidden;
+.product-picture{
+  height:270px;
   position:relative;
-  background:#241910;
+  cursor:pointer;
+  overflow:hidden;
+  background:linear-gradient(135deg,#684a37,#2e211a);
 }
 
-.product-image img{
+.product-picture svg{
   width:100%;
   height:100%;
-  object-fit:cover;
-  transition:.6s;
 }
 
-.product:hover img{transform:scale(1.08)}
-
-.product-badge{
+.badge{
   position:absolute;
-  z-index:2;
   top:14px;
   right:14px;
-  padding:6px 10px;
-  border-radius:50px;
-  background:#eed299;
-  color:#171009;
-  font-size:9px;
+  background:var(--red);
+  color:#fff;
+  padding:5px 11px;
+  border-radius:20px;
+  font-size:10px;
   font-weight:800;
-}
-
-.product-number{
-  position:absolute;
-  left:15px;
-  top:15px;
-  color:rgba(255,255,255,.5);
-  font-family:"Playfair Display",serif;
-  font-size:14px;
 }
 
 .product-body{
-  padding:19px;
+  padding:20px;
 }
 
-.product-body h3{
-  font-size:18px;
-  margin-bottom:6px;
-}
-
-.product-subtitle{
-  min-height:45px;
-  color:#8f8172;
+.origin{
+  color:var(--gold);
   font-size:11px;
-  line-height:1.8;
+  font-weight:900;
 }
 
-.product-price{
+.product h3{
+  color:var(--brown);
+  font-size:21px;
+  margin:3px 0 5px;
+}
+
+.use{
+  color:var(--muted);
+  font-size:13px;
+  min-height:49px;
+}
+
+.product-bottom{
+  margin-top:17px;
   display:flex;
-  align-items:baseline;
-  gap:9px;
-  margin:15px 0;
-}
-
-.old{
-  color:#665e56;
-  font-size:12px;
-  text-decoration:line-through;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .price{
-  color:var(--gold2);
-  font-size:25px;
-  font-weight:800;
+  color:var(--red);
+  font-weight:900;
+  font-size:20px;
 }
 
-.sar{
-  color:#887a6b;
+.price small{
+  color:var(--muted);
   font-size:10px;
 }
 
-.product-actions{
-  display:grid;
-  grid-template-columns:1fr 43px;
-  gap:8px;
+.add{
+  background:var(--brown);
+  color:white;
+  border:0;
+  border-radius:12px;
+  padding:10px 13px;
+  font-size:12px;
+  font-weight:800;
 }
 
-.product-actions .btn{
-  width:100%;
-}
-
-.quick{
-  width:43px;
-  border-radius:13px;
-  border:1px solid var(--line);
-  background:#120d09;
-  color:var(--gold2);
+.add:hover{
+  background:var(--red);
 }
 
 /* =========================
-   offer
+   FARM ART
 ========================= */
 
-.offer-section{
-  padding-top:0;
-}
-
-.offer{
-  min-height:300px;
-  border-radius:32px;
+.farm{
+  min-height:590px;
+  border-radius:38px;
   overflow:hidden;
   position:relative;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(90deg,rgba(13,9,6,.98),rgba(13,9,6,.72),rgba(13,9,6,.93)),
-    url("https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1600&q=90")
-    center/cover;
-  display:flex;
-  align-items:center;
+  background:#6b7751;
+  box-shadow:var(--shadow);
 }
 
-.offer-content{
-  padding:42px;
-  max-width:700px;
-}
-
-.offer-label{
-  color:var(--gold2);
-  font-size:11px;
-  font-weight:800;
-}
-
-.offer h2{
-  font-family:"Playfair Display",serif;
-  font-size:43px;
-  margin:7px 0;
-}
-
-.offer p{
-  color:#a99b8b;
-  font-size:13px;
-}
-
-.countdown{
-  display:flex;
-  gap:7px;
-  margin-top:22px;
-}
-
-.count{
-  min-width:65px;
-  padding:8px;
-  text-align:center;
-  background:rgba(5,4,3,.75);
-  border:1px solid var(--line);
-  border-radius:12px;
-}
-
-.count strong{
-  display:block;
-  color:var(--gold2);
-  font-size:21px;
-}
-
-.count span{
-  color:#796d61;
-  font-size:9px;
-}
-
-/* =========================
-   brand story
-========================= */
-
-.story{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.story-card{
-  min-height:420px;
-  border-radius:30px;
-  border:1px solid var(--line);
-  padding:42px;
-  background:linear-gradient(135deg,#1c140e,#0f0b08);
-}
-
-.story-card:first-child{
-  background:
-    linear-gradient(180deg,rgba(9,7,5,.15),rgba(9,7,5,.92)),
-    url("https://images.unsplash.com/photo-1603905179139-db12ab535e2a?auto=format&fit=crop&w=1200&q=90")
-    center/cover;
-}
-
-.story-card h2{
-  font-family:"Playfair Display",serif;
-  font-size:40px;
-  margin-bottom:15px;
-}
-
-.story-card p{
-  color:#a99b8b;
-  font-size:13px;
-  line-height:2;
-  max-width:520px;
-}
-
-.story-list{
-  margin-top:28px;
-  display:grid;
-  gap:13px;
-}
-
-.story-list div{
-  display:flex;
-  gap:12px;
-  color:#c9b9a7;
-  font-size:12px;
-}
-
-.story-list i{
-  color:var(--gold2);
-  font-style:normal;
-}
-
-/* =========================
-   trust
-========================= */
-
-.trust{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.trust-card{
-  padding:27px;
-  border-radius:22px;
-  border:1px solid var(--line);
-  background:#120e0b;
-}
-
-.trust-icon{
-  font-size:23px;
-  margin-bottom:10px;
-}
-
-.trust-card h3{
-  font-size:16px;
-  margin-bottom:5px;
-}
-
-.trust-card p{
-  color:#8f8173;
-  font-size:11px;
-  line-height:1.9;
-}
-
-/* =========================
-   faq
-========================= */
-
-.faq{
-  max-width:850px;
-  margin:auto;
-}
-
-.faq-item{
-  border-bottom:1px solid var(--line);
-}
-
-.faq-question{
+.farm svg{
+  position:absolute;
+  inset:0;
   width:100%;
-  border:0;
-  background:none;
-  color:var(--cream);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 0;
-  text-align:right;
-  font-weight:700;
+  height:100%;
 }
 
-.faq-question span{
-  color:var(--gold2);
-  font-size:20px;
-  transition:.2s;
+.farm-text{
+  position:relative;
+  z-index:3;
+  max-width:610px;
+  padding:75px;
+  color:white;
 }
 
-.faq-answer{
-  display:none;
-  color:#918476;
-  font-size:12px;
-  line-height:2;
-  padding:0 0 20px;
+.farm-text h2{
+  font-size:47px;
+  line-height:1.25;
+  margin:10px 0 18px;
 }
 
-.faq-item.open .faq-answer{display:block}
-
-.faq-item.open .faq-question span{
-  transform:rotate(45deg);
+.farm-text p{
+  color:#f1eadb;
 }
 
 /* =========================
-   footer
+   USE CARDS
 ========================= */
 
-.footer{
-  border-top:1px solid var(--line);
-  padding:55px 0 100px;
-}
-
-.footer-grid{
+.use-grid{
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:35px;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
 }
 
-.footer-brand{
-  font-family:"Playfair Display",serif;
-  font-size:29px;
-  color:var(--gold2);
+.use-card{
+  background:rgba(255,255,255,.46);
+  border:1px solid var(--border);
+  padding:27px;
+  border-radius:23px;
 }
 
-.footer p{
-  margin-top:8px;
-  color:#776c61;
-  font-size:11px;
-  line-height:2;
-  max-width:400px;
+.number{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:38px;
 }
 
-.footer-title{
-  color:var(--cream);
+.use-card h3{
+  color:var(--brown);
+  margin:5px 0;
+}
+
+.use-card p{
+  color:var(--muted);
   font-size:13px;
-  font-weight:800;
-  margin-bottom:12px;
 }
-
-.footer-links{
-  display:grid;
-  gap:8px;
-  color:#82766a;
-  font-size:11px;
-}
-
-.footer-links a:hover{color:var(--gold2)}
 
 /* =========================
-   whatsapp
+   ABOUT
 ========================= */
 
-.whatsapp{
-  position:fixed;
-  left:18px;
-  bottom:18px;
-  width:61px;
-  height:61px;
-  border-radius:50%;
-  background:var(--green);
-  color:#fff;
-  z-index:150;
-  display:grid;
-  place-items:center;
-  font-size:25px;
-  box-shadow:0 15px 45px rgba(37,211,102,.28);
-  transition:.2s;
+.about{
+  border-radius:38px;
+  background:var(--brown);
+  color:white;
+  padding:70px;
+  position:relative;
+  overflow:hidden;
 }
 
-.whatsapp:hover{
-  transform:scale(1.08);
+.about::after{
+  content:"ترف";
+  position:absolute;
+  left:-10px;
+  bottom:-90px;
+  font-family:Georgia,serif;
+  font-size:220px;
+  color:rgba(255,255,255,.035);
+}
+
+.about h2{
+  font-size:45px;
+}
+
+.about p{
+  max-width:850px;
+  color:#e6d9ca;
 }
 
 /* =========================
-   modal
+   MODALS
 ========================= */
 
 .modal{
   position:fixed;
   inset:0;
   z-index:500;
+  background:rgba(25,17,12,.73);
+  backdrop-filter:blur(10px);
   display:none;
-  align-items:flex-end;
+  align-items:center;
   justify-content:center;
-  padding:14px;
-  background:rgba(0,0,0,.78);
-  backdrop-filter:blur(13px);
+  padding:18px;
 }
 
-.modal.active{display:flex}
+.modal.show{
+  display:flex;
+}
 
-.sheet{
-  width:min(650px,100%);
-  max-height:94vh;
+.modal-box{
+  width:min(900px,100%);
+  max-height:93vh;
   overflow:auto;
   border-radius:30px;
-  border:1px solid var(--line);
-  background:#15100c;
-  box-shadow:var(--shadow);
-  padding:24px;
-  animation:sheet .25s ease;
-}
-
-@keyframes sheet{
-  from{transform:translateY(30px);opacity:0}
-  to{transform:translateY(0);opacity:1}
-}
-
-.sheet-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:start;
-}
-
-.sheet-kicker{
-  color:var(--gold2);
-  font-size:10px;
-  font-weight:800;
-}
-
-.sheet h2{
-  font-size:25px;
-  margin-top:3px;
+  background:var(--paper);
+  position:relative;
+  box-shadow:0 30px 90px rgba(0,0,0,.3);
 }
 
 .close{
+  position:absolute;
+  left:15px;
+  top:15px;
   width:40px;
   height:40px;
-  border-radius:12px;
-  background:#221811;
-  color:white;
-  border:1px solid var(--line);
-  font-size:20px;
+  border:0;
+  background:rgba(255,255,255,.9);
+  border-radius:50%;
+  font-size:22px;
+  z-index:10;
+  color:var(--brown);
 }
 
-.form{
+.product-modal{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:13px;
-  margin-top:20px;
 }
 
-.field{
-  display:grid;
-  gap:6px;
+.modal-image{
+  min-height:520px;
+  background:#614633;
 }
 
-.full{grid-column:1/-1}
-
-.field label{
-  color:#958778;
-  font-size:10px;
-}
-
-.field input,
-.field select{
+.modal-image svg{
   width:100%;
-  padding:12px;
-  color:var(--cream);
-  background:#0d0907;
-  border:1px solid var(--line);
-  border-radius:13px;
-  outline:none;
+  height:100%;
 }
 
-.field input:focus,
-.field select:focus{
-  border-color:#b98a47;
+.modal-details{
+  padding:45px;
 }
 
-.summary{
-  margin-top:17px;
-  border:1px solid var(--line);
-  background:#0c0907;
-  border-radius:16px;
+.modal-details h2{
+  color:var(--brown);
+  font-size:38px;
+  line-height:1.2;
+}
+
+.modal-details p{
+  color:var(--muted);
+  margin:15px 0;
+}
+
+.detail{
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  padding:12px 0;
+  font-size:13px;
+}
+
+.detail strong{
+  color:var(--brown);
+}
+
+.weight{
+  margin:20px 0;
   padding:15px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  background:var(--cream2);
+  border-radius:15px;
 }
 
-.summary span{
-  color:#948576;
-  font-size:11px;
-}
-
-.summary strong{
-  color:var(--gold2);
-  font-size:23px;
-}
-
-.sheet-note{
-  color:#6f655b;
-  font-size:10px;
-  line-height:1.8;
-  margin-top:10px;
-}
-
-/* =========================
-   cart drawer
-========================= */
-
-.drawer{
-  position:fixed;
-  top:0;
-  left:0;
-  bottom:0;
-  width:min(410px,92%);
-  background:#110c09;
-  border-right:1px solid var(--line);
-  z-index:600;
-  transform:translateX(-100%);
-  transition:.3s;
-  box-shadow:30px 0 80px rgba(0,0,0,.4);
-  padding:23px;
-}
-
-.drawer.active{transform:translateX(0)}
-
-.drawer-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding-bottom:18px;
-  border-bottom:1px solid var(--line);
-}
-
-.drawer-items{
-  padding:20px 0;
-  color:#a99987;
+.weight label{
+  display:block;
+  font-weight:800;
   font-size:12px;
 }
 
-.drawer-empty{
-  text-align:center;
-  padding:50px 0;
-  color:#6e645a;
+.weight select{
+  width:100%;
+  border:1px solid var(--border);
+  background:white;
+  padding:11px;
+  border-radius:10px;
+  margin-top:6px;
 }
 
-.drawer-overlay{
+.modal-add{
+  width:100%;
+  border:0;
+  background:var(--red);
+  color:white;
+  padding:15px;
+  border-radius:14px;
+  font-weight:900;
+}
+
+/* =========================
+   CART
+========================= */
+
+.overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.55);
-  z-index:550;
+  background:rgba(0,0,0,.28);
+  z-index:300;
   display:none;
 }
 
-.drawer-overlay.active{display:block}
-
-.drawer-total{
-  border-top:1px solid var(--line);
-  padding-top:20px;
+.overlay.show{
+  display:block;
 }
 
-.drawer-total-row{
+.cart{
+  position:fixed;
+  z-index:400;
+  top:0;
+  left:-450px;
+  width:min(440px,95vw);
+  height:100vh;
+  background:var(--paper);
+  box-shadow:20px 0 70px rgba(0,0,0,.2);
+  transition:.35s;
+  display:flex;
+  flex-direction:column;
+}
+
+.cart.open{
+  left:0;
+}
+
+.cart-head{
+  padding:21px;
+  border-bottom:1px solid var(--border);
   display:flex;
   justify-content:space-between;
-  margin-bottom:14px;
+  align-items:center;
 }
 
-.drawer-total-row strong{
-  color:var(--gold2);
-  font-size:21px;
+.cart-head h2{
+  color:var(--brown);
+}
+
+.cart-items{
+  flex:1;
+  overflow:auto;
+  padding:18px;
+}
+
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:80px 20px;
+}
+
+.cart-item{
+  display:flex;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.cart-item-art{
+  width:70px;
+  height:70px;
+  border-radius:13px;
+  overflow:hidden;
+  flex:none;
+}
+
+.cart-item-art svg{
+  width:100%;
+  height:100%;
+}
+
+.cart-info{
+  flex:1;
+}
+
+.cart-info h4{
+  color:var(--brown);
+}
+
+.cart-info small{
+  color:var(--muted);
+}
+
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-top:6px;
+}
+
+.quantity button{
+  width:26px;
+  height:26px;
+  border:1px solid var(--border);
+  background:white;
+  border-radius:7px;
+}
+
+.cart-footer{
+  padding:20px;
+  border-top:1px solid var(--border);
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:13px;
+}
+
+.checkout{
+  width:100%;
+  border:0;
+  background:var(--red);
+  color:white;
+  padding:15px;
+  border-radius:14px;
+  font-weight:900;
 }
 
 /* =========================
-   toast
+   CHECKOUT
 ========================= */
 
-.toast{
-  position:fixed;
-  top:100px;
-  right:50%;
-  transform:translate(50%,-15px);
-  z-index:900;
-  background:#efd396;
-  color:#171009;
-  padding:10px 17px;
-  border-radius:50px;
-  font-size:11px;
-  font-weight:800;
-  opacity:0;
-  pointer-events:none;
-  transition:.25s;
+.checkout-content{
+  padding:40px;
 }
 
-.toast.show{
-  opacity:1;
-  transform:translate(50%,0);
+.checkout-content h2{
+  color:var(--brown);
+  font-size:34px;
+}
+
+.summary{
+  background:var(--cream2);
+  border-radius:15px;
+  padding:18px;
+  margin:18px 0;
+}
+
+.field{
+  margin-bottom:13px;
+}
+
+.field label{
+  display:block;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:5px;
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:11px;
+  background:white;
+  outline:0;
+}
+
+.field textarea{
+  min-height:90px;
+}
+
+.whatsapp{
+  width:100%;
+  border:0;
+  background:#238947;
+  color:white;
+  padding:15px;
+  border-radius:14px;
+  font-weight:900;
 }
 
 /* =========================
-   mobile
+   FOOTER
 ========================= */
 
-@media(max-width:1000px){
+footer{
+  background:#3a2a21;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
 
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
+footer h2{
+  color:#e3c68e;
+}
 
-  .hero-photo{
-    height:480px;
-  }
+/* =========================
+   MOBILE
+========================= */
 
-  .product-grid{
+@media(max-width:1050px){
+
+  .products,
+  .use-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .story{
+  .links{
+    display:none;
+  }
+
+  .product-modal{
     grid-template-columns:1fr;
   }
 
+  .modal-image{
+    min-height:330px;
+    height:330px;
+  }
 }
 
-@media(max-width:700px){
+@media(max-width:650px){
 
-  .container{
-    width:calc(100% - 20px);
-  }
-
-  .header{
+  nav{
     height:68px;
   }
 
-  .nav-center{
-    display:none;
-  }
-
-  .brand{
-    font-size:18px;
-  }
-
-  .brand-symbol{
-    width:39px;
-    height:39px;
+  .brand-name{
+    font-size:17px;
   }
 
   .hero{
-    padding:55px 0;
+    min-height:650px;
   }
 
   .hero h1{
-    font-size:58px;
+    font-size:60px;
   }
 
-  .hero-intro{
-    font-size:15px;
+  .hero-title{
+    font-size:44px;
   }
 
-  .hero-photo{
-    height:390px;
-    border-radius:27px;
+  .products,
+  .use-grid{
+    grid-template-columns:1fr;
   }
 
-  .section{
-    padding:70px 0;
-  }
-
-  .section-title{
-    font-size:29px;
-  }
-
-  .section-top{
+  .section-head{
     display:block;
   }
 
-  .section-description{
-    margin-top:8px;
-  }
-
-  .product-grid{
-    grid-template-columns:1fr 1fr;
-    gap:9px;
-  }
-
-  .product-image{
-    height:190px;
-  }
-
-  .product-body{
-    padding:13px;
-  }
-
-  .product-body h3{
-    font-size:14px;
-  }
-
-  .product-subtitle{
-    font-size:9px;
-    min-height:42px;
-  }
-
-  .price{
-    font-size:19px;
-  }
-
-  .old{
-    font-size:9px;
-  }
-
-  .product-actions{
-    grid-template-columns:1fr;
-  }
-
-  .quick{
-    display:none;
-  }
-
-  .offer{
-    min-height:400px;
-  }
-
-  .offer-content{
-    padding:27px;
-  }
-
-  .offer h2{
+  .section-title{
     font-size:34px;
   }
 
-  .count{
-    min-width:55px;
+  .mabkhara-content,
+  .farm-text,
+  .about{
+    padding:38px 25px;
   }
 
-  .trust{
-    grid-template-columns:1fr;
+  .mabkhara-content h2,
+  .farm-text h2,
+  .about h2{
+    font-size:35px;
   }
 
-  .footer-grid{
-    grid-template-columns:1fr;
+  .modal-details{
+    padding:28px;
   }
-
-  .form{
-    grid-template-columns:1fr;
-  }
-
-  .full{
-    grid-column:auto;
-  }
-
-  .sheet{
-    padding:18px;
-  }
-
-}
-
-@media(max-width:390px){
-
-  .product-image{
-    height:165px;
-  }
-
-  .hero h1{
-    font-size:51px;
-  }
-
-  .hero-buttons .btn{
-    width:100%;
-  }
-
-  .timer{
-    gap:4px;
-  }
-
-  .count{
-    min-width:49px;
-  }
-
 }
 </style>
 </head>
 
 <body>
 
+<div class="top">
+  ✦ ترف العود — لأن العود ترف ✦
+</div>
+
+<nav>
+  <div class="nav">
+
+    <a class="brand" href="#home">
+      <div class="brand-icon">ت</div>
+
+      <div>
+        <div class="brand-name">ترف العود</div>
+        <span class="brand-sub">لأن العود ترف</span>
+      </div>
+    </a>
+
+    <div class="links">
+      <a href="#home">الرئيسية</a>
+      <a href="#products">المتجر</a>
+      <a href="#story">حكاية العود</a>
+      <a href="#about">عن ترف العود</a>
+    </div>
+
+    <button class="cart-button" onclick="openCart()">
+      🛒 السلة
+      <span class="cart-number" id="cartCount">0</span>
+    </button>
+
+  </div>
+</nav>
+
+
 <!-- =========================
-     TOP
+     HERO ART
 ========================= -->
 
-<div class="announcement">
-  ✦ ترف العود &nbsp; • &nbsp; شحن داخل المملكة &nbsp; • &nbsp; الطلب المباشر عبر واتساب ✦
+<section class="hero" id="home">
+
+<div class="hero-art">
+
+<svg viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice">
+
+<defs>
+
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#8c765c"/>
+  <stop offset=".55" stop-color="#69533f"/>
+  <stop offset="1" stop-color="#33261e"/>
+</linearGradient>
+
+<linearGradient id="ground" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#5d4937"/>
+  <stop offset=".5" stop-color="#403126"/>
+  <stop offset="1" stop-color="#261d18"/>
+</linearGradient>
+
+<filter id="soft">
+  <feGaussianBlur stdDeviation="9"/>
+</filter>
+
+</defs>
+
+<rect width="1600" height="800" fill="url(#sky)"/>
+
+<!-- painted clouds -->
+
+<path d="M0 210 C250 110 380 220 570 150
+C760 80 930 200 1110 130
+C1290 70 1460 170 1600 100
+L1600 0 L0 0Z"
+fill="#d4c2a4" opacity=".13" filter="url(#soft)"/>
+
+<!-- distant mountains -->
+
+<path d="M0 510
+L180 390 L300 475 L440 350 L590 485
+L760 330 L920 470 L1090 370 L1280 490
+L1440 360 L1600 460 L1600 800 L0 800Z"
+fill="#47372b" opacity=".9"/>
+
+<!-- trees -->
+
+<g fill="#27382a">
+
+<path d="M190 520
+C160 460 170 390 205 340
+C205 390 245 420 235 470
+C270 420 310 425 315 390
+C330 470 295 515 260 535Z"/>
+
+<path d="M420 550
+C390 470 405 400 440 350
+C445 405 480 425 470 485
+C510 430 550 450 555 405
+C565 490 530 535 490 560Z"/>
+
+<path d="M1250 540
+C1210 450 1230 370 1265 330
+C1260 410 1305 425 1290 490
+C1330 430 1375 450 1380 395
+C1390 490 1345 530 1300 555Z"/>
+
+</g>
+
+<!-- farmers -->
+
+<g fill="#241d18">
+
+<circle cx="720" cy="485" r="25"/>
+<path d="M685 520 Q720 495 755 520 L770 660 L670 660Z"/>
+
+<circle cx="830" cy="500" r="23"/>
+<path d="M795 530 Q830 505 865 530 L875 660 L785 660Z"/>
+
+</g>
+
+<!-- wood piles -->
+
+<g fill="#9a6c42">
+
+<ellipse cx="620" cy="650" rx="95" ry="30"/>
+<ellipse cx="760" cy="670" rx="100" ry="31"/>
+<ellipse cx="900" cy="650" rx="90" ry="28"/>
+
+</g>
+
+<rect y="650" width="1600" height="150" fill="url(#ground)"/>
+
+</svg>
+
 </div>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<div class="hero-content">
 
-<header class="header">
+  <div class="hero-copy">
 
-  <div class="container nav">
+    <div class="kicker">
+      T A R A F&nbsp; A L&nbsp; O U D
+    </div>
 
-    <a href="#home" class="brand">
-      <span class="brand-symbol">ت</span>
-      <span>ترف العود</span>
-    </a>
+    <h1>
+      لأن العود
+    </h1>
 
-    <nav class="nav-center">
-      <a href="#products">المتجر</a>
-      <a href="#offer">العروض</a>
-      <a href="#story">عن ترف العود</a>
-      <a href="#faq">الأسئلة</a>
-      <a href="#contact">تواصل</a>
-    </nav>
+    <div class="hero-title">
+      ترف.
+    </div>
 
-    <div class="nav-actions">
+    <p>
+      يامرحبا ترحيبة كلها أطياب<br>
+      أحلى من العنبر وأزكى من العود 🤍
+    </p>
 
-      <button class="icon-btn" onclick="openCart()" aria-label="السلة">
-        🛍
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
+    <div class="actions">
+
+      <a class="btn primary" href="#products">
+        اكتشف المختارات
+      </a>
+
+      <a class="btn secondary" href="#story">
+        حكاية العود
+      </a>
 
     </div>
 
   </div>
 
-</header>
-
-
-<main id="home">
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-  <div class="container hero-grid">
-
-    <div class="hero-copy">
-
-      <div class="mini-label">
-        ترف العود
-      </div>
-
-      <h1>
-        لأن العود<br>
-        <em>ترف.</em>
-      </h1>
-
-      <p class="hero-intro">
-        يامرحبا ترحيبة كلها أطياب —
-        أحلى من العنبر وأزكى من العود 🤍🤍
-      </p>
-
-      <p class="hero-sub">
-        مختارات من العود والمعمول بأسعار خاصة،
-        وتجربة طلب مباشرة وسريعة عبر واتساب.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#products" class="btn btn-gold">
-          اكتشف المختارات ✦
-        </a>
-
-        <a
-          href="https://wa.me/966539400955"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-outline"
-        >
-          واتساب مباشر
-        </a>
-
-      </div>
-
-      <div class="hero-note">
-
-        <span>✦ أسعار واضحة</span>
-        <span>✦ طلب مباشر</span>
-        <span>✦ شحن داخل المملكة</span>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-photo">
-
-      <div class="hero-photo-text">
-
-        <small>ترف العود</small>
-
-        <h2>
-          رائحة تُعرف<br>
-          قبل أن تُرى.
-        </h2>
-
-        <p>
-          اختر عطرك واترك الباقي علينا.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
 <!-- =========================
-     TICKER
+     MABKHARA
 ========================= -->
 
-<div class="ticker">
+<section class="section">
 
-  <div class="ticker-track">
+<div class="mabkhara">
 
-    <div class="ticker-item">ترف العود <b>✦</b></div>
-    <div class="ticker-item">دقة مروكي <b>160 ر.س</b></div>
-    <div class="ticker-item">أزرق كلمنتان <b>160 ر.س</b></div>
-    <div class="ticker-item">مروكي سيوفي <b>160 ر.س</b></div>
-    <div class="ticker-item">معمول دوسري 250 جم <b>40 ر.س</b></div>
-    <div class="ticker-item">يامرحبا ترحيبة كلها أطياب 🤍</div>
+<svg viewBox="0 0 1300 550" preserveAspectRatio="xMidYMid slice">
 
-    <div class="ticker-item">ترف العود <b>✦</b></div>
-    <div class="ticker-item">دقة مروكي <b>160 ر.س</b></div>
-    <div class="ticker-item">أزرق كلمنتان <b>160 ر.س</b></div>
-    <div class="ticker-item">مروكي سيوفي <b>160 ر.س</b></div>
-    <div class="ticker-item">معمول دوسري 250 جم <b>40 ر.س</b></div>
+<defs>
 
+<linearGradient id="redBg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#311719"/>
+  <stop offset=".5" stop-color="#71272c"/>
+  <stop offset="1" stop-color="#241214"/>
+</linearGradient>
+
+<radialGradient id="ember">
+  <stop offset="0" stop-color="#ffd36b"/>
+  <stop offset=".35" stop-color="#d95728"/>
+  <stop offset="1" stop-color="#641d20"/>
+</radialGradient>
+
+<filter id="smokeBlur">
+  <feGaussianBlur stdDeviation="15"/>
+</filter>
+
+</defs>
+
+<rect width="1300" height="550" fill="url(#redBg)"/>
+
+<!-- decorative oil strokes -->
+
+<path d="M0 90 C230 10 390 150 610 80
+C850 5 1060 130 1300 45"
+fill="none"
+stroke="#9e4045"
+stroke-width="30"
+opacity=".22"/>
+
+<path d="M0 500 C250 430 430 550 690 460
+C940 370 1100 510 1300 410"
+fill="none"
+stroke="#d07b67"
+stroke-width="20"
+opacity=".12"/>
+
+<!-- smoke -->
+
+<g fill="#eadbd0" opacity=".17" filter="url(#smokeBlur)">
+
+<path d="M790 330
+C700 240 850 210 780 120
+C730 50 850 30 870 0
+C970 90 860 170 930 230
+C1000 300 900 360 790 330Z"/>
+
+<path d="M920 310
+C870 230 1000 200 955 130
+C920 70 1020 45 1035 5
+C1110 100 1010 180 1080 230
+C1120 280 1050 330 920 310Z"/>
+
+</g>
+
+<!-- HAIL MABKHARA -->
+
+<path d="M490 385
+L540 235
+L760 235
+L810 385
+Z"
+fill="#8d3035"/>
+
+<path d="M525 235
+Q650 175 775 235
+L750 265
+Q650 220 550 265Z"
+fill="#a94243"/>
+
+<path d="M535 385
+Q650 350 765 385
+L780 450
+Q650 490 520 450Z"
+fill="#4b1b20"/>
+
+<!-- brass details -->
+
+<path d="M550 270 L750 270" stroke="#d6a867" stroke-width="9"/>
+<path d="M525 385 L775 385" stroke="#c69558" stroke-width="8"/>
+
+<!-- coal -->
+
+<ellipse cx="650" cy="365" rx="100" ry="34" fill="#241614"/>
+
+<ellipse cx="610" cy="358" rx="27" ry="15" fill="url(#ember)"/>
+<ellipse cx="650" cy="350" rx="32" ry="17" fill="url(#ember)"/>
+<ellipse cx="700" cy="360" rx="25" ry="15" fill="url(#ember)"/>
+
+<!-- oud wood -->
+
+<path d="M585 340 Q625 315 680 345
+Q710 360 755 335
+Q735 375 680 370
+Q620 355 585 340Z"
+fill="#6d452b"/>
+
+<path d="M600 342 Q640 330 680 350" fill="none"
+stroke="#b27b48" stroke-width="5"/>
+
+<!-- smoke top -->
+
+<path d="M650 330
+C610 275 690 250 650 190
+C610 130 700 100 670 45"
+fill="none"
+stroke="#eee6df"
+stroke-width="18"
+opacity=".23"
+stroke-linecap="round"
+filter="url(#smokeBlur)"/>
+
+</svg>
+
+<div class="mabkhara-content">
+
+  <div class="kicker">
+    رائحة تبدأ من الجمر
   </div>
 
+  <h2>
+    مدخنة حائلية<br>
+    بروح ترف العود
+  </h2>
+
+  <div class="line"></div>
+
+  <p>
+    جمر حي، وكسرة عود كلمنتان،
+    ودخان يتصاعد بهدوء...
+    لحظة تختصر معنى الفخامة قبل أن تتكلم.
+  </p>
+
 </div>
+
+</div>
+
+</section>
 
 
 <!-- =========================
@@ -1380,1296 +1278,1177 @@ button{cursor:pointer}
 
 <section class="section" id="products">
 
-  <div class="container">
+<div class="section-head">
 
-    <div class="section-top">
+<div>
 
-      <div>
+<div class="kicker">
+THE COLLECTION
+</div>
 
-        <div class="section-kicker">
-          THE COLLECTION
-        </div>
+<h2 class="section-title">
+مختارات ترف العود
+</h2>
 
-        <h2 class="section-title">
-          مختارات ترف العود
-        </h2>
+</div>
 
-      </div>
+<p class="section-description">
+اضغط على أي منتج لقراءة بطاقته التعريفية،
+ومصدره، واستخدامه، ووزنه، ثم أضفه للسلة
+وشاهد الإجمالي قبل إتمام الطلب.
+</p>
 
-      <p class="section-description">
-        مجموعة المتجر الحالية. اختر منتجك ثم أرسل الطلب
-        مباشرة إلى واتساب.
-      </p>
+</div>
 
-    </div>
-
-
-    <div class="product-grid">
-
-
-      <!-- 01 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <span class="product-badge">
-            عرض خاص
-          </span>
-
-          <span class="product-number">
-            01
-          </span>
-
-          <img
-            src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=92"
-            alt="دقة مروكي"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-body">
-
-          <h3>دقة مروكي</h3>
-
-          <div class="product-subtitle">
-            اختيار فاخر لمحبي حضور العود القوي والأنيق.
-          </div>
-
-          <div class="product-price">
-
-            <span class="old">290 ر.س</span>
-
-            <span class="price">160</span>
-
-            <span class="sar">ر.س</span>
-
-          </div>
-
-          <div class="product-actions">
-
-            <button
-              class="btn btn-gold"
-              onclick="openOrder('دقة مروكي',160)"
-            >
-              اطلب الآن
-            </button>
-
-            <button
-              class="quick"
-              onclick="quickAdd('دقة مروكي',160)"
-              aria-label="إضافة للسلة"
-            >
-              +
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 02 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <span class="product-badge">
-            عرض خاص
-          </span>
-
-          <span class="product-number">
-            02
-          </span>
-
-          <img
-            src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=1200&q=92"
-            alt="أزرق كلمنتان"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-body">
-
-          <h3>أزرق كلمنتان</h3>
-
-          <div class="product-subtitle">
-            حضور مميز بطابع أنيق للمجالس والمناسبات.
-          </div>
-
-          <div class="product-price">
-
-            <span class="old">445 ر.س</span>
-
-            <span class="price">160</span>
-
-            <span class="sar">ر.س</span>
-
-          </div>
-
-          <div class="product-actions">
-
-            <button
-              class="btn btn-gold"
-              onclick="openOrder('أزرق كلمنتان',160)"
-            >
-              اطلب الآن
-            </button>
-
-            <button
-              class="quick"
-              onclick="quickAdd('أزرق كلمنتان',160)"
-              aria-label="إضافة للسلة"
-            >
-              +
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 03 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <span class="product-badge">
-            عرض خاص
-          </span>
-
-          <span class="product-number">
-            03
-          </span>
-
-          <img
-            src="https://images.unsplash.com/photo-1584302179602-e4c3f0e9e3d3?auto=format&fit=crop&w=1200&q=92"
-            alt="مروكي سيوفي"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-body">
-
-          <h3>مروكي سيوفي</h3>
-
-          <div class="product-subtitle">
-            اختيار بطابع فاخر لمحبي العود المميز.
-          </div>
-
-          <div class="product-price">
-
-            <span class="old">250 ر.س</span>
-
-            <span class="price">160</span>
-
-            <span class="sar">ر.س</span>
-
-          </div>
-
-          <div class="product-actions">
-
-            <button
-              class="btn btn-gold"
-              onclick="openOrder('مروكي سيوفي',160)"
-            >
-              اطلب الآن
-            </button>
-
-            <button
-              class="quick"
-              onclick="quickAdd('مروكي سيوفي',160)"
-              aria-label="إضافة للسلة"
-            >
-              +
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 04 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <span class="product-badge">
-            عرض خاص
-          </span>
-
-          <span class="product-number">
-            04
-          </span>
-
-          <img
-            src="https://images.unsplash.com/photo-1603905179139-db12ab535e2a?auto=format&fit=crop&w=1200&q=92"
-            alt="معمول دوسري 250 جم"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-body">
-
-          <h3>معمول دوسري 250 جم</h3>
-
-          <div class="product-subtitle">
-            معمول دوسري بوزن 250 جم حسب المنتج المحدد.
-          </div>
-
-          <div class="product-price">
-
-            <span class="old">250 ر.س</span>
-
-            <span class="price">40</span>
-
-            <span class="sar">ر.س</span>
-
-          </div>
-
-          <div class="product-actions">
-
-            <button
-              class="btn btn-gold"
-              onclick="openOrder('معمول دوسري 250 جم',40)"
-            >
-              اطلب الآن
-            </button>
-
-            <button
-              class="quick"
-              onclick="quickAdd('معمول دوسري 250 جم',40)"
-              aria-label="إضافة للسلة"
-            >
-              +
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
+<div class="products" id="productsGrid"></div>
 
 </section>
 
 
 <!-- =========================
-     OFFER
-========================= -->
-
-<section class="section offer-section" id="offer">
-
-  <div class="container">
-
-    <div class="offer">
-
-      <div class="offer-content">
-
-        <div class="offer-label">
-          عرض ترف العود
-        </div>
-
-        <h2>
-          لا تخلي العرض يفوتك.
-        </h2>
-
-        <p>
-          الأسعار الحالية ظاهرة أمام كل منتج.
-          أرسل طلبك الآن وسيتم تأكيد التفاصيل عبر واتساب.
-        </p>
-
-        <div class="countdown">
-
-          <div class="count">
-            <strong id="days">00</strong>
-            <span>يوم</span>
-          </div>
-
-          <div class="count">
-            <strong id="hours">00</strong>
-            <span>ساعة</span>
-          </div>
-
-          <div class="count">
-            <strong id="minutes">00</strong>
-            <span>دقيقة</span>
-          </div>
-
-          <div class="count">
-            <strong id="seconds">00</strong>
-            <span>ثانية</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     STORY
+     FARM
 ========================= -->
 
 <section class="section" id="story">
 
-  <div class="container">
+<div class="farm">
 
-    <div class="section-top">
+<svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice">
 
-      <div>
+<defs>
 
-        <div class="section-kicker">
-          THE HOUSE
-        </div>
+<linearGradient id="farmSky" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#a5aa79"/>
+  <stop offset=".55" stop-color="#778154"/>
+  <stop offset="1" stop-color="#485039"/>
+</linearGradient>
 
-        <h2 class="section-title">
-          ترف العود
-        </h2>
+<linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#6b754b"/>
+  <stop offset="1" stop-color="#3f492f"/>
+</linearGradient>
 
-      </div>
+</defs>
 
-      <p class="section-description">
-        اسم صُمم ليكون بسيطًا، فاخرًا، وسهل التذكر.
-      </p>
+<rect width="1400" height="600" fill="url(#farmSky)"/>
 
-    </div>
+<!-- painted sky -->
 
+<ellipse cx="1100" cy="100" rx="220" ry="80"
+fill="#e5d8b4" opacity=".18"/>
 
-    <div class="story">
+<!-- hills -->
 
-      <div class="story-card">
+<path d="M0 330
+C220 230 350 340 540 260
+C720 185 920 310 1100 220
+C1220 165 1320 235 1400 205
+L1400 600 L0 600Z"
+fill="#58643e"/>
 
-      </div>
+<!-- oud trees -->
 
+<g fill="#253a27">
 
-      <div class="story-card">
+<path d="M230 455
+C190 385 205 300 245 245
+C245 315 290 330 270 395
+C315 345 360 355 370 300
+C380 390 340 440 285 470Z"/>
 
-        <h2>
-          العود مو مجرد رائحة.
-        </h2>
+<path d="M450 460
+C415 390 430 320 465 275
+C470 330 505 355 490 405
+C530 360 570 370 580 320
+C590 410 550 450 505 475Z"/>
 
-        <p>
-          هو حضور. هو ذكرى. وهو أول شيء يلاحظه الناس
-          قبل الكلام وبعد السلام.
-        </p>
+<path d="M1060 460
+C1020 390 1040 300 1075 245
+C1075 320 1120 340 1100 400
+C1140 350 1190 360 1190 305
+C1210 400 1160 450 1110 475Z"/>
 
-        <div class="story-list">
+</g>
 
-          <div>
-            <i>✦</i>
-            <span>اختيارات واضحة وأسعار مباشرة</span>
-          </div>
+<!-- tree trunks -->
 
-          <div>
-            <i>✦</i>
-            <span>طلب سريع من خلال واتساب</span>
-          </div>
+<g stroke="#59402b" stroke-width="25">
 
-          <div>
-            <i>✦</i>
-            <span>تجربة مصممة للجوال أولًا</span>
-          </div>
+<path d="M260 450 L260 300"/>
+<path d="M480 455 L480 335"/>
+<path d="M1090 455 L1090 305"/>
 
-          <div>
-            <i>✦</i>
-            <span>بدون تقييمات أو ادعاءات غير موثقة</span>
-          </div>
+</g>
 
-        </div>
+<!-- field -->
 
-      </div>
+<path d="M0 455
+C280 420 480 490 720 440
+C960 390 1160 470 1400 420
+L1400 600 L0 600Z"
+fill="url(#field)"/>
 
-    </div>
+<!-- farmers -->
 
-  </div>
+<g>
+
+<!-- farmer 1 -->
+
+<circle cx="690" cy="365" r="23" fill="#573d2c"/>
+
+<path d="M650 405
+Q690 375 730 405
+L745 535
+L635 535Z"
+fill="#7a563e"/>
+
+<path d="M660 410 L620 490"
+stroke="#59402d" stroke-width="13"
+stroke-linecap="round"/>
+
+<path d="M720 410 L765 480"
+stroke="#59402d" stroke-width="13"
+stroke-linecap="round"/>
+
+<!-- farmer 2 -->
+
+<circle cx="820" cy="380" r="22" fill="#4d3627"/>
+
+<path d="M782 415
+Q820 390 858 415
+L870 535
+L770 535Z"
+fill="#5f6a42"/>
+
+<path d="M795 420 L760 495"
+stroke="#4b3829" stroke-width="12"
+stroke-linecap="round"/>
+
+<path d="M845 420 L885 495"
+stroke="#4b3829" stroke-width="12"
+stroke-linecap="round"/>
+
+</g>
+
+<!-- wooden crates -->
+
+<g fill="#9b7045" stroke="#5c402b" stroke-width="5">
+
+<rect x="570" y="490" width="90" height="60" rx="4"/>
+<rect x="900" y="485" width="90" height="65" rx="4"/>
+
+</g>
+
+</svg>
+
+<div class="farm-text">
+
+<div class="kicker">
+FROM THE OUD TREE
+</div>
+
+<h2>
+من شجرة العود...
+<br>
+تبدأ الحكاية.
+</h2>
+
+<p>
+في مزارع العود تبدأ الرحلة من الشجرة،
+ويعتني بها المزارعون حتى تصل الكسرة
+إلى يد من يعرف قيمة العود الحقيقي.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
-     TRUST
+     USAGE
 ========================= -->
 
 <section class="section">
 
-  <div class="container">
+<div class="section-head">
 
-    <div class="trust">
+<div>
 
-      <div class="trust-card">
+<div class="kicker">
+اختياراتك حسب المناسبة
+</div>
 
-        <div class="trust-icon">
-          ✦
-        </div>
+<h2 class="section-title">
+لكل وقت عوده
+</h2>
 
-        <h3>
-          اختيارك أولًا
-        </h3>
+</div>
 
-        <p>
-          اختر المنتج والكمية التي تناسبك قبل إرسال الطلب.
-        </p>
+</div>
 
-      </div>
+<div class="use-grid">
 
+<div class="use-card">
+<div class="number">01</div>
+<h3>دقة مروكي</h3>
+<p>
+للاستعمال اليومي، لمن يحب رائحة العود
+بشكل أنيق ومستمر.
+</p>
+</div>
 
-      <div class="trust-card">
+<div class="use-card">
+<div class="number">02</div>
+<h3>مروكي سيوفي</h3>
+<p>
+للمناسبات واليومي، حضور قوي وأنيق
+لمحبي العود الواضح.
+</p>
+</div>
 
-        <div class="trust-icon">
-          💬
-        </div>
+<div class="use-card">
+<div class="number">03</div>
+<h3>كلمنتان</h3>
+<p>
+فخم ورسمي للمناسبات والمجالس،
+اختيار يبيض الوجه.
+</p>
+</div>
 
-        <h3>
-          واتساب مباشر
-        </h3>
+<div class="use-card">
+<div class="number">04</div>
+<h3>معمول دوسري</h3>
+<p>
+للبيت والمطبخ وممتاز للمجالس
+وللاستخدام اليومي.
+</p>
+</div>
 
-        <p>
-          طلبك يذهب مباشرة إلى محادثة واتساب بدون خطوات معقدة.
-        </p>
-
-      </div>
-
-
-      <div class="trust-card">
-
-        <div class="trust-icon">
-          🚚
-        </div>
-
-        <h3>
-          شحن داخل المملكة
-        </h3>
-
-        <p>
-          يتم تأكيد تفاصيل الشحن معك قبل إتمام الطلب.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
 <!-- =========================
-     FAQ
+     ABOUT
 ========================= -->
 
-<section class="section" id="faq">
+<section class="section" id="about">
 
-  <div class="container">
+<div class="about">
 
-    <div class="section-top">
+<div class="kicker">
+THE HOUSE OF TARAF
+</div>
 
-      <div>
+<h2>
+ترف العود
+</h2>
 
-        <div class="section-kicker">
-          FAQ
-        </div>
+<p>
+لأن العود ليس مجرد رائحة.
+هو حضور، وذوق، وذكرى.
+اخترنا لكم مختارات بعناية،
+وقدمناها بطريقة بسيطة وفاخرة
+حتى تكون تجربة الشراء امتدادًا
+لفخامة المنتج نفسه.
+</p>
 
-        <h2 class="section-title">
-          الأسئلة الشائعة
-        </h2>
-
-      </div>
-
-    </div>
-
-
-    <div class="faq">
-
-
-      <div class="faq-item">
-
-        <button class="faq-question" onclick="toggleFaq(this)">
-          كيف أطلب؟
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          اختر المنتج واضغط «اطلب الآن»، ثم حدد الكمية والوزن
-          وأرسل الطلب مباشرة عبر واتساب.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button class="faq-question" onclick="toggleFaq(this)">
-          هل يوجد شحن؟
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          نعم، المتجر مهيأ للطلب داخل المملكة، ويتم تأكيد تفاصيل
-          الشحن النهائية مع العميل عبر واتساب.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button class="faq-question" onclick="toggleFaq(this)">
-          هل الأسعار الظاهرة نهائية؟
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          السعر الأساسي هو السعر الظاهر في بطاقة المنتج.
-          تفاصيل الوزن والشحن وأي متطلبات إضافية يتم تأكيدها
-          قبل إتمام الطلب.
-        </div>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <button class="faq-question" onclick="toggleFaq(this)">
-          كيف أتواصل مع المتجر؟
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          عن طريق واتساب على الرقم 0539400955.
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-</main>
+<footer>
 
+<h2>ترف العود</h2>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<p>
+يامرحبا ترحيبة كلها أطياب
+— أحلى من العنبر وأزكى من العود 🤍
+</p>
 
-<footer class="footer" id="contact">
-
-  <div class="container footer-grid">
-
-    <div>
-
-      <div class="footer-brand">
-        ترف العود
-      </div>
-
-      <p>
-        يامرحبا ترحيبة كلها أطياب —
-        أحلى من العنبر وأزكى من العود 🤍🤍
-      </p>
-
-    </div>
-
-
-    <div>
-
-      <div class="footer-title">
-        المتجر
-      </div>
-
-      <div class="footer-links">
-
-        <a href="#products">المنتجات</a>
-        <a href="#offer">العروض</a>
-        <a href="#story">عن ترف العود</a>
-        <a href="#faq">الأسئلة الشائعة</a>
-
-      </div>
-
-    </div>
-
-
-    <div>
-
-      <div class="footer-title">
-        تواصل
-      </div>
-
-      <div class="footer-links">
-
-        <a
-          href="https://wa.me/966539400955"
-          target="_blank"
-          rel="noopener"
-        >
-          واتساب 0539400955
-        </a>
-
-        <a href="#home">
-          العودة للأعلى ↑
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+<p style="margin-top:10px;font-size:12px;">
+© 2026 ترف العود
+</p>
 
 </footer>
 
 
 <!-- =========================
-     WHATSAPP
+     PRODUCT MODAL
 ========================= -->
 
-<a
-  class="whatsapp"
-  href="https://wa.me/966539400955"
-  target="_blank"
-  rel="noopener"
-  aria-label="واتساب"
->
-  ☎
-</a>
+<div class="modal" id="productModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeProduct()">×</button>
+
+<div class="product-modal">
+
+<div class="modal-image" id="modalArt"></div>
+
+<div class="modal-details">
+
+<div class="origin" id="modalOrigin"></div>
+
+<h2 id="modalName"></h2>
+
+<p id="modalDescription"></p>
+
+<div class="detail">
+<span>الاستخدام</span>
+<strong id="modalUse"></strong>
+</div>
+
+<div class="detail">
+<span>المصدر</span>
+<strong id="modalFrom"></strong>
+</div>
+
+<div class="detail">
+<span>الوزن</span>
+<strong id="modalWeightText"></strong>
+</div>
+
+<div class="detail">
+<span>السعر</span>
+<strong id="modalPrice"></strong>
+</div>
+
+<div class="weight">
+
+<label>الوزن</label>
+
+<select id="modalWeight"></select>
+
+</div>
+
+<button class="modal-add" onclick="addModalProduct()">
+أضف إلى السلة
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 <!-- =========================
-     CART DRAWER
+     CART
 ========================= -->
 
-<div
-  class="drawer-overlay"
-  id="drawerOverlay"
-  onclick="closeCart()"
-></div>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
 
+<aside class="cart" id="cart">
 
-<aside class="drawer" id="cartDrawer">
+<div class="cart-head">
 
-  <div class="drawer-head">
+<h2>سلة ترف العود</h2>
 
-    <strong>
-      سلة ترف العود
-    </strong>
+<button class="close" onclick="closeCart()">×</button>
 
-    <button
-      class="close"
-      onclick="closeCart()"
-    >
-      ×
-    </button>
+</div>
 
-  </div>
+<div class="cart-items" id="cartItems"></div>
 
+<div class="cart-footer">
 
-  <div class="drawer-items" id="drawerItems">
+<div class="total">
 
-    <div class="drawer-empty">
-      السلة فارغة حاليًا 🤍
-    </div>
+<span>الإجمالي</span>
 
-  </div>
+<span id="total">0 ر.س</span>
 
+</div>
 
-  <div class="drawer-total">
+<button class="checkout" onclick="checkout()">
+إتمام الطلب
+</button>
 
-    <div class="drawer-total-row">
-
-      <span>
-        الإجمالي
-      </span>
-
-      <strong id="drawerTotal">
-        0 ر.س
-      </strong>
-
-    </div>
-
-    <button
-      class="btn btn-gold"
-      style="width:100%"
-      onclick="checkoutCart()"
-    >
-      إتمام الطلب عبر واتساب
-    </button>
-
-  </div>
+</div>
 
 </aside>
 
 
 <!-- =========================
-     ORDER MODAL
+     CHECKOUT
 ========================= -->
 
-<div
-  class="modal"
-  id="orderModal"
-  onclick="outsideModal(event)"
->
+<div class="modal" id="checkoutModal">
 
-  <div class="sheet">
+<div class="modal-box">
 
-    <div class="sheet-head">
+<button class="close" onclick="closeCheckout()">×</button>
 
-      <div>
+<div class="checkout-content">
 
-        <div class="sheet-kicker">
-          ترف العود
-        </div>
+<h2>
+إتمام الطلب
+</h2>
 
-        <h2 id="modalTitle">
-          أكمل طلبك
-        </h2>
+<div class="summary" id="summary"></div>
 
-      </div>
+<div class="field">
 
-      <button
-        class="close"
-        onclick="closeOrder()"
-      >
-        ×
-      </button>
+<label>
+الاسم
+</label>
 
-    </div>
-
-
-    <div class="form">
-
-      <div class="field full">
-
-        <label>
-          المنتج
-        </label>
-
-        <select id="productSelect" onchange="changeProduct()">
-
-          <option value="دقة مروكي|160">
-            دقة مروكي — 160 ر.س
-          </option>
-
-          <option value="أزرق كلمنتان|160">
-            أزرق كلمنتان — 160 ر.س
-          </option>
-
-          <option value="مروكي سيوفي|160">
-            مروكي سيوفي — 160 ر.س
-          </option>
-
-          <option value="معمول دوسري 250 جم|40">
-            معمول دوسري 250 جم — 40 ر.س
-          </option>
-
-        </select>
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          الوزن
-        </label>
-
-        <select id="weight">
-
-          <option>الوزن الأساسي</option>
-          <option>3 جم</option>
-          <option>6 جم</option>
-          <option>12 جم</option>
-          <option>25 جم</option>
-          <option>50 جم</option>
-          <option>100 جم</option>
-
-        </select>
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          الكمية
-        </label>
-
-        <input
-          id="quantity"
-          type="number"
-          min="1"
-          max="99"
-          value="1"
-          oninput="calculate()"
-        >
-
-      </div>
-
-
-      <div class="field full">
-
-        <label>
-          المدينة / الحي
-        </label>
-
-        <input
-          id="location"
-          placeholder="مثال: الرياض — شمال الرياض"
-        >
-
-      </div>
-
-
-      <div class="field full">
-
-        <label>
-          ملاحظة للطلب
-        </label>
-
-        <input
-          id="orderNote"
-          placeholder="اختياري"
-        >
-
-      </div>
-
-    </div>
-
-
-    <div class="summary">
-
-      <span>
-        الإجمالي المبدئي
-      </span>
-
-      <strong id="total">
-        160 ر.س
-      </strong>
-
-    </div>
-
-
-    <button
-      class="btn btn-gold"
-      style="width:100%;margin-top:13px"
-      onclick="sendOrder()"
-    >
-      إرسال الطلب عبر واتساب ↗
-    </button>
-
-
-    <p class="sheet-note">
-      ملاحظة: أسعار الأوزان الإضافية غير محددة في بيانات المتجر،
-      لذلك لا يتم اختراع سعر لها. السعر الظاهر هو سعر المنتج × الكمية،
-      ويتم تأكيد التفاصيل النهائية عبر واتساب.
-    </p>
-
-  </div>
+<input
+id="customerName"
+placeholder="اكتب اسمك"
+/>
 
 </div>
 
+<div class="field">
 
-<div class="toast" id="toast">
-  تمت الإضافة إلى السلة 🤍
+<label>
+المدينة والحي
+</label>
+
+<input
+id="customerLocation"
+placeholder="مثال: الرياض — شمال الرياض"
+/>
+
+</div>
+
+<div class="field">
+
+<label>
+ملاحظة للطلب
+</label>
+
+<textarea
+id="customerNote"
+placeholder="أي ملاحظة إضافية..."
+></textarea>
+
+</div>
+
+<button class="whatsapp" onclick="sendWhatsApp()">
+إرسال الطلب عبر واتساب
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 
 <script>
 
 /* =========================================
-   STORE SETTINGS
+   رقم واتساب المتجر
+   غيّر الرقم فقط إذا احتجت
 ========================================= */
 
-const WHATSAPP = "966539400955";
-
-let currentPrice = 160;
-
-let cart = [];
+const WHATSAPP_NUMBER="966539400955";
 
 
 /* =========================================
-   ORDER
+   SVG PRODUCT ART
 ========================================= */
 
-function openOrder(product="دقة مروكي",price=160){
+function productArt(type){
 
-  const modal =
-    document.getElementById("orderModal");
+if(type==="moroki"){
 
-  modal.classList.add("active");
+return `
+<svg viewBox="0 0 500 400">
 
-  document.body.classList.add("lock");
+<defs>
+<linearGradient id="m1" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#806044"/>
+<stop offset=".5" stop-color="#432b20"/>
+<stop offset="1" stop-color="#211814"/>
+</linearGradient>
+</defs>
 
-  const select =
-    document.getElementById("productSelect");
+<rect width="500" height="400" fill="url(#m1)"/>
 
-  [...select.options].forEach(option=>{
+<ellipse cx="250" cy="310" rx="150" ry="45"
+fill="#17120f"/>
 
-    if(option.value.startsWith(product+"|")){
-      option.selected=true;
-    }
+<g fill="#7b4d2d">
 
-  });
+<path d="M120 290 Q180 230 250 280
+Q310 320 380 265
+Q350 335 275 320
+Q190 300 120 290Z"/>
 
-  currentPrice=Number(price);
+<path d="M150 250 Q210 205 290 260
+Q320 280 355 235
+Q320 295 250 285
+Q195 265 150 250Z"/>
 
-  document.getElementById("modalTitle").textContent=
-    "طلب "+product;
+</g>
 
-  calculate();
+<g stroke="#bb8450" stroke-width="7" opacity=".65">
+<path d="M145 285 Q215 260 285 295"/>
+<path d="M170 245 Q230 235 310 265"/>
+</g>
+
+<circle cx="250" cy="330" r="8" fill="#e2a14d"/>
+
+</svg>
+`;
 
 }
 
+if(type==="seyoufi"){
 
-function closeOrder(){
+return `
+<svg viewBox="0 0 500 400">
 
-  document
-    .getElementById("orderModal")
-    .classList.remove("active");
+<rect width="500" height="400" fill="#6a4b38"/>
 
-  document.body.classList.remove("lock");
+<path d="M0 320 Q130 250 250 315
+Q370 380 500 270 L500 400 L0 400Z"
+fill="#34251d"/>
+
+<g fill="#80522f">
+
+<path d="M75 300 Q160 210 235 285
+Q300 345 420 235
+Q385 350 275 340
+Q170 320 75 300Z"/>
+
+<path d="M110 255 Q180 190 260 250
+Q315 300 390 205
+Q360 300 275 305
+Q190 280 110 255Z"/>
+
+</g>
+
+<g stroke="#c08b50" stroke-width="6" opacity=".7">
+<path d="M105 295 Q185 255 270 315"/>
+<path d="M135 250 Q210 225 295 275"/>
+</g>
+
+</svg>
+`;
 
 }
 
+if(type==="kalimantan"){
 
-function outsideModal(e){
+return `
+<svg viewBox="0 0 500 400">
 
-  if(e.target.id==="orderModal"){
-    closeOrder();
-  }
+<defs>
+<linearGradient id="k1" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#60714c"/>
+<stop offset=".55" stop-color="#37462e"/>
+<stop offset="1" stop-color="#211d16"/>
+</linearGradient>
+</defs>
+
+<rect width="500" height="400" fill="url(#k1)"/>
+
+<!-- leaves -->
+
+<g fill="#1d3022">
+
+<ellipse cx="100" cy="90" rx="80" ry="25" transform="rotate(30 100 90)"/>
+<ellipse cx="190" cy="70" rx="100" ry="28" transform="rotate(-20 190 70)"/>
+<ellipse cx="330" cy="100" rx="100" ry="30" transform="rotate(20 330 100)"/>
+<ellipse cx="420" cy="65" rx="70" ry="22" transform="rotate(-30 420 65)"/>
+
+</g>
+
+<!-- wood -->
+
+<path d="M90 315 Q160 245 245 290
+Q320 330 410 250
+Q380 350 285 340
+Q170 330 90 315Z"
+fill="#76502f"/>
+
+<path d="M125 310 Q210 275 300 320"
+fill="none"
+stroke="#c0965c"
+stroke-width="7"/>
+
+</svg>
+`;
+
+}
+
+return `
+<svg viewBox="0 0 500 400">
+
+<rect width="500" height="400" fill="#8c694a"/>
+
+<ellipse cx="250" cy="280" rx="150" ry="70"
+fill="#5a3b29"/>
+
+<circle cx="200" cy="265" r="55" fill="#9c754f"/>
+<circle cx="300" cy="275" r="55" fill="#8d6341"/>
+
+<path d="M140 250 Q250 200 360 250"
+fill="none"
+stroke="#d1a56d"
+stroke-width="8"/>
+
+</svg>
+`;
 
 }
 
 
 /* =========================================
-   PRODUCT CHANGE
+   PRODUCTS
 ========================================= */
 
-function changeProduct(){
+const products=[
 
-  const value=
-    document.getElementById("productSelect").value;
+{
+id:"moroki",
+name:"دقة مروكي",
+origin:"عود مروكي",
+from:"إندونيسيا",
+weight:"50 جرام",
+price:160,
+use:"للاستعمال اليومي",
+description:
+"دقة مروكي مختارة للاستعمال اليومي، بحضور أنيق يناسب البيت والمجلس ومحبي رائحة العود الأصيلة.",
+type:"moroki"
+},
 
-  const parts=value.split("|");
+{
+id:"seyoufi",
+name:"مروكي سيوفي",
+origin:"عود مروكي سيوفي",
+from:"إندونيسيا",
+weight:"125 جرام",
+price:190,
+use:"للمناسبات واليومي",
+description:
+"مروكي سيوفي بطابع قوي وأنيق، مناسب للمناسبات وكذلك الاستخدام اليومي لمن يحب حضور العود الواضح.",
+type:"seyoufi"
+},
 
-  currentPrice=Number(parts[1]);
+{
+id:"kalimantan",
+name:"أزرق كلمنتان",
+origin:"عود كلمنتان",
+from:"إندونيسيا — كلمنتان",
+weight:"125 جرام",
+price:260,
+use:"فخم ورسمي للمناسبات",
+description:
+"كلمنتان فخم ورسمي للمناسبات والمجالس. اختيار أنيق يبيض الوجه ويليق بالضيوف.",
+type:"kalimantan"
+},
 
-  document.getElementById("modalTitle").textContent=
-    "طلب "+parts[0];
-
-  calculate();
-
+{
+id:"dosari",
+name:"معمول دوسري",
+origin:"معمول دوسري",
+from:"السعودية",
+weight:"250 جرام",
+price:45,
+use:"للبيت والمطبخ والمجالس",
+description:
+"معمول دوسري للبيت والمطبخ، وممتاز للمجالس وللاستخدام اليومي لمحبي أجواء البخور الشرقية.",
+type:"dosari"
 }
 
-
-/* =========================================
-   CALCULATE
-========================================= */
-
-function calculate(){
-
-  let quantity=
-    Number(document.getElementById("quantity").value)||1;
-
-  quantity=Math.max(1,Math.min(99,quantity));
-
-  document.getElementById("quantity").value=quantity;
-
-  const total=currentPrice*quantity;
-
-  document.getElementById("total").textContent=
-    total.toLocaleString("ar-SA")+" ر.س";
-
-}
-
-
-/* =========================================
-   SEND ORDER
-========================================= */
-
-function sendOrder(){
-
-  const value=
-    document.getElementById("productSelect").value;
-
-  const parts=value.split("|");
-
-  const product=parts[0];
-
-  const price=Number(parts[1]);
-
-  const weight=
-    document.getElementById("weight").value;
-
-  const quantity=
-    Number(document.getElementById("quantity").value)||1;
-
-  const location=
-    document.getElementById("location").value.trim();
-
-  const note=
-    document.getElementById("orderNote").value.trim();
-
-  const total=price*quantity;
-
-
-  let message=
-`السلام عليكم ورحمة الله وبركاته 🤍
-
-أرغب بالطلب من متجر ترف العود.
-
-🪵 المنتج: ${product}
-⚖️ الوزن: ${weight}
-🔢 الكمية: ${quantity}
-💰 السعر: ${price} ر.س
-💵 الإجمالي المبدئي: ${total} ر.س`;
-
-
-  if(location){
-    message+=
-      `\n📍 المدينة / الحي: ${location}`;
-  }
-
-
-  if(note){
-    message+=
-      `\n📝 ملاحظة: ${note}`;
-  }
-
-
-  message+=`
-
-يامرحبا ترحيبة كلها أطياب
-أحلى من العنبر وأزكى من العود 🤍🤍`;
-
-
-  const url=
-    "https://wa.me/"+WHATSAPP+
-    "?text="+encodeURIComponent(message);
-
-
-  window.open(url,"_blank");
-
-}
+];
 
 
 /* =========================================
    CART
 ========================================= */
 
-function quickAdd(product,price){
-
-  const existing=
-    cart.find(item=>item.product===product);
-
-  if(existing){
-    existing.quantity++;
-  }else{
-    cart.push({
-      product,
-      price,
-      quantity:1
-    });
-  }
-
-  updateCart();
-
-  showToast();
-
-}
+let cart=[];
+let selectedProduct=null;
 
 
-function updateCart(){
+function renderProducts(){
 
-  const count=
-    cart.reduce((sum,item)=>sum+item.quantity,0);
+const grid=document.getElementById("productsGrid");
 
-  document.getElementById("cartCount").textContent=
-    count;
+grid.innerHTML=products.map(p=>`
 
+<article class="product">
 
-  const container=
-    document.getElementById("drawerItems");
+<div class="product-picture"
+onclick="openProduct('${p.id}')">
 
+${productArt(p.type)}
 
-  if(cart.length===0){
+<span class="badge">
+اقرأ بطاقة المنتج
+</span>
 
-    container.innerHTML=
-      `<div class="drawer-empty">
-        السلة فارغة حاليًا 🤍
-      </div>`;
+</div>
 
-  }else{
+<div class="product-body">
 
-    container.innerHTML=
-      cart.map((item,index)=>`
+<div class="origin">
+${p.origin}
+</div>
 
-        <div style="
-          padding:13px 0;
-          border-bottom:1px solid var(--line);
-          display:flex;
-          justify-content:space-between;
-          gap:12px;
-        ">
+<h3>
+${p.name}
+</h3>
 
-          <div>
+<div class="use">
+${p.use}
+</div>
 
-            <strong style="
-              color:var(--cream);
-              font-size:12px;
-            ">
-              ${item.product}
-            </strong>
+<div class="product-bottom">
 
-            <div style="
-              color:#766b60;
-              margin-top:4px;
-              font-size:10px;
-            ">
-              ${item.quantity} × ${item.price} ر.س
-            </div>
+<div class="price">
+${p.price} ر.س
+<small> / ${p.weight}</small>
+</div>
 
-          </div>
+<button class="add"
+onclick="addToCart('${p.id}')">
++ أضف للسلة
+</button>
 
-          <button
-            onclick="removeItem(${index})"
-            style="
-              background:none;
-              border:0;
-              color:#98745c;
-            "
-          >
-            حذف
-          </button>
+</div>
 
-        </div>
+</div>
 
-      `).join("");
+</article>
 
-  }
-
-
-  const total=
-    cart.reduce(
-      (sum,item)=>sum+(item.price*item.quantity),
-      0
-    );
-
-
-  document.getElementById("drawerTotal").textContent=
-    total.toLocaleString("ar-SA")+" ر.س";
+`).join("");
 
 }
 
 
-function removeItem(index){
+/* =========================================
+   PRODUCT DETAILS
+========================================= */
 
-  cart.splice(index,1);
+function openProduct(id){
 
-  updateCart();
+selectedProduct=products.find(p=>p.id===id);
+
+if(!selectedProduct)return;
+
+document.getElementById("modalArt").innerHTML=
+productArt(selectedProduct.type);
+
+document.getElementById("modalOrigin").textContent=
+selectedProduct.origin;
+
+document.getElementById("modalName").textContent=
+selectedProduct.name;
+
+document.getElementById("modalDescription").textContent=
+selectedProduct.description;
+
+document.getElementById("modalUse").textContent=
+selectedProduct.use;
+
+document.getElementById("modalFrom").textContent=
+selectedProduct.from;
+
+document.getElementById("modalWeightText").textContent=
+selectedProduct.weight;
+
+document.getElementById("modalPrice").textContent=
+selectedProduct.price+" ر.س";
+
+document.getElementById("modalWeight").innerHTML=`
+<option>${selectedProduct.weight}</option>
+`;
+
+document.getElementById("productModal")
+.classList.add("show");
 
 }
 
+
+function closeProduct(){
+
+document.getElementById("productModal")
+.classList.remove("show");
+
+selectedProduct=null;
+
+}
+
+
+function addModalProduct(){
+
+if(selectedProduct){
+
+addToCart(selectedProduct.id);
+
+closeProduct();
+
+openCart();
+
+}
+
+}
+
+
+/* =========================================
+   ADD CART
+========================================= */
+
+function addToCart(id){
+
+const p=products.find(x=>x.id===id);
+
+if(!p)return;
+
+const found=cart.find(x=>x.id===id);
+
+if(found){
+
+found.qty++;
+
+}else{
+
+cart.push({
+...p,
+qty:1
+});
+
+}
+
+save();
+renderCart();
+
+toast("تمت إضافة "+p.name+" إلى السلة 🤍");
+
+}
+
+
+function changeQuantity(id,n){
+
+const item=cart.find(x=>x.id===id);
+
+if(!item)return;
+
+item.qty+=n;
+
+if(item.qty<=0){
+
+cart=cart.filter(x=>x.id!==id);
+
+}
+
+save();
+renderCart();
+
+}
+
+
+/* =========================================
+   RENDER CART
+========================================= */
+
+function renderCart(){
+
+const items=document.getElementById("cartItems");
+
+const count=cart.reduce(
+(s,x)=>s+x.qty,0
+);
+
+const total=cart.reduce(
+(s,x)=>s+(x.price*x.qty),0
+);
+
+document.getElementById("cartCount")
+.textContent=count;
+
+document.getElementById("total")
+.textContent=total+" ر.س";
+
+if(cart.length===0){
+
+items.innerHTML=`
+<div class="empty">
+السلة فارغة 🤍
+<br>
+اختر من مختارات ترف العود.
+</div>
+`;
+
+return;
+
+}
+
+items.innerHTML=cart.map(item=>`
+
+<div class="cart-item">
+
+<div class="cart-item-art">
+${productArt(item.type)}
+</div>
+
+<div class="cart-info">
+
+<h4>${item.name}</h4>
+
+<small>
+${item.weight} • ${item.price} ر.س
+</small>
+
+<div class="quantity">
+
+<button onclick="changeQuantity('${item.id}',-1)">
+−
+</button>
+
+<strong>
+${item.qty}
+</strong>
+
+<button onclick="changeQuantity('${item.id}',1)">
++
+</button>
+
+</div>
+
+</div>
+
+<strong>
+${item.price*item.qty} ر.س
+</strong>
+
+</div>
+
+`).join("");
+
+}
+
+
+/* =========================================
+   CART OPEN
+========================================= */
 
 function openCart(){
 
-  document
-    .getElementById("cartDrawer")
-    .classList.add("active");
+document.getElementById("cart")
+.classList.add("open");
 
-  document
-    .getElementById("drawerOverlay")
-    .classList.add("active");
+document.getElementById("overlay")
+.classList.add("show");
 
 }
 
 
 function closeCart(){
 
-  document
-    .getElementById("cartDrawer")
-    .classList.remove("active");
+document.getElementById("cart")
+.classList.remove("open");
 
-  document
-    .getElementById("drawerOverlay")
-    .classList.remove("active");
+document.getElementById("overlay")
+.classList.remove("show");
 
 }
 
 
-function checkoutCart(){
+/* =========================================
+   CHECKOUT
+========================================= */
 
-  if(cart.length===0){
+function checkout(){
 
-    showToast("السلة فارغة");
+if(cart.length===0){
 
-    return;
+alert("السلة فارغة.");
 
-  }
+return;
+
+}
+
+closeCart();
+
+const total=cart.reduce(
+(s,x)=>s+(x.price*x.qty),0
+);
+
+document.getElementById("summary").innerHTML=`
+
+${cart.map(x=>`
+
+<div style="
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+">
+
+<span>
+${x.name} × ${x.qty}
+</span>
+
+<strong>
+${x.price*x.qty} ر.س
+</strong>
+
+</div>
+
+`).join("")}
+
+<hr style="
+border:0;
+border-top:1px solid var(--border);
+margin:13px 0;
+">
+
+<div style="
+display:flex;
+justify-content:space-between;
+font-size:20px;
+font-weight:900;
+">
+
+<span>الإجمالي</span>
+<span>${total} ر.س</span>
+
+</div>
+`;
+
+document.getElementById("checkoutModal")
+.classList.add("show");
+
+}
 
 
-  let message=
-`السلام عليكم ورحمة الله وبركاته 🤍
+function closeCheckout(){
 
-أرغب بالطلب من متجر ترف العود:
+document.getElementById("checkoutModal")
+.classList.remove("show");
+
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+function sendWhatsApp(){
+
+const name=document
+.getElementById("customerName")
+.value.trim();
+
+const location=document
+.getElementById("customerLocation")
+.value.trim();
+
+const note=document
+.getElementById("customerNote")
+.value.trim();
+
+if(!name){
+
+alert("اكتب اسمك.");
+
+return;
+
+}
+
+if(!location){
+
+alert("اكتب المدينة والحي.");
+
+return;
+
+}
+
+const total=cart.reduce(
+(s,x)=>s+(x.price*x.qty),0
+);
+
+let message=
+"السلام عليكم ورحمة الله وبركاته 🤍\n\n"+
+"أرغب بالطلب من متجر ترف العود:\n\n";
+
+cart.forEach((x,i)=>{
+
+message+=
+`${i+1}. ${x.name}
+الوزن: ${x.weight}
+الكمية: ${x.qty}
+السعر: ${x.price*x.qty} ر.س
 
 `;
 
+});
 
-  cart.forEach((item,index)=>{
+message+=
+`الإجمالي: ${total} ر.س
 
-    message+=
-`${index+1}. ${item.product}
-الكمية: ${item.quantity}
-السعر: ${item.price} ر.س
-الإجمالي: ${item.price*item.quantity} ر.س
+الاسم: ${name}
+المدينة والحي: ${location}`;
 
-`;
+if(note){
 
-  });
+message+=
+`\n\nملاحظة:
+${note}`;
+
+}
+
+message+=
+`\n\nلأن العود ترف.
+ترف العود 🤍`;
+
+window.open(
+"https://wa.me/"+
+WHATSAPP_NUMBER+
+"?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+}
 
 
-  const total=
-    cart.reduce(
-      (sum,item)=>sum+(item.price*item.quantity),
-      0
-    );
+/* =========================================
+   STORAGE
+========================================= */
 
+function save(){
 
-  message+=
-`الإجمالي المبدئي: ${total} ر.س
+localStorage.setItem(
+"tarafAloudCart",
+JSON.stringify(cart)
+);
 
-يامرحبا ترحيبة كلها أطياب
-أحلى من العنبر وأزكى من العود 🤍🤍`;
+}
 
+function load(){
 
-  window.open(
-    "https://wa.me/"+WHATSAPP+
-    "?text="+encodeURIComponent(message),
-    "_blank"
-  );
+try{
+
+const data=localStorage
+.getItem("tarafAloudCart");
+
+if(data){
+
+cart=JSON.parse(data);
+
+}
+
+}catch(e){
+
+cart=[];
+
+}
 
 }
 
@@ -2678,142 +2457,73 @@ function checkoutCart(){
    TOAST
 ========================================= */
 
-function showToast(text="تمت الإضافة إلى السلة 🤍"){
+function toast(text){
 
-  const toast=
-    document.getElementById("toast");
+const el=document.createElement("div");
 
-  toast.textContent=text;
+el.textContent=text;
 
-  toast.classList.add("show");
+el.style.cssText=`
+position:fixed;
+bottom:25px;
+right:25px;
+z-index:999;
+background:#641d24;
+color:white;
+padding:13px 19px;
+border-radius:14px;
+font-weight:800;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+transition:.3s;
+`;
 
-  setTimeout(()=>{
-    toast.classList.remove("show");
-  },1800);
+document.body.appendChild(el);
 
-}
+setTimeout(()=>{
 
+el.style.opacity="0";
 
-/* =========================================
-   FAQ
-========================================= */
+setTimeout(()=>el.remove(),300);
 
-function toggleFaq(button){
-
-  const item=
-    button.parentElement;
-
-  document
-    .querySelectorAll(".faq-item")
-    .forEach(el=>{
-
-      if(el!==item){
-        el.classList.remove("open");
-      }
-
-    });
-
-  item.classList.toggle("open");
+},1800);
 
 }
-
-
-/* =========================================
-   COUNTDOWN
-   48 HOURS
-========================================= */
-
-const timerKey=
-  "tarafAloudTimer";
-
-let endTime=
-  localStorage.getItem(timerKey);
-
-
-if(!endTime || Number(endTime)<Date.now()){
-
-  endTime=
-    Date.now()+(48*60*60*1000);
-
-  localStorage.setItem(
-    timerKey,
-    endTime
-  );
-
-}
-
-
-function updateCountdown(){
-
-  let remaining=
-    Math.max(
-      0,
-      Number(endTime)-Date.now()
-    );
-
-
-  const days=
-    Math.floor(remaining/86400000);
-
-  remaining%=86400000;
-
-
-  const hours=
-    Math.floor(remaining/3600000);
-
-  remaining%=3600000;
-
-
-  const minutes=
-    Math.floor(remaining/60000);
-
-  const seconds=
-    Math.floor(
-      (remaining%60000)/1000
-    );
-
-
-  document.getElementById("days").textContent=
-    String(days).padStart(2,"0");
-
-  document.getElementById("hours").textContent=
-    String(hours).padStart(2,"0");
-
-  document.getElementById("minutes").textContent=
-    String(minutes).padStart(2,"0");
-
-  document.getElementById("seconds").textContent=
-    String(seconds).padStart(2,"0");
-
-}
-
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
-
-/* =========================================
-   ESC
-========================================= */
-
-document.addEventListener("keydown",e=>{
-
-  if(e.key==="Escape"){
-
-    closeOrder();
-    closeCart();
-
-  }
-
-});
 
 
 /* =========================================
    INIT
 ========================================= */
 
-updateCart();
+load();
+
+renderProducts();
+
+renderCart();
+
+
+/* close modal on background */
+
+document.getElementById("productModal")
+.addEventListener("click",e=>{
+
+if(e.target===e.currentTarget){
+
+closeProduct();
+
+}
+
+});
+
+document.getElementById("checkoutModal")
+.addEventListener("click",e=>{
+
+if(e.target===e.currentTarget){
+
+closeCheckout();
+
+}
+
+});
 
 </script>
 
