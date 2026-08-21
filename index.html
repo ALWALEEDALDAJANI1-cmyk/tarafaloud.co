@@ -2,7 +2,9 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ترف العود | لأن العود ترف</title>
@@ -27,6 +29,17 @@ body{
     color:#2d2116;
 }
 
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#17100b;
+    color:#d9c7aa;
+    text-align:center;
+    padding:7px 10px;
+    font-size:11px;
+}
 
 /* =========================
    HEADER
@@ -34,511 +47,453 @@ body{
 
 .header{
     position:relative;
-    min-height:88vh;
-
+    min-height:570px;
+    overflow:hidden;
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
-    padding:40px 20px;
-
-    overflow:hidden;
+    color:white;
 
     background:
     radial-gradient(
         circle at 50% 35%,
-        #5a432d 0%,
-        #2b1d12 42%,
-        #120d08 100%
+        #765638 0%,
+        #3d2a1a 30%,
+        #1c120b 65%,
+        #0e0905 100%
     );
 }
 
-
-/* زخارف الخلفية */
-
 .header::before{
     content:"";
-
     position:absolute;
-
-    width:500px;
-    height:500px;
-
-    border:1px solid rgba(218,183,112,.15);
-
+    width:520px;
+    height:520px;
+    border:1px solid rgba(226,190,116,.18);
     border-radius:50%;
-
-    top:-250px;
-    right:-180px;
+    top:-280px;
+    right:-150px;
 }
 
 .header::after{
     content:"";
-
     position:absolute;
-
-    width:420px;
-    height:420px;
-
-    border:1px solid rgba(218,183,112,.10);
-
+    width:430px;
+    height:430px;
+    border:1px solid rgba(226,190,116,.12);
     border-radius:50%;
-
-    bottom:-230px;
-    left:-160px;
+    bottom:-280px;
+    left:-120px;
 }
-
-
-/* القائمة */
 
 .menu-button{
     position:absolute;
-
-    top:25px;
-    right:25px;
-
-    z-index:10;
-
+    z-index:20;
+    top:20px;
+    right:20px;
     width:48px;
     height:48px;
-
-    border:1px solid rgba(222,187,116,.4);
-
+    border:1px solid rgba(226,190,116,.35);
     border-radius:14px;
-
-    background:rgba(255,255,255,.06);
-
-    color:#e1bd76;
-
+    background:rgba(0,0,0,.28);
+    color:#e3c17b;
     font-size:25px;
-
     cursor:pointer;
-
-    backdrop-filter:blur(10px);
 }
-
-
-/* المحتوى */
-
-.hero-content{
-    position:relative;
-    z-index:2;
-
-    max-width:750px;
-}
-
-
-/* الشعار */
 
 .logo{
-    font-size:55px;
-
+    position:relative;
+    z-index:3;
+    color:#e4c17a;
+    font-size:48px;
     font-weight:800;
-
-    color:#e0bd76;
-
-    letter-spacing:1px;
-
-    text-shadow:
-    0 5px 25px rgba(0,0,0,.5);
 }
 
-
-/* الخط */
-
-.hero-line{
-    width:85px;
-    height:3px;
-
-    margin:15px auto;
-
-    border-radius:20px;
-
-    background:
-    linear-gradient(
-        90deg,
-        #a87b35,
-        #e5c57f,
-        #a87b35
-    );
+.tagline{
+    position:relative;
+    z-index:3;
+    margin-top:8px;
+    color:#e0d0b8;
+    font-size:15px;
 }
-
-
-.slogan{
-    font-size:20px;
-
-    color:#f2e6d3;
-
-    margin-bottom:25px;
-}
-
 
 .welcome{
-    font-size:15px;
-
-    line-height:2.2;
-
-    color:#cbbba5;
-
-    margin-bottom:35px;
+    position:relative;
+    z-index:3;
+    max-width:650px;
+    margin:25px auto 0;
+    color:#fff;
+    font-size:19px;
+    line-height:2;
+    font-weight:600;
 }
 
-
-/* زر العروض */
-
-.hero-button{
-    display:inline-block;
-
-    padding:15px 35px;
-
-    border-radius:14px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #e3c27c,
-        #ae8037
-    );
-
-    color:#20160d;
-
-    text-decoration:none;
-
-    font-size:15px;
-
-    font-weight:800;
-
-    box-shadow:
-    0 12px 30px rgba(0,0,0,.3);
-
-    transition:.3s;
+.welcome span{
+    color:#e4c17a;
 }
-
-
-.hero-button:hover{
-    transform:translateY(-3px);
-}
-
 
 /* =========================
-   الأقسام
+   MENU
 ========================= */
 
-.categories{
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:70px 18px;
-}
-
-
-.section-title{
-    text-align:center;
-
-    margin-bottom:40px;
-}
-
-
-.section-title h2{
-    font-size:30px;
-
-    color:#352518;
-}
-
-
-.section-title p{
-    margin-top:8px;
-
-    color:#806b53;
-
-    font-size:14px;
-}
-
-
-/* شبكة الأقسام */
-
-.category-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:22px;
-}
-
-
-/* كرت القسم */
-
-.category-card{
-
-    position:relative;
-
-    min-height:260px;
-
-    padding:30px 20px;
-
-    border-radius:25px;
-
-    overflow:hidden;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
-
-    text-decoration:none;
-
-    background:
-    linear-gradient(
-        145deg,
-        #38281a,
-        #17110c
-    );
-
-    box-shadow:
-    0 12px 35px rgba(50,35,20,.18);
-
+.menu{
+    position:fixed;
+    z-index:100;
+    top:0;
+    right:-340px;
+    width:320px;
+    height:100vh;
+    overflow-y:auto;
+    padding:80px 22px 30px;
+    background:#17100b;
+    box-shadow:-15px 0 45px rgba(0,0,0,.35);
     transition:.35s;
 }
 
-
-.category-card:hover{
-    transform:translateY(-7px);
-
-    box-shadow:
-    0 20px 45px rgba(50,35,20,.25);
+.menu.open{
+    right:0;
 }
 
-
-/* لمعان */
-
-.category-card::before{
-
-    content:"";
-
+.close{
     position:absolute;
-
-    width:180px;
-    height:180px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(225,190,116,.2);
-
-    top:-90px;
-    left:-60px;
-}
-
-
-.category-icon{
-
-    font-size:48px;
-
-    margin-bottom:15px;
-}
-
-
-.category-card h3{
-
-    color:#e1bd76;
-
+    top:20px;
+    left:20px;
+    width:42px;
+    height:42px;
+    border:1px solid rgba(226,190,116,.25);
+    border-radius:12px;
+    background:none;
+    color:#e3c17b;
     font-size:22px;
-
-    margin-bottom:6px;
+    cursor:pointer;
 }
 
-
-.category-card p{
-
-    color:#cbbba5;
-
-    font-size:12px;
-
-    line-height:1.9;
+.menu-title{
+    color:#e3c17b;
+    font-size:25px;
+    font-weight:800;
+    margin-bottom:25px;
 }
 
+.menu a{
+    display:block;
+    margin-bottom:10px;
+    padding:15px;
+    border-radius:13px;
+    color:#e8ddcd;
+    text-decoration:none;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(226,190,116,.08);
+    font-size:13px;
+    transition:.25s;
+}
+
+.menu a:hover{
+    background:#342316;
+    color:#e3c17b;
+    transform:translateX(-4px);
+}
+
+.menu .offer-link{
+    color:#ffd98a;
+    background:rgba(156,48,37,.18);
+}
 
 /* =========================
-   عرض الافتتاح
+   OVERLAY
 ========================= */
 
-.featured-offer{
-
-    max-width:1000px;
-
-    margin:0 auto 70px;
-
-    padding:40px 25px;
-
-    border-radius:28px;
-
-    text-align:center;
-
-    background:
-    linear-gradient(
-        135deg,
-        #21170f,
-        #44301d,
-        #1b130d
-    );
-
-    border:
-    1px solid rgba(224,190,119,.4);
-
-    box-shadow:
-    0 20px 55px rgba(50,35,20,.25);
+.overlay{
+    position:fixed;
+    z-index:90;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
 }
 
+.overlay.show{
+    opacity:1;
+    visibility:visible;
+}
 
-.offer-label{
+/* =========================
+   CONTAINER
+========================= */
 
-    display:inline-block;
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:55px 18px 75px;
+}
 
-    padding:7px 17px;
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
 
-    border-radius:50px;
-
-    background:#9c3025;
-
-    color:white;
-
-    font-size:12px;
-
+.section-title h2{
+    color:#382719;
+    font-size:29px;
     font-weight:800;
 }
 
-
-.featured-offer h2{
-
-    margin-top:18px;
-
-    color:#e4c27d;
-
-    font-size:30px;
+.section-title p{
+    margin-top:8px;
+    color:#806b53;
+    font-size:13px;
 }
 
+/* =========================
+   OFFER BANNER
+========================= */
 
-.featured-offer p{
+.offer-banner{
+    position:relative;
+    overflow:hidden;
+    margin-bottom:55px;
+    padding:35px 25px;
+    border-radius:28px;
+    color:white;
+    text-align:center;
 
-    margin-top:10px;
+    background:
+    radial-gradient(
+        circle at center,
+        #68492c,
+        #2b1c10 65%,
+        #130c07
+    );
 
-    color:#d0c0a8;
+    box-shadow:0 20px 50px rgba(55,38,20,.22);
+}
 
+.offer-banner::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border:1px solid rgba(226,190,116,.16);
+    border-radius:50%;
+    top:-250px;
+    right:-100px;
+}
+
+.offer-badge{
+    position:relative;
+    display:inline-block;
+    padding:7px 18px;
+    border-radius:50px;
+    background:#9b3026;
+    color:white;
+    font-size:12px;
+    font-weight:800;
+}
+
+.offer-banner h2{
+    position:relative;
+    margin-top:13px;
+    color:#e5c17b;
+    font-size:28px;
+}
+
+.offer-banner p{
+    position:relative;
+    margin-top:8px;
+    color:#ddcfbc;
+    font-size:13px;
+}
+
+.offer-price{
+    position:relative;
+    margin-top:18px;
+}
+
+.offer-old{
+    color:#b8a894;
     font-size:14px;
 }
 
-
-.offer-price{
-
-    margin-top:20px;
-
-    color:#f0d18a;
-
-    font-size:42px;
-
+.offer-new{
+    margin-top:3px;
+    color:white;
+    font-size:40px;
     font-weight:900;
 }
 
-
-.offer-price del{
-
-    margin-left:10px;
-
-    color:#948574;
-
-    font-size:17px;
-
-    font-weight:400;
+.offer-new span{
+    font-size:15px;
 }
 
+.offer-discount{
+    position:relative;
+    display:inline-block;
+    margin-top:5px;
+    padding:6px 16px;
+    border-radius:50px;
+    background:#9b3026;
+    color:white;
+    font-size:12px;
+    font-weight:800;
+}
+
+.offer-button{
+    position:relative;
+    display:block;
+    width:100%;
+    max-width:360px;
+    margin:20px auto 0;
+    padding:13px;
+    border-radius:13px;
+    background:#e1bd73;
+    color:#21170d;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:900;
+}
 
 /* =========================
-   الفوتر
+   CATEGORY CARDS
+========================= */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.category{
+    position:relative;
+    overflow:hidden;
+    min-height:230px;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border-radius:22px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(60,40,20,.11);
+    text-decoration:none;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(60,40,20,.18);
+}
+
+.category-icon{
+    width:75px;
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#2a1b10;
+    color:#e1bd76;
+    font-size:32px;
+}
+
+.category h3{
+    margin-top:16px;
+    color:#382719;
+    font-size:19px;
+}
+
+.category p{
+    margin-top:7px;
+    color:#806b53;
+    font-size:11px;
+    line-height:1.8;
+}
+
+.category small{
+    margin-top:12px;
+    color:#a27535;
+    font-weight:700;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    margin-top:55px;
+    padding:35px 25px;
+    border-radius:24px;
+    background:#fffaf3;
+    border:1px solid rgba(150,110,55,.13);
+    text-align:center;
+}
+
+.about h2{
+    color:#8d6429;
+    font-size:23px;
+}
+
+.about p{
+    max-width:750px;
+    margin:12px auto 0;
+    color:#756451;
+    font-size:13px;
+    line-height:2.2;
+}
+
+/* =========================
+   FOOTER
 ========================= */
 
 .footer{
-
-    padding:30px 20px;
-
+    padding:35px 20px;
     text-align:center;
-
-    background:#17110c;
-
-    color:#9f907c;
-
+    background:#17100b;
+    color:#9e907d;
     font-size:12px;
 }
 
-
 .footer strong{
-
     color:#d8b66f;
 }
 
-
-/* =========================
-   الجوال
-========================= */
-
-@media(max-width:800px){
-
-    .category-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-    .logo{
-
-        font-size:43px;
-
-    }
-
+.footer-links{
+    margin-top:12px;
 }
 
+.footer-links a{
+    color:#c9b99f;
+    text-decoration:none;
+    margin:0 8px;
+}
 
-@media(max-width:550px){
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
 
     .header{
-
-        min-height:80vh;
-
+        min-height:520px;
+        padding:30px 20px;
     }
 
     .logo{
-
-        font-size:36px;
-
-    }
-
-    .slogan{
-
-        font-size:17px;
-
+        font-size:38px;
     }
 
     .welcome{
-
-        font-size:13px;
-
+        font-size:16px;
     }
 
-    .category-grid{
-
+    .categories{
         grid-template-columns:1fr;
-
     }
 
-    .category-card{
-
-        min-height:220px;
-
+    .category{
+        min-height:190px;
     }
 
 }
@@ -551,377 +506,316 @@ body{
 <body>
 
 
-<!-- =========================
-     الهيدر
-========================= -->
+<div class="topbar">
+عرض الافتتاح الحصري — الباقة 300 ريال فقط 🔥
+</div>
+
 
 <header class="header">
 
-    <button
-        class="menu-button"
-        onclick="openMenu()"
-        aria-label="القائمة"
-    >
-        ☰
-    </button>
+
+<button
+class="menu-button"
+onclick="openMenu()"
+aria-label="فتح القائمة"
+>
+☰
+</button>
 
 
-    <div class="hero-content">
+<div>
 
-        <div class="logo">
-            ترف العود
-        </div>
+<div class="logo">
+ترف العود
+</div>
 
+<div class="tagline">
+لأن العود ترف
+</div>
 
-        <div class="hero-line"></div>
+<div class="welcome">
+يامرحبا ترحيبة كلها أطياب<br>
+<span>أحلى من العنبر وأزكى من العود 🤍</span>
+</div>
 
-
-        <div class="slogan">
-            لأن العود ترف 🤍
-        </div>
-
-
-        <div class="welcome">
-
-            يامرحبا ترحيبة كلها أطياب<br>
-
-            أحلى من العنبر وأزكى من العود 🤍
-
-        </div>
-
-
-        <a
-            href="#categories"
-            class="hero-button"
-        >
-            اكتشف منتجاتنا
-        </a>
-
-    </div>
+</div>
 
 </header>
 
 
 
 <!-- =========================
-     الأقسام
-========================= -->
-
-<section
-    class="categories"
-    id="categories"
->
-
-    <div class="section-title">
-
-        <h2>
-            اكتشف عالم ترف العود
-        </h2>
-
-        <p>
-            اختر القسم الذي تبحث عنه
-        </p>
-
-    </div>
-
-
-    <div class="category-grid">
-
-
-        <!-- الأعواد -->
-
-        <a
-            href="oud.html"
-            class="category-card"
-        >
-
-            <div class="category-icon">
-                🪵
-            </div>
-
-            <h3>
-                الأعواد
-            </h3>
-
-            <p>
-                أعواد طبيعية ومحسنة
-                مختارة بعناية لعشاق الفخامة.
-            </p>
-
-        </a>
-
-
-
-        <!-- المعمول -->
-
-        <a
-            href="maamoul.html"
-            class="category-card"
-        >
-
-            <div class="category-icon">
-                🌿
-            </div>
-
-            <h3>
-                المعمول
-            </h3>
-
-            <p>
-                معمول فاخر بروائح مميزة
-                للمجالس والمناسبات.
-            </p>
-
-        </a>
-
-
-
-        <!-- دهن العود -->
-
-        <a
-            href="dahn.html"
-            class="category-card"
-        >
-
-            <div class="category-icon">
-                🖤
-            </div>
-
-            <h3>
-                دهن العود
-            </h3>
-
-            <p>
-                مختارات من دهون العود
-                لعشاق الروائح الأصيلة.
-            </p>
-
-        </a>
-
-
-
-        <!-- العروض -->
-
-        <a
-            href="offers.html"
-            class="category-card"
-        >
-
-            <div class="category-icon">
-                🔥
-            </div>
-
-            <h3>
-                العروض
-            </h3>
-
-            <p>
-                عروض حصرية وأسعار افتتاحية
-                لفترة محدودة.
-            </p>
-
-        </a>
-
-
-
-        <!-- خدمة العملاء -->
-
-        <a
-            href="support.html"
-            class="category-card"
-        >
-
-            <div class="category-icon">
-                🤝
-            </div>
-
-            <h3>
-                خدمة العملاء
-            </h3>
-
-            <p>
-                تواصل معنا واستفسر عن المنتجات
-                والطلبات.
-            </p>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     العرض المميز
-========================= -->
-
-<section class="featured-offer">
-
-    <span class="offer-label">
-        🔥 عرض الافتتاح
-    </span>
-
-
-    <h2>
-        باقة ترف العود
-    </h2>
-
-
-    <p>
-        50 جرام من كل نوع × 3 أنواع
-    </p>
-
-
-    <div class="offer-price">
-
-        300 ريال
-
-        <del>
-            610 ريال
-        </del>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     الفوتر
-========================= -->
-
-<footer class="footer">
-
-    © 2026
-
-    <strong>
-        ترف العود
-    </strong>
-
-    — لأن العود ترف
-
-</footer>
-
-
-
-<!-- =========================
-     القائمة
+     SIDE MENU
 ========================= -->
 
 <div
-    id="sideMenu"
-    style="
-        position:fixed;
-        inset:0;
-        z-index:9999;
-        display:none;
-        background:rgba(0,0,0,.65);
-    "
-    onclick="closeMenu(event)"
+class="overlay"
+id="overlay"
+onclick="closeMenu()"
+></div>
+
+
+<nav
+class="menu"
+id="menu"
 >
 
-
-    <div
-        style="
-            position:absolute;
-            top:0;
-            right:0;
-            width:300px;
-            max-width:85%;
-            height:100%;
-            padding:30px 20px;
-            background:#1b130d;
-            box-shadow:-10px 0 40px rgba(0,0,0,.35);
-        "
-        onclick="event.stopPropagation()"
-    >
-
-        <button
-            onclick="closeMenu()"
-            style="
-                width:40px;
-                height:40px;
-                border:0;
-                border-radius:50%;
-                background:#302116;
-                color:#e1bd76;
-                font-size:24px;
-                cursor:pointer;
-            "
-        >
-            ×
-        </button>
+<button
+class="close"
+onclick="closeMenu()"
+>
+×
+</button>
 
 
-        <div
-            style="
-                margin:25px 0 30px;
-                color:#e1bd76;
-                font-size:25px;
-                font-weight:800;
-            "
-        >
-            ترف العود
-        </div>
+<div class="menu-title">
+أقسام ترف العود
+</div>
 
 
-        <a
-            href="index.html"
-            style="display:block;padding:14px 5px;color:#eee;text-decoration:none;"
-        >
-            🏠 الرئيسية
-        </a>
+<a href="oud.html">
+🪵 أعواد طبيعية ومحسنة
+</a>
 
 
-        <a
-            href="oud.html"
-            style="display:block;padding:14px 5px;color:#eee;text-decoration:none;"
-        >
-            🪵 الأعواد الطبيعية والمحسنة
-        </a>
+<a href="maamoul.html">
+📦 معمول
+</a>
 
 
-        <a
-            href="maamoul.html"
-            style="display:block;padding:14px 5px;color:#eee;text-decoration:none;"
-        >
-            🌿 المعمول
-        </a>
+<a href="dahn.html">
+🧴 دهن عود
+</a>
 
 
-        <a
-            href="dahn.html"
-            style="display:block;padding:14px 5px;color:#eee;text-decoration:none;"
-        >
-            🖤 دهن العود
-        </a>
+<a
+href="offers.html"
+class="offer-link"
+>
+🔥 العروض
+</a>
 
 
-        <a
-            href="offers.html"
-            style="
-                display:block;
-                padding:14px 5px;
-                color:#e1bd76;
-                text-decoration:none;
-                font-weight:800;
-            "
-        >
-            🔥 العروض
-        </a>
+<a href="support.html">
+🤎 خدمة العملاء
+</a>
 
 
-        <a
-            href="support.html"
-            style="display:block;padding:14px 5px;color:#eee;text-decoration:none;"
-        >
-            🤝 خدمة العملاء
-        </a>
+</nav>
 
-    </div>
+
+
+<main class="container">
+
+
+<!-- =========================
+     OFFER
+========================= -->
+
+<section class="offer-banner">
+
+
+<span class="offer-badge">
+🔥 عرض افتتاح حصري
+</span>
+
+
+<h2>
+باقة ترف العود
+</h2>
+
+
+<p>
+50 جرام من كل نوع — 3 أنواع مختارة
+</p>
+
+
+<div class="offer-price">
+
+<div class="offer-old">
+سابقاً <del>610 ريال</del>
+</div>
+
+
+<div class="offer-new">
+300 <span>ريال</span>
+</div>
+
+
+<div class="offer-discount">
+خصم 50.8%
+</div>
 
 </div>
+
+
+<a
+href="offers.html"
+class="offer-button"
+>
+شاهد تفاصيل العرض
+</a>
+
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section>
+
+
+<div class="section-title">
+
+<h2>
+اكتشف عالم ترف العود
+</h2>
+
+<p>
+اختر القسم الذي يناسب ذوقك
+</p>
+
+</div>
+
+
+<div class="categories">
+
+
+<a
+href="oud.html"
+class="category"
+>
+
+<div class="category-icon">
+🪵
+</div>
+
+<h3>
+أعواد طبيعية ومحسنة
+</h3>
+
+<p>
+مختارات من أجود الأعواد
+لعشاق الأصالة والفخامة.
+</p>
+
+<small>
+اكتشف الأعواد ←
+</small>
+
+</a>
+
+
+
+<a
+href="maamoul.html"
+class="category"
+>
+
+<div class="category-icon">
+📦
+</div>
+
+<h3>
+المعمول
+</h3>
+
+<p>
+روائح فاخرة للمجالس
+والضيافة والمناسبات.
+</p>
+
+<small>
+اكتشف المعمول ←
+</small>
+
+</a>
+
+
+
+<a
+href="dahn.html"
+class="category"
+>
+
+<div class="category-icon">
+🧴
+</div>
+
+<h3>
+دهن العود
+</h3>
+
+<p>
+دهون عود فاخرة لعشاق
+الروائح الشرقية الراقية.
+</p>
+
+<small>
+اكتشف الدهون ←
+</small>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about">
+
+<h2>
+ترف العود
+</h2>
+
+<p>
+متجر متخصص في العود والبخور والروائح الشرقية،
+نسعى لتقديم اختيارات فاخرة وتجربة تليق بذوق عملائنا.
+<br>
+لأننا نؤمن أن العود ليس مجرد رائحة...
+<strong>العود ترف.</strong>
+</p>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+<div>
+© 2026 <strong>ترف العود</strong> — لأن العود ترف
+</div>
+
+
+<div class="footer-links">
+
+<a href="offers.html">
+العروض
+</a>
+
+<a href="support.html">
+خدمة العملاء
+</a>
+
+<a href="oud.html">
+الأعواد
+</a>
+
+</div>
+
+</footer>
 
 
 
@@ -929,14 +823,30 @@ body{
 
 function openMenu(){
 
-    document.getElementById("sideMenu").style.display="block";
+    document
+    .getElementById("menu")
+    .classList
+    .add("open");
+
+    document
+    .getElementById("overlay")
+    .classList
+    .add("show");
 
 }
 
 
 function closeMenu(){
 
-    document.getElementById("sideMenu").style.display="none";
+    document
+    .getElementById("menu")
+    .classList
+    .remove("open");
+
+    document
+    .getElementById("overlay")
+    .classList
+    .remove("show");
 
 }
 
