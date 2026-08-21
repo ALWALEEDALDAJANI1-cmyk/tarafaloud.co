@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>ترف العود | لأن العود ترف</title>
+<title>ترف العود | مختارات من العود الطبيعي المحسن الفاخر</title>
+
+<meta name="description" content="ترف العود — مختارات من العود الطبيعي المحسن الفاخر، مختارة بعناية من تجار العود في إندونيسيا. لأن العود ترف.">
+<meta name="theme-color" content="#4a3428">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap');
@@ -67,6 +70,7 @@ a{
   text-align:center;
   padding:7px 15px;
   font-size:12px;
+  letter-spacing:.2px;
 }
 
 /* =========================
@@ -99,17 +103,23 @@ nav{
   gap:11px;
 }
 
-.brand-icon{
-  width:46px;
-  height:46px;
+.brand-logo{
+  width:52px;
+  height:52px;
   border-radius:50%;
-  background:var(--red);
-  color:#ead39e;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(179,145,88,.35);
+  box-shadow:0 8px 25px rgba(66,43,27,.16);
   display:grid;
   place-items:center;
-  font-family:Georgia,serif;
-  font-size:22px;
-  box-shadow:0 8px 22px rgba(100,29,36,.25);
+}
+
+.brand-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .brand-name{
@@ -133,6 +143,10 @@ nav{
   font-weight:600;
 }
 
+.links a{
+  transition:.25s;
+}
+
 .links a:hover{
   color:var(--red);
 }
@@ -147,6 +161,12 @@ nav{
   display:flex;
   gap:8px;
   align-items:center;
+  transition:.25s;
+}
+
+.cart-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(100,29,36,.22);
 }
 
 .cart-number{
@@ -170,27 +190,48 @@ nav{
   overflow:hidden;
   display:flex;
   align-items:center;
-  background:
-    linear-gradient(110deg,#806a52 0%,#5a4434 48%,#32251e 100%);
+  background:#33251e;
 }
 
-.hero-art{
+.hero-image{
   position:absolute;
   inset:0;
-  opacity:.75;
+  z-index:0;
 }
 
-.hero-art svg{
+.hero-image img{
   width:100%;
   height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32,22,17,.22) 0%,
+      rgba(32,22,17,.53) 55%,
+      rgba(32,22,17,.80) 100%
+    );
 }
 
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
+  z-index:1;
   background:
-    linear-gradient(90deg,rgba(40,28,20,.08),rgba(40,28,20,.62));
+    linear-gradient(
+      0deg,
+      rgba(25,17,12,.60),
+      transparent 58%
+    );
 }
 
 .hero-content{
@@ -219,10 +260,7 @@ nav{
   line-height:.95;
   margin-top:12px;
   font-weight:900;
-}
-
-.hero h1 span{
-  color:#e2c38b;
+  text-shadow:0 10px 30px rgba(0,0,0,.22);
 }
 
 .hero-title{
@@ -230,6 +268,7 @@ nav{
   font-size:clamp(42px,6vw,75px);
   color:#f5e8d1;
   margin-top:5px;
+  text-shadow:0 10px 30px rgba(0,0,0,.22);
 }
 
 .hero p{
@@ -259,6 +298,7 @@ nav{
 .primary{
   background:#e8c88e;
   color:#4c3425;
+  box-shadow:0 12px 30px rgba(0,0,0,.16);
 }
 
 .secondary{
@@ -298,7 +338,7 @@ nav{
 }
 
 /* =========================
-   OIL MABKHARA
+   MABKHARA
 ========================= */
 
 .mabkhara{
@@ -306,23 +346,44 @@ nav{
   position:relative;
   overflow:hidden;
   border-radius:38px;
-  background:
-    linear-gradient(115deg,#351b18,#6b2228 45%,#301719);
   box-shadow:var(--shadow);
+  background:#281714;
 }
 
-.mabkhara svg{
+.mabkhara-image{
   position:absolute;
   inset:0;
+}
+
+.mabkhara-image img{
   width:100%;
   height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 1s ease;
+}
+
+.mabkhara:hover .mabkhara-image img{
+  transform:scale(1.025);
+}
+
+.mabkhara-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(30,14,13,.84),
+      rgba(50,18,20,.46),
+      rgba(30,14,13,.12)
+    );
 }
 
 .mabkhara-content{
   position:relative;
   z-index:3;
   padding:70px;
-  max-width:610px;
+  max-width:650px;
   color:white;
 }
 
@@ -370,28 +431,36 @@ nav{
 }
 
 .product-picture{
-  height:270px;
+  height:290px;
   position:relative;
   cursor:pointer;
   overflow:hidden;
-  background:linear-gradient(135deg,#684a37,#2e211a);
+  background:#5a4131;
 }
 
-.product-picture svg{
+.real-product-image{
   width:100%;
   height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+
+.product-picture:hover .real-product-image{
+  transform:scale(1.06);
 }
 
 .badge{
   position:absolute;
   top:14px;
   right:14px;
-  background:var(--red);
+  background:rgba(100,29,36,.93);
   color:#fff;
-  padding:5px 11px;
+  padding:6px 12px;
   border-radius:20px;
   font-size:10px;
   font-weight:800;
+  backdrop-filter:blur(8px);
 }
 
 .product-body{
@@ -421,6 +490,7 @@ nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:10px;
 }
 
 .price{
@@ -442,14 +512,16 @@ nav{
   padding:10px 13px;
   font-size:12px;
   font-weight:800;
+  transition:.25s;
 }
 
 .add:hover{
   background:var(--red);
+  transform:translateY(-2px);
 }
 
 /* =========================
-   FARM ART
+   FARM
 ========================= */
 
 .farm{
@@ -457,21 +529,43 @@ nav{
   border-radius:38px;
   overflow:hidden;
   position:relative;
-  background:#6b7751;
   box-shadow:var(--shadow);
+  background:#3f492f;
 }
 
-.farm svg{
+.farm-image{
   position:absolute;
   inset:0;
+}
+
+.farm-image img{
   width:100%;
   height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 1s ease;
+}
+
+.farm:hover .farm-image img{
+  transform:scale(1.025);
+}
+
+.farm-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28,37,23,.84),
+      rgba(45,54,31,.42),
+      rgba(45,54,31,.08)
+    );
 }
 
 .farm-text{
   position:relative;
   z-index:3;
-  max-width:610px;
+  max-width:650px;
   padding:75px;
   color:white;
 }
@@ -501,6 +595,12 @@ nav{
   border:1px solid var(--border);
   padding:27px;
   border-radius:23px;
+  transition:.3s;
+}
+
+.use-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(66,43,27,.09);
 }
 
 .number{
@@ -525,7 +625,9 @@ nav{
 
 .about{
   border-radius:38px;
-  background:var(--brown);
+  background:
+    radial-gradient(circle at 90% 10%,rgba(212,189,145,.14),transparent 30%),
+    var(--brown);
   color:white;
   padding:70px;
   position:relative;
@@ -603,11 +705,15 @@ nav{
 .modal-image{
   min-height:520px;
   background:#614633;
+  overflow:hidden;
 }
 
-.modal-image svg{
+.modal-image img{
   width:100%;
   height:100%;
+  min-height:520px;
+  object-fit:cover;
+  display:block;
 }
 
 .modal-details{
@@ -740,11 +846,14 @@ nav{
   border-radius:13px;
   overflow:hidden;
   flex:none;
+  background:#5a4131;
 }
 
-.cart-item-art svg{
+.cart-item-art img{
   width:100%;
   height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .cart-info{
@@ -838,6 +947,12 @@ nav{
   outline:0;
 }
 
+.field input:focus,
+.field textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(179,145,88,.10);
+}
+
 .field textarea{
   min-height:90px;
 }
@@ -853,6 +968,18 @@ nav{
 }
 
 /* =========================
+   WHY TARAF
+========================= */
+
+.why-card{
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.65),
+    rgba(255,255,255,.30)
+  );
+}
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -865,6 +992,28 @@ footer{
 
 footer h2{
   color:#e3c68e;
+}
+
+footer p{
+  color:#eee0cf;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast-message{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  z-index:999;
+  background:var(--red);
+  color:white;
+  padding:13px 19px;
+  border-radius:14px;
+  font-weight:800;
+  box-shadow:0 15px 35px rgba(0,0,0,.2);
+  transition:.3s;
 }
 
 /* =========================
@@ -890,6 +1039,10 @@ footer h2{
     min-height:330px;
     height:330px;
   }
+
+  .modal-image img{
+    min-height:330px;
+  }
 }
 
 @media(max-width:650px){
@@ -902,8 +1055,30 @@ footer h2{
     font-size:17px;
   }
 
+  .brand-logo{
+    width:45px;
+    height:45px;
+  }
+
   .hero{
     min-height:650px;
+  }
+
+  .hero::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(25,17,12,.12),
+        rgba(25,17,12,.84)
+      );
+  }
+
+  .hero-content{
+    padding:70px 22px 55px;
+  }
+
+  .hero-copy{
+    max-width:100%;
   }
 
   .hero h1{
@@ -914,9 +1089,17 @@ footer h2{
     font-size:44px;
   }
 
+  .hero p{
+    font-size:15px;
+  }
+
   .products,
   .use-grid{
     grid-template-columns:1fr;
+  }
+
+  .product-picture{
+    height:320px;
   }
 
   .section-head{
@@ -927,10 +1110,15 @@ footer h2{
     font-size:34px;
   }
 
+  .mabkhara,
+  .farm{
+    min-height:520px;
+  }
+
   .mabkhara-content,
   .farm-text,
   .about{
-    padding:38px 25px;
+    padding:42px 25px;
   }
 
   .mabkhara-content h2,
@@ -939,8 +1127,26 @@ footer h2{
     font-size:35px;
   }
 
+  .mabkhara-overlay,
+  .farm-overlay{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20,12,10,.10),
+        rgba(20,12,10,.84)
+      );
+  }
+
   .modal-details{
     padding:28px;
+  }
+
+  .product-bottom{
+    align-items:flex-end;
+  }
+
+  .cart{
+    width:94vw;
   }
 }
 </style>
@@ -956,12 +1162,16 @@ footer h2{
   <div class="nav">
 
     <a class="brand" href="#home">
-      <div class="brand-icon">ت</div>
+
+      <div class="brand-logo">
+        <img src="image_15.png" alt="شعار ترف العود">
+      </div>
 
       <div>
         <div class="brand-name">ترف العود</div>
         <span class="brand-sub">لأن العود ترف</span>
       </div>
+
     </a>
 
     <div class="links">
@@ -981,142 +1191,56 @@ footer h2{
 
 
 <!-- =========================
-     HERO ART
+     HERO
 ========================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-art">
+  <div class="hero-image">
 
-<svg viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice">
+    <img
+      src="image_14.png"
+      alt="أجواء ترف العود الفاخرة"
+    >
 
-<defs>
+  </div>
 
-<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0" stop-color="#8c765c"/>
-  <stop offset=".55" stop-color="#69533f"/>
-  <stop offset="1" stop-color="#33261e"/>
-</linearGradient>
+  <div class="hero-content">
 
-<linearGradient id="ground" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#5d4937"/>
-  <stop offset=".5" stop-color="#403126"/>
-  <stop offset="1" stop-color="#261d18"/>
-</linearGradient>
+    <div class="hero-copy">
 
-<filter id="soft">
-  <feGaussianBlur stdDeviation="9"/>
-</filter>
+      <div class="kicker">
+        T A R A F &nbsp; A L &nbsp; O U D
+      </div>
 
-</defs>
+      <h1>
+        لأن العود
+      </h1>
 
-<rect width="1600" height="800" fill="url(#sky)"/>
+      <div class="hero-title">
+        ترف.
+      </div>
 
-<!-- painted clouds -->
+      <p>
+        مختارات من العود الطبيعي المحسن الفاخر<br>
+        مختارة بعناية لعشاق العود 🤍
+      </p>
 
-<path d="M0 210 C250 110 380 220 570 150
-C760 80 930 200 1110 130
-C1290 70 1460 170 1600 100
-L1600 0 L0 0Z"
-fill="#d4c2a4" opacity=".13" filter="url(#soft)"/>
+      <div class="actions">
 
-<!-- distant mountains -->
+        <a class="btn primary" href="#products">
+          اكتشف المختارات
+        </a>
 
-<path d="M0 510
-L180 390 L300 475 L440 350 L590 485
-L760 330 L920 470 L1090 370 L1280 490
-L1440 360 L1600 460 L1600 800 L0 800Z"
-fill="#47372b" opacity=".9"/>
+        <a class="btn secondary" href="#story">
+          حكاية العود
+        </a>
 
-<!-- trees -->
-
-<g fill="#27382a">
-
-<path d="M190 520
-C160 460 170 390 205 340
-C205 390 245 420 235 470
-C270 420 310 425 315 390
-C330 470 295 515 260 535Z"/>
-
-<path d="M420 550
-C390 470 405 400 440 350
-C445 405 480 425 470 485
-C510 430 550 450 555 405
-C565 490 530 535 490 560Z"/>
-
-<path d="M1250 540
-C1210 450 1230 370 1265 330
-C1260 410 1305 425 1290 490
-C1330 430 1375 450 1380 395
-C1390 490 1345 530 1300 555Z"/>
-
-</g>
-
-<!-- farmers -->
-
-<g fill="#241d18">
-
-<circle cx="720" cy="485" r="25"/>
-<path d="M685 520 Q720 495 755 520 L770 660 L670 660Z"/>
-
-<circle cx="830" cy="500" r="23"/>
-<path d="M795 530 Q830 505 865 530 L875 660 L785 660Z"/>
-
-</g>
-
-<!-- wood piles -->
-
-<g fill="#9a6c42">
-
-<ellipse cx="620" cy="650" rx="95" ry="30"/>
-<ellipse cx="760" cy="670" rx="100" ry="31"/>
-<ellipse cx="900" cy="650" rx="90" ry="28"/>
-
-</g>
-
-<rect y="650" width="1600" height="150" fill="url(#ground)"/>
-
-</svg>
-
-</div>
-
-
-<div class="hero-content">
-
-  <div class="hero-copy">
-
-    <div class="kicker">
-      T A R A F&nbsp; A L&nbsp; O U D
-    </div>
-
-    <h1>
-      لأن العود
-    </h1>
-
-    <div class="hero-title">
-      ترف.
-    </div>
-
-    <p>
-      يامرحبا ترحيبة كلها أطياب<br>
-      أحلى من العنبر وأزكى من العود 🤍
-    </p>
-
-    <div class="actions">
-
-      <a class="btn primary" href="#products">
-        اكتشف المختارات
-      </a>
-
-      <a class="btn secondary" href="#story">
-        حكاية العود
-      </a>
+      </div>
 
     </div>
 
   </div>
-
-</div>
 
 </section>
 
@@ -1127,147 +1251,40 @@ C1390 490 1345 530 1300 555Z"/>
 
 <section class="section">
 
-<div class="mabkhara">
+  <div class="mabkhara">
 
-<svg viewBox="0 0 1300 550" preserveAspectRatio="xMidYMid slice">
+    <div class="mabkhara-image">
 
-<defs>
+      <img
+        src="image_9.png"
+        alt="مبخرة ترف العود الفاخرة"
+      >
 
-<linearGradient id="redBg" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#311719"/>
-  <stop offset=".5" stop-color="#71272c"/>
-  <stop offset="1" stop-color="#241214"/>
-</linearGradient>
+    </div>
 
-<radialGradient id="ember">
-  <stop offset="0" stop-color="#ffd36b"/>
-  <stop offset=".35" stop-color="#d95728"/>
-  <stop offset="1" stop-color="#641d20"/>
-</radialGradient>
+    <div class="mabkhara-overlay"></div>
 
-<filter id="smokeBlur">
-  <feGaussianBlur stdDeviation="15"/>
-</filter>
+    <div class="mabkhara-content">
 
-</defs>
+      <div class="kicker">
+        رائحة تبدأ من الجمر
+      </div>
 
-<rect width="1300" height="550" fill="url(#redBg)"/>
+      <h2>
+        فخامة ترف العود
+      </h2>
 
-<!-- decorative oil strokes -->
+      <div class="line"></div>
 
-<path d="M0 90 C230 10 390 150 610 80
-C850 5 1060 130 1300 45"
-fill="none"
-stroke="#9e4045"
-stroke-width="30"
-opacity=".22"/>
+      <p>
+        تجربة استثنائية من البخور الفاخر،
+        حيث يبدأ العطر من الجمر
+        وتكتمل الحكاية في أجواء منزلك.
+      </p>
 
-<path d="M0 500 C250 430 430 550 690 460
-C940 370 1100 510 1300 410"
-fill="none"
-stroke="#d07b67"
-stroke-width="20"
-opacity=".12"/>
+    </div>
 
-<!-- smoke -->
-
-<g fill="#eadbd0" opacity=".17" filter="url(#smokeBlur)">
-
-<path d="M790 330
-C700 240 850 210 780 120
-C730 50 850 30 870 0
-C970 90 860 170 930 230
-C1000 300 900 360 790 330Z"/>
-
-<path d="M920 310
-C870 230 1000 200 955 130
-C920 70 1020 45 1035 5
-C1110 100 1010 180 1080 230
-C1120 280 1050 330 920 310Z"/>
-
-</g>
-
-<!-- HAIL MABKHARA -->
-
-<path d="M490 385
-L540 235
-L760 235
-L810 385
-Z"
-fill="#8d3035"/>
-
-<path d="M525 235
-Q650 175 775 235
-L750 265
-Q650 220 550 265Z"
-fill="#a94243"/>
-
-<path d="M535 385
-Q650 350 765 385
-L780 450
-Q650 490 520 450Z"
-fill="#4b1b20"/>
-
-<!-- brass details -->
-
-<path d="M550 270 L750 270" stroke="#d6a867" stroke-width="9"/>
-<path d="M525 385 L775 385" stroke="#c69558" stroke-width="8"/>
-
-<!-- coal -->
-
-<ellipse cx="650" cy="365" rx="100" ry="34" fill="#241614"/>
-
-<ellipse cx="610" cy="358" rx="27" ry="15" fill="url(#ember)"/>
-<ellipse cx="650" cy="350" rx="32" ry="17" fill="url(#ember)"/>
-<ellipse cx="700" cy="360" rx="25" ry="15" fill="url(#ember)"/>
-
-<!-- oud wood -->
-
-<path d="M585 340 Q625 315 680 345
-Q710 360 755 335
-Q735 375 680 370
-Q620 355 585 340Z"
-fill="#6d452b"/>
-
-<path d="M600 342 Q640 330 680 350" fill="none"
-stroke="#b27b48" stroke-width="5"/>
-
-<!-- smoke top -->
-
-<path d="M650 330
-C610 275 690 250 650 190
-C610 130 700 100 670 45"
-fill="none"
-stroke="#eee6df"
-stroke-width="18"
-opacity=".23"
-stroke-linecap="round"
-filter="url(#smokeBlur)"/>
-
-</svg>
-
-<div class="mabkhara-content">
-
-  <div class="kicker">
-    رائحة تبدأ من الجمر
   </div>
-
-  <h2>
-    مدخنة حائلية<br>
-    بروح ترف العود
-  </h2>
-
-  <div class="line"></div>
-
-  <p>
-    جمر حي، وكسرة عود كلمنتان،
-    ودخان يتصاعد بهدوء...
-    لحظة تختصر معنى الفخامة قبل أن تتكلم.
-  </p>
-
-</div>
-
-</div>
 
 </section>
 
@@ -1278,190 +1295,143 @@ filter="url(#smokeBlur)"/>
 
 <section class="section" id="products">
 
-<div class="section-head">
+  <div class="section-head">
 
-<div>
+    <div>
 
-<div class="kicker">
-THE COLLECTION
-</div>
+      <div class="kicker">
+        THE COLLECTION
+      </div>
 
-<h2 class="section-title">
-مختارات ترف العود
-</h2>
+      <h2 class="section-title">
+        مختارات ترف العود
+      </h2>
 
-</div>
+    </div>
 
-<p class="section-description">
-اضغط على أي منتج لقراءة بطاقته التعريفية،
-ومصدره، واستخدامه، ووزنه، ثم أضفه للسلة
-وشاهد الإجمالي قبل إتمام الطلب.
-</p>
+    <p class="section-description">
+      مختارات من العود الطبيعي المحسن الفاخر،
+      يتم اختيارها بعناية لعشاق العود.
+      اضغط على أي منتج لمعرفة التفاصيل ثم أضفه للسلة.
+    </p>
 
-</div>
+  </div>
 
-<div class="products" id="productsGrid"></div>
+  <div class="products" id="productsGrid"></div>
 
 </section>
 
 
 <!-- =========================
-     FARM
+     FARM / STORY
 ========================= -->
 
 <section class="section" id="story">
 
-<div class="farm">
+  <div class="farm">
 
-<svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice">
+    <div class="farm-image">
 
-<defs>
+      <img
+        src="image_8.png"
+        alt="عمال حصاد العود"
+      >
 
-<linearGradient id="farmSky" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0" stop-color="#a5aa79"/>
-  <stop offset=".55" stop-color="#778154"/>
-  <stop offset="1" stop-color="#485039"/>
-</linearGradient>
+    </div>
 
-<linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#6b754b"/>
-  <stop offset="1" stop-color="#3f492f"/>
-</linearGradient>
+    <div class="farm-overlay"></div>
 
-</defs>
+    <div class="farm-text">
 
-<rect width="1400" height="600" fill="url(#farmSky)"/>
+      <div class="kicker">
+        FROM THE OUD TREE
+      </div>
 
-<!-- painted sky -->
+      <h2>
+        من شجرة العود...
+        <br>
+        تبدأ الحكاية.
+      </h2>
 
-<ellipse cx="1100" cy="100" rx="220" ry="80"
-fill="#e5d8b4" opacity=".18"/>
+      <p>
+        من قلب الطبيعة تبدأ رحلة العود،
+        ويعتني به المزارعون حتى تصل
+        الكسرة إلى يد من يعرف قيمة العود الحقيقي.
+      </p>
 
-<!-- hills -->
+    </div>
 
-<path d="M0 330
-C220 230 350 340 540 260
-C720 185 920 310 1100 220
-C1220 165 1320 235 1400 205
-L1400 600 L0 600Z"
-fill="#58643e"/>
+  </div>
 
-<!-- oud trees -->
+</section>
 
-<g fill="#253a27">
 
-<path d="M230 455
-C190 385 205 300 245 245
-C245 315 290 330 270 395
-C315 345 360 355 370 300
-C380 390 340 440 285 470Z"/>
+<!-- =========================
+     WHY TARAF
+========================= -->
 
-<path d="M450 460
-C415 390 430 320 465 275
-C470 330 505 355 490 405
-C530 360 570 370 580 320
-C590 410 550 450 505 475Z"/>
+<section class="section">
 
-<path d="M1060 460
-C1020 390 1040 300 1075 245
-C1075 320 1120 340 1100 400
-C1140 350 1190 360 1190 305
-C1210 400 1160 450 1110 475Z"/>
+  <div class="section-head">
 
-</g>
+    <div>
 
-<!-- tree trunks -->
+      <div class="kicker">
+        TARAF AL OUD
+      </div>
 
-<g stroke="#59402b" stroke-width="25">
+      <h2 class="section-title">
+        لماذا ترف العود؟
+      </h2>
 
-<path d="M260 450 L260 300"/>
-<path d="M480 455 L480 335"/>
-<path d="M1090 455 L1090 305"/>
+    </div>
 
-</g>
+    <p class="section-description">
+      نحرص على أن تكون تجربة ترف العود امتداداً
+      لجودة المختارات التي نقدمها.
+    </p>
 
-<!-- field -->
+  </div>
 
-<path d="M0 455
-C280 420 480 490 720 440
-C960 390 1160 470 1400 420
-L1400 600 L0 600Z"
-fill="url(#field)"/>
+  <div class="use-grid">
 
-<!-- farmers -->
+    <div class="use-card why-card">
+      <div class="number">01</div>
+      <h3>اختيار بعناية</h3>
+      <p>
+        مختارات من العود الطبيعي المحسن الفاخر،
+        يتم انتقاؤها بعناية.
+      </p>
+    </div>
 
-<g>
+    <div class="use-card why-card">
+      <div class="number">02</div>
+      <h3>من إندونيسيا</h3>
+      <p>
+        العود الطبيعي المحسن من تجار العود
+        في إندونيسيا.
+      </p>
+    </div>
 
-<!-- farmer 1 -->
+    <div class="use-card why-card">
+      <div class="number">03</div>
+      <h3>تجربة بسيطة</h3>
+      <p>
+        اختر منتجك، أضفه للسلة،
+        وأرسل طلبك مباشرة عبر واتساب.
+      </p>
+    </div>
 
-<circle cx="690" cy="365" r="23" fill="#573d2c"/>
+    <div class="use-card why-card">
+      <div class="number">04</div>
+      <h3>ترف في التفاصيل</h3>
+      <p>
+        نهتم بالتفاصيل الصغيرة لتكون
+        تجربة الشراء بمستوى المنتج.
+      </p>
+    </div>
 
-<path d="M650 405
-Q690 375 730 405
-L745 535
-L635 535Z"
-fill="#7a563e"/>
-
-<path d="M660 410 L620 490"
-stroke="#59402d" stroke-width="13"
-stroke-linecap="round"/>
-
-<path d="M720 410 L765 480"
-stroke="#59402d" stroke-width="13"
-stroke-linecap="round"/>
-
-<!-- farmer 2 -->
-
-<circle cx="820" cy="380" r="22" fill="#4d3627"/>
-
-<path d="M782 415
-Q820 390 858 415
-L870 535
-L770 535Z"
-fill="#5f6a42"/>
-
-<path d="M795 420 L760 495"
-stroke="#4b3829" stroke-width="12"
-stroke-linecap="round"/>
-
-<path d="M845 420 L885 495"
-stroke="#4b3829" stroke-width="12"
-stroke-linecap="round"/>
-
-</g>
-
-<!-- wooden crates -->
-
-<g fill="#9b7045" stroke="#5c402b" stroke-width="5">
-
-<rect x="570" y="490" width="90" height="60" rx="4"/>
-<rect x="900" y="485" width="90" height="65" rx="4"/>
-
-</g>
-
-</svg>
-
-<div class="farm-text">
-
-<div class="kicker">
-FROM THE OUD TREE
-</div>
-
-<h2>
-من شجرة العود...
-<br>
-تبدأ الحكاية.
-</h2>
-
-<p>
-في مزارع العود تبدأ الرحلة من الشجرة،
-ويعتني بها المزارعون حتى تصل الكسرة
-إلى يد من يعرف قيمة العود الحقيقي.
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
@@ -1472,61 +1442,60 @@ FROM THE OUD TREE
 
 <section class="section">
 
-<div class="section-head">
+  <div class="section-head">
 
-<div>
+    <div>
 
-<div class="kicker">
-اختياراتك حسب المناسبة
-</div>
+      <div class="kicker">
+        اختياراتك حسب المناسبة
+      </div>
 
-<h2 class="section-title">
-لكل وقت عوده
-</h2>
+      <h2 class="section-title">
+        لكل وقت عوده
+      </h2>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
-<div class="use-grid">
+  <div class="use-grid">
 
-<div class="use-card">
-<div class="number">01</div>
-<h3>دقة مروكي</h3>
-<p>
-للاستعمال اليومي، لمن يحب رائحة العود
-بشكل أنيق ومستمر.
-</p>
-</div>
+    <div class="use-card">
+      <div class="number">01</div>
+      <h3>دقة مروكي</h3>
+      <p>
+        للاستعمال اليومي، لمن يحب رائحة العود
+        بشكل أنيق ومستمر.
+      </p>
+    </div>
 
-<div class="use-card">
-<div class="number">02</div>
-<h3>مروكي سيوفي</h3>
-<p>
-للمناسبات واليومي، حضور قوي وأنيق
-لمحبي العود الواضح.
-</p>
-</div>
+    <div class="use-card">
+      <div class="number">02</div>
+      <h3>مروكي سيوفي</h3>
+      <p>
+        للمناسبات واليومي، حضور قوي وأنيق
+        لمحبي العود الواضح.
+      </p>
+    </div>
 
-<div class="use-card">
-<div class="number">03</div>
-<h3>كلمنتان</h3>
-<p>
-فخم ورسمي للمناسبات والمجالس،
-اختيار يبيض الوجه.
-</p>
-</div>
+    <div class="use-card">
+      <div class="number">03</div>
+      <h3>أزرق كلمنتان</h3>
+      <p>
+        فخم ورسمي للمناسبات والمجالس،
+        اختيار يبيض الوجه.
+      </p>
+    </div>
 
-<div class="use-card">
-<div class="number">04</div>
-<h3>معمول دوسري</h3>
-<p>
-للبيت والمطبخ وممتاز للمجالس
-وللاستخدام اليومي.
-</p>
-</div>
+    <div class="use-card">
+      <div class="number">04</div>
+      <h3>معمول دوسري</h3>
+      <p>
+        للبيت والمجالس وممتاز للاستخدام اليومي.
+      </p>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -1537,42 +1506,43 @@ FROM THE OUD TREE
 
 <section class="section" id="about">
 
-<div class="about">
+  <div class="about">
 
-<div class="kicker">
-THE HOUSE OF TARAF
-</div>
+    <div class="kicker">
+      THE HOUSE OF TARAF
+    </div>
 
-<h2>
-ترف العود
-</h2>
+    <h2>
+      ترف العود
+    </h2>
 
-<p>
-لأن العود ليس مجرد رائحة.
-هو حضور، وذوق، وذكرى.
-اخترنا لكم مختارات بعناية،
-وقدمناها بطريقة بسيطة وفاخرة
-حتى تكون تجربة الشراء امتدادًا
-لفخامة المنتج نفسه.
-</p>
+    <p>
+      في ترف العود نؤمن أن جودة العود تبدأ من حسن الاختيار.
+      لذلك نحرص على تقديم مختارات من العود الطبيعي المحسن
+      الفاخر، من تجار العود في إندونيسيا، بعناية واهتمام
+      بالتفاصيل.
+      <br><br>
+      لأن العود ليس مجرد رائحة...
+      هو حضور، وذوق، وذكرى.
+    </p>
 
-</div>
+  </div>
 
 </section>
 
 
 <footer>
 
-<h2>ترف العود</h2>
+  <h2>ترف العود</h2>
 
-<p>
-يامرحبا ترحيبة كلها أطياب
-— أحلى من العنبر وأزكى من العود 🤍
-</p>
+  <p>
+    يامرحبا ترحيبة كلها أطياب
+    — أحلى من العنبر وأزكى من العود 🤍
+  </p>
 
-<p style="margin-top:10px;font-size:12px;">
-© 2026 ترف العود
-</p>
+  <p style="margin-top:10px;font-size:12px;">
+    © 2026 ترف العود
+  </p>
 
 </footer>
 
@@ -1583,59 +1553,59 @@ THE HOUSE OF TARAF
 
 <div class="modal" id="productModal">
 
-<div class="modal-box">
+  <div class="modal-box">
 
-<button class="close" onclick="closeProduct()">×</button>
+    <button class="close" onclick="closeProduct()">×</button>
 
-<div class="product-modal">
+    <div class="product-modal">
 
-<div class="modal-image" id="modalArt"></div>
+      <div class="modal-image" id="modalArt"></div>
 
-<div class="modal-details">
+      <div class="modal-details">
 
-<div class="origin" id="modalOrigin"></div>
+        <div class="origin" id="modalOrigin"></div>
 
-<h2 id="modalName"></h2>
+        <h2 id="modalName"></h2>
 
-<p id="modalDescription"></p>
+        <p id="modalDescription"></p>
 
-<div class="detail">
-<span>الاستخدام</span>
-<strong id="modalUse"></strong>
-</div>
+        <div class="detail">
+          <span>الاستخدام</span>
+          <strong id="modalUse"></strong>
+        </div>
 
-<div class="detail">
-<span>المصدر</span>
-<strong id="modalFrom"></strong>
-</div>
+        <div class="detail">
+          <span>المصدر</span>
+          <strong id="modalFrom"></strong>
+        </div>
 
-<div class="detail">
-<span>الوزن</span>
-<strong id="modalWeightText"></strong>
-</div>
+        <div class="detail">
+          <span>الوزن</span>
+          <strong id="modalWeightText"></strong>
+        </div>
 
-<div class="detail">
-<span>السعر</span>
-<strong id="modalPrice"></strong>
-</div>
+        <div class="detail">
+          <span>السعر</span>
+          <strong id="modalPrice"></strong>
+        </div>
 
-<div class="weight">
+        <div class="weight">
 
-<label>الوزن</label>
+          <label>الوزن</label>
 
-<select id="modalWeight"></select>
+          <select id="modalWeight"></select>
 
-</div>
+        </div>
 
-<button class="modal-add" onclick="addModalProduct()">
-أضف إلى السلة
-</button>
+        <button class="modal-add" onclick="addModalProduct()">
+          أضف إلى السلة
+        </button>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </div>
 
@@ -1648,31 +1618,31 @@ THE HOUSE OF TARAF
 
 <aside class="cart" id="cart">
 
-<div class="cart-head">
+  <div class="cart-head">
 
-<h2>سلة ترف العود</h2>
+    <h2>سلة ترف العود</h2>
 
-<button class="close" onclick="closeCart()">×</button>
+    <button class="close" onclick="closeCart()">×</button>
 
-</div>
+  </div>
 
-<div class="cart-items" id="cartItems"></div>
+  <div class="cart-items" id="cartItems"></div>
 
-<div class="cart-footer">
+  <div class="cart-footer">
 
-<div class="total">
+    <div class="total">
 
-<span>الإجمالي</span>
+      <span>الإجمالي</span>
 
-<span id="total">0 ر.س</span>
+      <span id="total">0 ر.س</span>
 
-</div>
+    </div>
 
-<button class="checkout" onclick="checkout()">
-إتمام الطلب
-</button>
+    <button class="checkout" onclick="checkout()">
+      إتمام الطلب
+    </button>
 
-</div>
+  </div>
 
 </aside>
 
@@ -1683,64 +1653,64 @@ THE HOUSE OF TARAF
 
 <div class="modal" id="checkoutModal">
 
-<div class="modal-box">
+  <div class="modal-box">
 
-<button class="close" onclick="closeCheckout()">×</button>
+    <button class="close" onclick="closeCheckout()">×</button>
 
-<div class="checkout-content">
+    <div class="checkout-content">
 
-<h2>
-إتمام الطلب
-</h2>
+      <h2>
+        إتمام الطلب
+      </h2>
 
-<div class="summary" id="summary"></div>
+      <div class="summary" id="summary"></div>
 
-<div class="field">
+      <div class="field">
 
-<label>
-الاسم
-</label>
+        <label>
+          الاسم
+        </label>
 
-<input
-id="customerName"
-placeholder="اكتب اسمك"
-/>
+        <input
+          id="customerName"
+          placeholder="اكتب اسمك"
+        >
 
-</div>
+      </div>
 
-<div class="field">
+      <div class="field">
 
-<label>
-المدينة والحي
-</label>
+        <label>
+          المدينة والحي
+        </label>
 
-<input
-id="customerLocation"
-placeholder="مثال: الرياض — شمال الرياض"
-/>
+        <input
+          id="customerLocation"
+          placeholder="مثال: الرياض — شمال الرياض"
+        >
 
-</div>
+      </div>
 
-<div class="field">
+      <div class="field">
 
-<label>
-ملاحظة للطلب
-</label>
+        <label>
+          ملاحظة للطلب
+        </label>
 
-<textarea
-id="customerNote"
-placeholder="أي ملاحظة إضافية..."
-></textarea>
+        <textarea
+          id="customerNote"
+          placeholder="أي ملاحظة إضافية..."
+        ></textarea>
 
-</div>
+      </div>
 
-<button class="whatsapp" onclick="sendWhatsApp()">
-إرسال الطلب عبر واتساب
-</button>
+      <button class="whatsapp" onclick="sendWhatsApp()">
+        إرسال الطلب عبر واتساب
+      </button>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </div>
 
@@ -1749,161 +1719,9 @@ placeholder="أي ملاحظة إضافية..."
 
 /* =========================================
    رقم واتساب المتجر
-   غيّر الرقم فقط إذا احتجت
 ========================================= */
 
 const WHATSAPP_NUMBER="966539400955";
-
-
-/* =========================================
-   SVG PRODUCT ART
-========================================= */
-
-function productArt(type){
-
-if(type==="moroki"){
-
-return `
-<svg viewBox="0 0 500 400">
-
-<defs>
-<linearGradient id="m1" x1="0" y1="0" x2="1" y2="1">
-<stop stop-color="#806044"/>
-<stop offset=".5" stop-color="#432b20"/>
-<stop offset="1" stop-color="#211814"/>
-</linearGradient>
-</defs>
-
-<rect width="500" height="400" fill="url(#m1)"/>
-
-<ellipse cx="250" cy="310" rx="150" ry="45"
-fill="#17120f"/>
-
-<g fill="#7b4d2d">
-
-<path d="M120 290 Q180 230 250 280
-Q310 320 380 265
-Q350 335 275 320
-Q190 300 120 290Z"/>
-
-<path d="M150 250 Q210 205 290 260
-Q320 280 355 235
-Q320 295 250 285
-Q195 265 150 250Z"/>
-
-</g>
-
-<g stroke="#bb8450" stroke-width="7" opacity=".65">
-<path d="M145 285 Q215 260 285 295"/>
-<path d="M170 245 Q230 235 310 265"/>
-</g>
-
-<circle cx="250" cy="330" r="8" fill="#e2a14d"/>
-
-</svg>
-`;
-
-}
-
-if(type==="seyoufi"){
-
-return `
-<svg viewBox="0 0 500 400">
-
-<rect width="500" height="400" fill="#6a4b38"/>
-
-<path d="M0 320 Q130 250 250 315
-Q370 380 500 270 L500 400 L0 400Z"
-fill="#34251d"/>
-
-<g fill="#80522f">
-
-<path d="M75 300 Q160 210 235 285
-Q300 345 420 235
-Q385 350 275 340
-Q170 320 75 300Z"/>
-
-<path d="M110 255 Q180 190 260 250
-Q315 300 390 205
-Q360 300 275 305
-Q190 280 110 255Z"/>
-
-</g>
-
-<g stroke="#c08b50" stroke-width="6" opacity=".7">
-<path d="M105 295 Q185 255 270 315"/>
-<path d="M135 250 Q210 225 295 275"/>
-</g>
-
-</svg>
-`;
-
-}
-
-if(type==="kalimantan"){
-
-return `
-<svg viewBox="0 0 500 400">
-
-<defs>
-<linearGradient id="k1" x1="0" y1="0" x2="1" y2="1">
-<stop stop-color="#60714c"/>
-<stop offset=".55" stop-color="#37462e"/>
-<stop offset="1" stop-color="#211d16"/>
-</linearGradient>
-</defs>
-
-<rect width="500" height="400" fill="url(#k1)"/>
-
-<!-- leaves -->
-
-<g fill="#1d3022">
-
-<ellipse cx="100" cy="90" rx="80" ry="25" transform="rotate(30 100 90)"/>
-<ellipse cx="190" cy="70" rx="100" ry="28" transform="rotate(-20 190 70)"/>
-<ellipse cx="330" cy="100" rx="100" ry="30" transform="rotate(20 330 100)"/>
-<ellipse cx="420" cy="65" rx="70" ry="22" transform="rotate(-30 420 65)"/>
-
-</g>
-
-<!-- wood -->
-
-<path d="M90 315 Q160 245 245 290
-Q320 330 410 250
-Q380 350 285 340
-Q170 330 90 315Z"
-fill="#76502f"/>
-
-<path d="M125 310 Q210 275 300 320"
-fill="none"
-stroke="#c0965c"
-stroke-width="7"/>
-
-</svg>
-`;
-
-}
-
-return `
-<svg viewBox="0 0 500 400">
-
-<rect width="500" height="400" fill="#8c694a"/>
-
-<ellipse cx="250" cy="280" rx="150" ry="70"
-fill="#5a3b29"/>
-
-<circle cx="200" cy="265" r="55" fill="#9c754f"/>
-<circle cx="300" cy="275" r="55" fill="#8d6341"/>
-
-<path d="M140 250 Q250 200 360 250"
-fill="none"
-stroke="#d1a56d"
-stroke-width="8"/>
-
-</svg>
-`;
-
-}
 
 
 /* =========================================
@@ -1912,57 +1730,57 @@ stroke-width="8"/>
 
 const products=[
 
-{
-id:"moroki",
-name:"دقة مروكي",
-origin:"عود مروكي",
-from:"إندونيسيا",
-weight:"50 جرام",
-price:160,
-use:"للاستعمال اليومي",
-description:
-"دقة مروكي مختارة للاستعمال اليومي، بحضور أنيق يناسب البيت والمجلس ومحبي رائحة العود الأصيلة.",
-type:"moroki"
-},
+  {
+    id:"moroki",
+    name:"دقة مروكي",
+    origin:"عود مروكي",
+    from:"إندونيسيا",
+    weight:"50 جرام",
+    price:160,
+    use:"للاستعمال اليومي",
+    description:
+    "دقة مروكي مختارة بعناية من العود الطبيعي المحسن، بحضور أنيق يناسب البيت والمجلس ومحبي رائحة العود الأصيلة.",
+    image:"image_10.png"
+  },
 
-{
-id:"seyoufi",
-name:"مروكي سيوفي",
-origin:"عود مروكي سيوفي",
-from:"إندونيسيا",
-weight:"125 جرام",
-price:190,
-use:"للمناسبات واليومي",
-description:
-"مروكي سيوفي بطابع قوي وأنيق، مناسب للمناسبات وكذلك الاستخدام اليومي لمن يحب حضور العود الواضح.",
-type:"seyoufi"
-},
+  {
+    id:"kalimantan",
+    name:"أزرق كلمنتان",
+    origin:"عود كلمنتان",
+    from:"إندونيسيا — كلمنتان",
+    weight:"125 جرام",
+    price:260,
+    use:"فخم ورسمي للمناسبات",
+    description:
+    "عود أزرق كلمنتان من المختارات الفاخرة، بطابع مميز يناسب المجالس والمناسبات وعشاق العود.",
+    image:"image_11.png"
+  },
 
-{
-id:"kalimantan",
-name:"أزرق كلمنتان",
-origin:"عود كلمنتان",
-from:"إندونيسيا — كلمنتان",
-weight:"125 جرام",
-price:260,
-use:"فخم ورسمي للمناسبات",
-description:
-"كلمنتان فخم ورسمي للمناسبات والمجالس. اختيار أنيق يبيض الوجه ويليق بالضيوف.",
-type:"kalimantan"
-},
+  {
+    id:"seyoufi",
+    name:"مروكي سيوفي",
+    origin:"عود مروكي سيوفي",
+    from:"إندونيسيا",
+    weight:"125 جرام",
+    price:190,
+    use:"للمناسبات واليومي",
+    description:
+    "مروكي سيوفي بطابع قوي وأنيق، مناسب للمناسبات وكذلك الاستخدام اليومي لمن يحب حضور العود الواضح.",
+    image:"image_12.png"
+  },
 
-{
-id:"dosari",
-name:"معمول دوسري",
-origin:"معمول دوسري",
-from:"السعودية",
-weight:"250 جرام",
-price:45,
-use:"للبيت والمطبخ والمجالس",
-description:
-"معمول دوسري للبيت والمطبخ، وممتاز للمجالس وللاستخدام اليومي لمحبي أجواء البخور الشرقية.",
-type:"dosari"
-}
+  {
+    id:"dosari",
+    name:"معمول دوسري",
+    origin:"معمول دوسري",
+    from:"السعودية",
+    weight:"250 جرام",
+    price:45,
+    use:"للبيت والمجالس",
+    description:
+    "معمول دوسري بأجواء شرقية أصيلة، مناسب للبيت والمجالس والاستخدام اليومي.",
+    image:"image_13.png"
+  }
 
 ];
 
@@ -1975,58 +1793,70 @@ let cart=[];
 let selectedProduct=null;
 
 
+/* =========================================
+   RENDER PRODUCTS
+========================================= */
+
 function renderProducts(){
 
-const grid=document.getElementById("productsGrid");
+  const grid=document.getElementById("productsGrid");
 
-grid.innerHTML=products.map(p=>`
+  grid.innerHTML=products.map(p=>`
 
-<article class="product">
+    <article class="product">
 
-<div class="product-picture"
-onclick="openProduct('${p.id}')">
+      <div
+        class="product-picture"
+        onclick="openProduct('${p.id}')"
+      >
 
-${productArt(p.type)}
+        <img
+          src="${p.image}"
+          alt="${p.name}"
+          class="real-product-image"
+        >
 
-<span class="badge">
-اقرأ بطاقة المنتج
-</span>
+        <span class="badge">
+          اقرأ بطاقة المنتج
+        </span>
 
-</div>
+      </div>
 
-<div class="product-body">
+      <div class="product-body">
 
-<div class="origin">
-${p.origin}
-</div>
+        <div class="origin">
+          ${p.origin}
+        </div>
 
-<h3>
-${p.name}
-</h3>
+        <h3>
+          ${p.name}
+        </h3>
 
-<div class="use">
-${p.use}
-</div>
+        <div class="use">
+          ${p.use}
+        </div>
 
-<div class="product-bottom">
+        <div class="product-bottom">
 
-<div class="price">
-${p.price} ر.س
-<small> / ${p.weight}</small>
-</div>
+          <div class="price">
+            ${p.price} ر.س
+            <small> / ${p.weight}</small>
+          </div>
 
-<button class="add"
-onclick="addToCart('${p.id}')">
-+ أضف للسلة
-</button>
+          <button
+            class="add"
+            onclick="addToCart('${p.id}')"
+          >
+            + أضف للسلة
+          </button>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</article>
+    </article>
 
-`).join("");
+  `).join("");
 
 }
 
@@ -2037,65 +1867,71 @@ onclick="addToCart('${p.id}')">
 
 function openProduct(id){
 
-selectedProduct=products.find(p=>p.id===id);
+  selectedProduct=products.find(p=>p.id===id);
 
-if(!selectedProduct)return;
+  if(!selectedProduct)return;
 
-document.getElementById("modalArt").innerHTML=
-productArt(selectedProduct.type);
+  document.getElementById("modalArt").innerHTML=`
 
-document.getElementById("modalOrigin").textContent=
-selectedProduct.origin;
+    <img
+      src="${selectedProduct.image}"
+      alt="${selectedProduct.name}"
+    >
 
-document.getElementById("modalName").textContent=
-selectedProduct.name;
+  `;
 
-document.getElementById("modalDescription").textContent=
-selectedProduct.description;
+  document.getElementById("modalOrigin").textContent=
+  selectedProduct.origin;
 
-document.getElementById("modalUse").textContent=
-selectedProduct.use;
+  document.getElementById("modalName").textContent=
+  selectedProduct.name;
 
-document.getElementById("modalFrom").textContent=
-selectedProduct.from;
+  document.getElementById("modalDescription").textContent=
+  selectedProduct.description;
 
-document.getElementById("modalWeightText").textContent=
-selectedProduct.weight;
+  document.getElementById("modalUse").textContent=
+  selectedProduct.use;
 
-document.getElementById("modalPrice").textContent=
-selectedProduct.price+" ر.س";
+  document.getElementById("modalFrom").textContent=
+  selectedProduct.from;
 
-document.getElementById("modalWeight").innerHTML=`
-<option>${selectedProduct.weight}</option>
-`;
+  document.getElementById("modalWeightText").textContent=
+  selectedProduct.weight;
 
-document.getElementById("productModal")
-.classList.add("show");
+  document.getElementById("modalPrice").textContent=
+  selectedProduct.price+" ر.س";
+
+  document.getElementById("modalWeight").innerHTML=`
+    <option>${selectedProduct.weight}</option>
+  `;
+
+  document.getElementById("productModal")
+  .classList.add("show");
 
 }
 
 
 function closeProduct(){
 
-document.getElementById("productModal")
-.classList.remove("show");
+  document.getElementById("productModal")
+  .classList.remove("show");
 
-selectedProduct=null;
+  selectedProduct=null;
 
 }
 
 
 function addModalProduct(){
 
-if(selectedProduct){
+  if(selectedProduct){
 
-addToCart(selectedProduct.id);
+    addToCart(selectedProduct.id);
 
-closeProduct();
+    closeProduct();
 
-openCart();
+    openCart();
 
-}
+  }
 
 }
 
@@ -2106,49 +1942,49 @@ openCart();
 
 function addToCart(id){
 
-const p=products.find(x=>x.id===id);
+  const p=products.find(x=>x.id===id);
 
-if(!p)return;
+  if(!p)return;
 
-const found=cart.find(x=>x.id===id);
+  const found=cart.find(x=>x.id===id);
 
-if(found){
+  if(found){
 
-found.qty++;
+    found.qty++;
 
-}else{
+  }else{
 
-cart.push({
-...p,
-qty:1
-});
+    cart.push({
+      ...p,
+      qty:1
+    });
 
-}
+  }
 
-save();
-renderCart();
+  save();
+  renderCart();
 
-toast("تمت إضافة "+p.name+" إلى السلة 🤍");
+  toast("تمت إضافة "+p.name+" إلى السلة 🤍");
 
 }
 
 
 function changeQuantity(id,n){
 
-const item=cart.find(x=>x.id===id);
+  const item=cart.find(x=>x.id===id);
 
-if(!item)return;
+  if(!item)return;
 
-item.qty+=n;
+  item.qty+=n;
 
-if(item.qty<=0){
+  if(item.qty<=0){
 
-cart=cart.filter(x=>x.id!==id);
+    cart=cart.filter(x=>x.id!==id);
 
-}
+  }
 
-save();
-renderCart();
+  save();
+  renderCart();
 
 }
 
@@ -2159,77 +1995,88 @@ renderCart();
 
 function renderCart(){
 
-const items=document.getElementById("cartItems");
+  const items=document.getElementById("cartItems");
 
-const count=cart.reduce(
-(s,x)=>s+x.qty,0
-);
+  const count=cart.reduce(
+    (s,x)=>s+x.qty,
+    0
+  );
 
-const total=cart.reduce(
-(s,x)=>s+(x.price*x.qty),0
-);
+  const total=cart.reduce(
+    (s,x)=>s+(x.price*x.qty),
+    0
+  );
 
-document.getElementById("cartCount")
-.textContent=count;
+  document.getElementById("cartCount")
+  .textContent=count;
 
-document.getElementById("total")
-.textContent=total+" ر.س";
+  document.getElementById("total")
+  .textContent=total+" ر.س";
 
-if(cart.length===0){
+  if(cart.length===0){
 
-items.innerHTML=`
-<div class="empty">
-السلة فارغة 🤍
-<br>
-اختر من مختارات ترف العود.
-</div>
-`;
+    items.innerHTML=`
+      <div class="empty">
+        السلة فارغة 🤍
+        <br>
+        اختر من مختارات ترف العود.
+      </div>
+    `;
 
-return;
+    return;
 
-}
+  }
 
-items.innerHTML=cart.map(item=>`
+  items.innerHTML=cart.map(item=>`
 
-<div class="cart-item">
+    <div class="cart-item">
 
-<div class="cart-item-art">
-${productArt(item.type)}
-</div>
+      <div class="cart-item-art">
 
-<div class="cart-info">
+        <img
+          src="${item.image}"
+          alt="${item.name}"
+        >
 
-<h4>${item.name}</h4>
+      </div>
 
-<small>
-${item.weight} • ${item.price} ر.س
-</small>
+      <div class="cart-info">
 
-<div class="quantity">
+        <h4>${item.name}</h4>
 
-<button onclick="changeQuantity('${item.id}',-1)">
-−
-</button>
+        <small>
+          ${item.weight} • ${item.price} ر.س
+        </small>
 
-<strong>
-${item.qty}
-</strong>
+        <div class="quantity">
 
-<button onclick="changeQuantity('${item.id}',1)">
-+
-</button>
+          <button
+            onclick="changeQuantity('${item.id}',-1)"
+          >
+            −
+          </button>
 
-</div>
+          <strong>
+            ${item.qty}
+          </strong>
 
-</div>
+          <button
+            onclick="changeQuantity('${item.id}',1)"
+          >
+            +
+          </button>
 
-<strong>
-${item.price*item.qty} ر.س
-</strong>
+        </div>
 
-</div>
+      </div>
 
-`).join("");
+      <strong>
+        ${item.price*item.qty} ر.س
+      </strong>
+
+    </div>
+
+  `).join("");
 
 }
 
@@ -2240,22 +2087,22 @@ ${item.price*item.qty} ر.س
 
 function openCart(){
 
-document.getElementById("cart")
-.classList.add("open");
+  document.getElementById("cart")
+  .classList.add("open");
 
-document.getElementById("overlay")
-.classList.add("show");
+  document.getElementById("overlay")
+  .classList.add("show");
 
 }
 
 
 function closeCart(){
 
-document.getElementById("cart")
-.classList.remove("open");
+  document.getElementById("cart")
+  .classList.remove("open");
 
-document.getElementById("overlay")
-.classList.remove("show");
+  document.getElementById("overlay")
+  .classList.remove("show");
 
 }
 
@@ -2266,71 +2113,76 @@ document.getElementById("overlay")
 
 function checkout(){
 
-if(cart.length===0){
+  if(cart.length===0){
 
-alert("السلة فارغة.");
+    alert("السلة فارغة.");
 
-return;
+    return;
 
-}
+  }
 
-closeCart();
+  closeCart();
 
-const total=cart.reduce(
-(s,x)=>s+(x.price*x.qty),0
-);
+  const total=cart.reduce(
+    (s,x)=>s+(x.price*x.qty),
+    0
+  );
 
-document.getElementById("summary").innerHTML=`
+  document.getElementById("summary").innerHTML=`
 
-${cart.map(x=>`
+    ${cart.map(x=>`
 
-<div style="
-display:flex;
-justify-content:space-between;
-margin-bottom:8px;
-">
+      <div style="
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:8px;
+      ">
 
-<span>
-${x.name} × ${x.qty}
-</span>
+        <span>
+          ${x.name} × ${x.qty}
+        </span>
 
-<strong>
-${x.price*x.qty} ر.س
-</strong>
+        <strong>
+          ${x.price*x.qty} ر.س
+        </strong>
 
-</div>
+      </div>
 
-`).join("")}
+    `).join("")}
 
-<hr style="
-border:0;
-border-top:1px solid var(--border);
-margin:13px 0;
-">
+    <hr style="
+      border:0;
+      border-top:1px solid var(--border);
+      margin:13px 0;
+    ">
 
-<div style="
-display:flex;
-justify-content:space-between;
-font-size:20px;
-font-weight:900;
-">
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      font-size:20px;
+      font-weight:900;
+    ">
 
-<span>الإجمالي</span>
-<span>${total} ر.س</span>
+      <span>الإجمالي</span>
 
-</div>
-`;
+      <span>
+        ${total} ر.س
+      </span>
 
-document.getElementById("checkoutModal")
-.classList.add("show");
+    </div>
+
+  `;
+
+  document.getElementById("checkoutModal")
+  .classList.add("show");
 
 }
 
 
 function closeCheckout(){
 
-document.getElementById("checkoutModal")
-.classList.remove("show");
+  document.getElementById("checkoutModal")
+  .classList.remove("show");
 
 }
 
@@ -2341,79 +2193,80 @@ document.getElementById("checkoutModal")
 
 function sendWhatsApp(){
 
-const name=document
-.getElementById("customerName")
-.value.trim();
+  const name=document
+  .getElementById("customerName")
+  .value.trim();
 
-const location=document
-.getElementById("customerLocation")
-.value.trim();
+  const location=document
+  .getElementById("customerLocation")
+  .value.trim();
 
-const note=document
-.getElementById("customerNote")
-.value.trim();
+  const note=document
+  .getElementById("customerNote")
+  .value.trim();
 
-if(!name){
+  if(!name){
 
-alert("اكتب اسمك.");
+    alert("اكتب اسمك.");
 
-return;
+    return;
 
-}
+  }
 
-if(!location){
+  if(!location){
 
-alert("اكتب المدينة والحي.");
+    alert("اكتب المدينة والحي.");
 
-return;
+    return;
 
-}
+  }
 
-const total=cart.reduce(
-(s,x)=>s+(x.price*x.qty),0
-);
+  const total=cart.reduce(
+    (s,x)=>s+(x.price*x.qty),
+    0
+  );
 
-let message=
-"السلام عليكم ورحمة الله وبركاته 🤍\n\n"+
-"أرغب بالطلب من متجر ترف العود:\n\n";
+  let message=
+  "السلام عليكم ورحمة الله وبركاته 🤍\n\n"+
+  "أرغب بالطلب من متجر ترف العود:\n\n";
 
-cart.forEach((x,i)=>{
+  cart.forEach((x,i)=>{
 
-message+=
-`${i+1}. ${x.name}
+    message+=
+    `${i+1}. ${x.name}
 الوزن: ${x.weight}
 الكمية: ${x.qty}
 السعر: ${x.price*x.qty} ر.س
 
 `;
 
-});
+  });
 
-message+=
-`الإجمالي: ${total} ر.س
+  message+=
+  `الإجمالي: ${total} ر.س
 
 الاسم: ${name}
 المدينة والحي: ${location}`;
 
-if(note){
+  if(note){
 
-message+=
-`\n\nملاحظة:
+    message+=
+    `\n\nملاحظة:
 ${note}`;
 
-}
+  }
 
-message+=
-`\n\nلأن العود ترف.
+  message+=
+  `\n\nلأن العود ترف.
 ترف العود 🤍`;
 
-window.open(
-"https://wa.me/"+
-WHATSAPP_NUMBER+
-"?text="+
-encodeURIComponent(message),
-"_blank"
-);
+  window.open(
+    "https://wa.me/"+
+    WHATSAPP_NUMBER+
+    "?text="+
+    encodeURIComponent(message),
+    "_blank"
+  );
 
 }
 
@@ -2424,31 +2277,32 @@ encodeURIComponent(message),
 
 function save(){
 
-localStorage.setItem(
-"tarafAloudCart",
-JSON.stringify(cart)
-);
+  localStorage.setItem(
+    "tarafAloudCart",
+    JSON.stringify(cart)
+  );
 
 }
+
 
 function load(){
 
-try{
+  try{
 
-const data=localStorage
-.getItem("tarafAloudCart");
+    const data=localStorage
+    .getItem("tarafAloudCart");
 
-if(data){
+    if(data){
 
-cart=JSON.parse(data);
+      cart=JSON.parse(data);
 
-}
+    }
 
-}catch(e){
+  }catch(e){
 
-cart=[];
+    cart=[];
 
-}
+  }
 
 }
 
@@ -2459,33 +2313,24 @@ cart=[];
 
 function toast(text){
 
-const el=document.createElement("div");
+  const el=document.createElement("div");
 
-el.textContent=text;
+  el.textContent=text;
 
-el.style.cssText=`
-position:fixed;
-bottom:25px;
-right:25px;
-z-index:999;
-background:#641d24;
-color:white;
-padding:13px 19px;
-border-radius:14px;
-font-weight:800;
-box-shadow:0 15px 35px rgba(0,0,0,.2);
-transition:.3s;
-`;
+  el.className="toast-message";
 
-document.body.appendChild(el);
+  document.body.appendChild(el);
 
-setTimeout(()=>{
+  setTimeout(()=>{
 
-el.style.opacity="0";
+    el.style.opacity="0";
 
-setTimeout(()=>el.remove(),300);
+    setTimeout(
+      ()=>el.remove(),
+      300
+    );
 
-},1800);
+  },1800);
 
 }
 
@@ -2501,27 +2346,30 @@ renderProducts();
 renderCart();
 
 
-/* close modal on background */
+/* =========================================
+   CLOSE MODALS
+========================================= */
 
 document.getElementById("productModal")
 .addEventListener("click",e=>{
 
-if(e.target===e.currentTarget){
+  if(e.target===e.currentTarget){
 
-closeProduct();
+    closeProduct();
 
-}
+  }
 
 });
+
 
 document.getElementById("checkoutModal")
 .addEventListener("click",e=>{
 
-if(e.target===e.currentTarget){
+  if(e.target===e.currentTarget){
 
-closeCheckout();
+    closeCheckout();
 
-}
+  }
 
 });
 
