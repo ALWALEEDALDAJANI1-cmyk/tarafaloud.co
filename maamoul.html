@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المعمول | ترف العود</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#f4eee4;
+    color:#2d2116;
+}
+
+
+/* =========================
+   الهيدر
+========================= */
+
+.header{
+    background:
+    linear-gradient(
+        135deg,
+        #18110b,
+        #392719,
+        #18110b
+    );
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+}
+
+.back{
+    position:absolute;
+
+    right:20px;
+    top:20px;
+
+    color:#e2c078;
+
+    text-decoration:none;
+
+    font-size:13px;
+}
+
+.logo{
+    color:#e1bd76;
+
+    font-size:34px;
+
+    font-weight:800;
+}
+
+.subtitle{
+    margin-top:7px;
+
+    color:#cbbba5;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   المحتوى
+========================= */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:45px 18px 70px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.title h1{
+
+    font-size:30px;
+
+    color:#352518;
+
+}
+
+.title p{
+
+    margin-top:8px;
+
+    color:#806b53;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   المنتجات
+========================= */
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(60,40,20,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 18px 40px rgba(60,40,20,.2);
+
+}
+
+
+/* =========================
+   صورة المعمول المؤقتة
+========================= */
+
+.product-image{
+
+    height:300px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #705034,
+        #291b10
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.product-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    border:1px solid rgba(225,190,116,.2);
+
+    border-radius:50%;
+
+}
+
+.box{
+
+    position:relative;
+
+    z-index:2;
+
+    width:150px;
+
+    height:105px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #6c492b,
+        #2b190d
+    );
+
+    border:
+    2px solid rgba(225,190,116,.35);
+
+    box-shadow:
+    0 18px 35px rgba(0,0,0,.45);
+
+}
+
+.box::before{
+
+    content:"ترف العود";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:#e1bd76;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+}
+
+.box::after{
+
+    content:"معمول";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:12px;
+
+    transform:translateX(-50%);
+
+    color:#cdb895;
+
+    font-size:9px;
+
+}
+
+
+/* =========================
+   التفاصيل
+========================= */
+
+.info{
+
+    padding:22px;
+
+    text-align:center;
+
+}
+
+.name{
+
+    font-size:19px;
+
+    font-weight:800;
+
+    color:#352518;
+
+}
+
+.type{
+
+    margin-top:7px;
+
+    color:#927653;
+
+    font-size:12px;
+
+}
+
+.description{
+
+    margin-top:12px;
+
+    color:#756451;
+
+    font-size:12px;
+
+    line-height:2;
+
+}
+
+.price{
+
+    margin-top:15px;
+
+    color:#9b6d2a;
+
+    font-size:21px;
+
+    font-weight:800;
+
+}
+
+.button{
+
+    display:block;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #3b2a1b,
+        #17100b
+    );
+
+    color:#e2c078;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================
+   الفوتر
+========================= */
+
+.footer{
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#17110c;
+
+    color:#9f907c;
+
+    font-size:12px;
+
+}
+
+.footer strong{
+
+    color:#d8b66f;
+
+}
+
+
+/* =========================
+   الجوال
+========================= */
+
+@media(max-width:850px){
+
+    .products{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:550px){
+
+    .products{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .product-image{
+
+        height:280px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     الهيدر
+========================= -->
+
+<header class="header">
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← الرئيسية
+    </a>
+
+    <div class="logo">
+        ترف العود
+    </div>
+
+    <div class="subtitle">
+        المعمول الفاخر
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     المحتوى
+========================= -->
+
+<main class="container">
+
+
+    <div class="title">
+
+        <h1>
+            معمول ترف العود
+        </h1>
+
+        <p>
+            نفحات فاخرة للمجالس والمناسبات
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- معمول دوسري -->
+
+        <article class="card">
+
+            <div class="product-image">
+
+                <div class="box"></div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 class="name">
+                    معمول دوسري
+                </h2>
+
+                <div class="type">
+                    معمول فاخر
+                </div>
+
+                <p class="description">
+                    معمول برائحة شرقية فاخرة،
+                    مناسب للمجالس والضيافة.
+                </p>
+
+                <div class="price">
+                    ١٢٠ ريال
+                </div>
+
+                <a
+                    href="https://wa.me/966539400955?text=السلام%20عليكم،%20أرغب%20بطلب%20معمول%20دوسري"
+                    target="_blank"
+                    class="button"
+                >
+                    اطلب الآن
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- معمول فاخر -->
+
+        <article class="card">
+
+            <div class="product-image">
+
+                <div class="box"></div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 class="name">
+                    معمول ترف
+                </h2>
+
+                <div class="type">
+                    خلطة خاصة
+                </div>
+
+                <p class="description">
+                    نفحات دافئة ومميزة تضيف
+                    للمكان حضوراً فاخراً.
+                </p>
+
+                <div class="price">
+                    قريباً
+                </div>
+
+                <a
+                    href="https://wa.me/966539400955"
+                    target="_blank"
+                    class="button"
+                >
+                    استفسر عن المنتج
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- معمول المناسبات -->
+
+        <article class="card">
+
+            <div class="product-image">
+
+                <div class="box"></div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 class="name">
+                    معمول المناسبات
+                </h2>
+
+                <div class="type">
+                    اختيار فاخر
+                </div>
+
+                <p class="description">
+                    خيار مميز للهدايا والضيافة
+                    والمناسبات الخاصة.
+                </p>
+
+                <div class="price">
+                    قريباً
+                </div>
+
+                <a
+                    href="https://wa.me/966539400955"
+                    target="_blank"
+                    class="button"
+                >
+                    استفسر عن المنتج
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- معمول فاخر 2 -->
+
+        <article class="card">
+
+            <div class="product-image">
+
+                <div class="box"></div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 class="name">
+                    معمول شرقي
+                </h2>
+
+                <div class="type">
+                    رائحة شرقية
+                </div>
+
+                <p class="description">
+                    تركيبة شرقية تمنح المكان
+                    أجواء دافئة وأنيقة.
+                </p>
+
+                <div class="price">
+                    قريباً
+                </div>
+
+                <a
+                    href="https://wa.me/966539400955"
+                    target="_blank"
+                    class="button"
+                >
+                    استفسر عن المنتج
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- هدية معمول -->
+
+        <article class="card">
+
+            <div class="product-image">
+
+                <div class="box"></div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 class="name">
+                    معمول الهدايا
+                </h2>
+
+                <div class="type">
+                    تغليف فاخر
+                </div>
+
+                <p class="description">
+                    معمول مناسب للهدايا
+                    والمناسبات الخاصة.
+                </p>
+
+                <div class="price">
+                    قريباً
+                </div>
+
+                <a
+                    href="https://wa.me/966539400955"
+                    target="_blank"
+                    class="button"
+                >
+                    استفسر عن المنتج
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- معمول ترف -->
+
+        <article class="card">
+
+            <div class="product-image">
+
+                <div class="box"></div>
+
+            </div>
+
+            <div class="info">
+
+                <h2 class="name">
+                    معمول ترف العود
+                </h2>
+
+                <div class="type">
+                    إصدار خاص
+                </div>
+
+                <p class="description">
+                    اختيار فاخر لعشاق الروائح
+                    الراقية والمميزة.
+                </p>
+
+                <div class="price">
+                    قريباً
+                </div>
+
+                <a
+                    href="https://wa.me/966539400955"
+                    target="_blank"
+                    class="button"
+                >
+                    استفسر عن المنتج
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================
+     الفوتر
+========================= -->
+
+<footer class="footer">
+
+    © 2026
+
+    <strong>
+        ترف العود
+    </strong>
+
+    — لأن العود ترف
+
+</footer>
+
+
+</body>
+
+</html>
