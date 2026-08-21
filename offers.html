@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>عرض الافتتاح | ترف العود</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Cairo',sans-serif;
+
+    background:#eee6d9;
+
+    color:#2b1d12;
+
+}
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.header{
+
+    position:relative;
+
+    min-height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #60462d 0%,
+        #2c1d11 45%,
+        #110b07 100%
+    );
+
+}
+
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border:
+    1px solid
+    rgba(225,190,116,.15);
+
+    border-radius:50%;
+
+    top:-300px;
+    right:-100px;
+
+}
+
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border:
+    1px solid
+    rgba(225,190,116,.10);
+
+    border-radius:50%;
+
+    bottom:-260px;
+    left:-100px;
+
+}
+
+
+.back{
+
+    position:absolute;
+
+    z-index:3;
+
+    top:22px;
+
+    right:22px;
+
+    color:#e4c27d;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+}
+
+
+.logo{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#e2bd73;
+
+    font-size:35px;
+
+    font-weight:800;
+
+}
+
+
+.header p{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:8px;
+
+    color:#d4c3aa;
+
+    font-size:13px;
+
+}
+
+
+/* =================================================
+   OFFER
+================================================= */
+
+.offer{
+
+    max-width:1050px;
+
+    margin:45px auto 70px;
+
+    padding:30px 20px 50px;
+
+}
+
+
+/* =================================================
+   BADGE
+================================================= */
+
+.badge{
+
+    display:block;
+
+    width:max-content;
+
+    margin:0 auto 15px;
+
+    padding:8px 22px;
+
+    border-radius:50px;
+
+    background:#9b3026;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    box-shadow:
+    0 8px 25px rgba(120,35,25,.2);
+
+}
+
+
+/* =================================================
+   TITLE
+================================================= */
+
+.offer-title{
+
+    text-align:center;
+
+}
+
+
+.offer-title h1{
+
+    color:#352518;
+
+    font-size:38px;
+
+    font-weight:900;
+
+}
+
+
+.offer-title p{
+
+    margin-top:10px;
+
+    color:#806b53;
+
+    font-size:14px;
+
+}
+
+
+/* =================================================
+   OFFER IMAGE / ART
+================================================= */
+
+.offer-art{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:760px;
+
+    min-height:360px;
+
+    margin:35px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #755438 0%,
+        #392719 40%,
+        #17100b 100%
+    );
+
+    box-shadow:
+    0 25px 60px rgba(50,35,20,.25);
+
+    border:
+    1px solid
+    rgba(224,190,119,.35);
+
+}
+
+
+.offer-art::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border:
+    1px solid
+    rgba(224,190,119,.13);
+
+    border-radius:50%;
+
+}
+
+
+.offer-art::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+    height:330px;
+
+    border:
+    1px solid
+    rgba(224,190,119,.09);
+
+    border-radius:50%;
+
+}
+
+
+/* =================================================
+   THREE OUD PIECES
+================================================= */
+
+.oud-piece{
+
+    position:relative;
+
+    z-index:3;
+
+    width:155px;
+
+    height:65px;
+
+    margin:0 -10px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #160b05,
+        #6c4425,
+        #241308
+    );
+
+    box-shadow:
+    0 20px 35px rgba(0,0,0,.45);
+
+    transform:rotate(-12deg);
+
+}
+
+
+.oud-piece:nth-child(2){
+
+    transform:
+    rotate(5deg)
+    translateY(-20px);
+
+}
+
+
+.oud-piece:nth-child(3){
+
+    transform:
+    rotate(14deg)
+    translateY(12px);
+
+}
+
+
+.oud-piece::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:24px;
+
+    right:22px;
+
+    width:105px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    background:#a87943;
+
+    opacity:.55;
+
+}
+
+
+/* =================================================
+   PACK INFO
+================================================= */
+
+.pack-info{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+
+.pack-info h2{
+
+    color:#3b2819;
+
+    font-size:25px;
+
+}
+
+
+.pack-info p{
+
+    margin-top:8px;
+
+    color:#806b53;
+
+    font-size:13px;
+
+}
+
+
+/* =================================================
+   PRODUCT CARDS
+================================================= */
+
+.oud-cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+
+.oud-card{
+
+    padding:25px 18px;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px
+    rgba(60,40,20,.10);
+
+    border:
+    1px solid
+    rgba(150,110,55,.10);
+
+    transition:.3s;
+
+}
+
+
+.oud-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+.oud-icon{
+
+    width:65px;
+
+    height:65px;
+
+    margin:0 auto 14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#2a1b10;
+
+    color:#e0bc72;
+
+    font-size:27px;
+
+}
+
+
+.oud-card h3{
+
+    color:#392719;
+
+    font-size:19px;
+
+}
+
+
+.weight{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:5px 14px;
+
+    border-radius:50px;
+
+    background:#f0e6d7;
+
+    color:#876a46;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+
+.oud-card p{
+
+    margin-top:14px;
+
+    color:#766451;
+
+    font-size:12px;
+
+    line-height:2;
+
+}
+
+
+/* =================================================
+   PRICE
+================================================= */
+
+.price-box{
+
+    margin:40px auto 0;
+
+    text-align:center;
+
+}
+
+
+.old{
+
+    color:#887966;
+
+    font-size:16px;
+
+}
+
+
+.old del{
+
+    color:#a18e78;
+
+}
+
+
+.price{
+
+    margin-top:3px;
+
+    color:#9c6d27;
+
+    font-size:64px;
+
+    line-height:1;
+
+    font-weight:900;
+
+}
+
+
+.price span{
+
+    font-size:19px;
+
+    font-weight:700;
+
+}
+
+
+.discount{
+
+    display:inline-block;
+
+    margin-top:17px;
+
+    padding:9px 22px;
+
+    border-radius:50px;
+
+    background:#9c3025;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:900;
+
+}
+
+
+.saving{
+
+    margin-top:12px;
+
+    color:#6d5639;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =================================================
+   LAUNCH MESSAGE
+================================================= */
+
+.launch{
+
+    max-width:600px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    background:#f8f2e9;
+
+    border:
+    1px solid
+    rgba(150,110,55,.18);
+
+}
+
+
+.launch strong{
+
+    color:#8c6328;
+
+}
+
+
+.launch p{
+
+    margin-top:7px;
+
+    color:#756451;
+
+    font-size:12px;
+
+    line-height:2;
+
+}
+
+
+/* =================================================
+   BUTTON
+================================================= */
+
+.order{
+
+    display:block;
+
+    width:100%;
+
+    max-width:430px;
+
+    margin:25px auto 0;
+
+    padding:16px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #e3c17b,
+        #b4873e
+    );
+
+    color:#21170d;
+
+    font-size:15px;
+
+    font-weight:900;
+
+    box-shadow:
+    0 12px 30px
+    rgba(50,35,20,.22);
+
+    transition:.3s;
+
+}
+
+
+.order:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer{
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#17100b;
+
+    color:#9e907d;
+
+    font-size:12px;
+
+}
+
+
+.footer strong{
+
+    color:#d8b66f;
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media(max-width:750px){
+
+    .oud-cards{
+
+        grid-template-columns:1fr;
+
+        max-width:500px;
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .offer-title h1{
+
+        font-size:30px;
+
+    }
+
+
+    .offer-art{
+
+        min-height:300px;
+
+    }
+
+
+    .oud-piece{
+
+        width:110px;
+
+        height:50px;
+
+    }
+
+
+    .price{
+
+        font-size:53px;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .offer{
+
+        padding-left:12px;
+
+        padding-right:12px;
+
+    }
+
+
+    .offer-art{
+
+        min-height:250px;
+
+    }
+
+
+    .oud-piece{
+
+        width:85px;
+
+        height:42px;
+
+        margin:0 -7px;
+
+    }
+
+
+    .oud-piece::after{
+
+        width:55px;
+
+        right:15px;
+
+        top:16px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     HEADER
+================================================= -->
+
+<header class="header">
+
+<a
+href="index.html"
+class="back"
+>
+← الرئيسية
+</a>
+
+
+<div>
+
+<div class="logo">
+ترف العود
+</div>
+
+<p>
+لأن العود ترف
+</p>
+
+</div>
+
+</header>
+
+
+
+<!-- =================================================
+     OFFER
+================================================= -->
+
+<main class="offer">
+
+
+<span class="badge">
+🔥 عرض افتتاح حصري
+</span>
+
+
+<div class="offer-title">
+
+<h1>
+باقة ترف العود
+</h1>
+
+
+<p>
+ثلاثة من أجمل مختارات العود في باقة واحدة
+</p>
+
+</div>
+
+
+
+<!-- =================================================
+     ART
+================================================= -->
+
+<div class="offer-art">
+
+<div class="oud-piece"></div>
+
+<div class="oud-piece"></div>
+
+<div class="oud-piece"></div>
+
+</div>
+
+
+
+<!-- =================================================
+     INFO
+================================================= -->
+
+<div class="pack-info">
+
+<h2>
+150 جرام من العود الفاخر
+</h2>
+
+<p>
+50 جرام من كل نوع — مختارات خاصة بمناسبة افتتاح متجر ترف العود
+</p>
+
+</div>
+
+
+
+<!-- =================================================
+     CARDS
+================================================= -->
+
+<div class="oud-cards">
+
+
+<div class="oud-card">
+
+<div class="oud-icon">
+🪵
+</div>
+
+<h3>
+دقة مروكي
+</h3>
+
+<span class="weight">
+50 جرام
+</span>
+
+<p>
+عود مروكي فاخر بنفحات عميقة
+وحضور مميز لعشاق العود.
+</p>
+
+</div>
+
+
+
+<div class="oud-card">
+
+<div class="oud-icon">
+🪵
+</div>
+
+<h3>
+مروكي سيوفي
+</h3>
+
+<span class="weight">
+50 جرام
+</span>
+
+<p>
+رائحة قوية وفاخرة تضيف
+للمجلس حضوراً وأناقة.
+</p>
+
+</div>
+
+
+
+<div class="oud-card">
+
+<div class="oud-icon">
+🪵
+</div>
+
+<h3>
+كلمتان أزرق
+</h3>
+
+<span class="weight">
+50 جرام
+</span>
+
+<p>
+اختيار مميز لمحبي النفحات
+الراقية والعود الطبيعي.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =================================================
+     PRICE
+================================================= -->
+
+<div class="price-box">
+
+<div class="old">
+السعر سابقاً:
+<del>610 ريال</del>
+</div>
+
+
+<div class="price">
+300
+<span>ريال</span>
+</div>
+
+
+<div class="discount">
+خصم 50.8%
+</div>
+
+
+<div class="saving">
+🔥 وفّر 310 ريال
+</div>
+
+</div>
+
+
+
+<!-- =================================================
+     LAUNCH
+================================================= -->
+
+<div class="launch">
+
+<strong>
+بمناسبة افتتاح متجر ترف العود
+</strong>
+
+
+<p>
+عرض حصري لفترة محدودة.
+استمتع بثلاثة أنواع مختارة من العود
+بكمية إجمالية 150 جرام بسعر افتتاحي مميز.
+</p>
+
+</div>
+
+
+
+<!-- =================================================
+     ORDER
+================================================= -->
+
+<a
+href="https://wa.me/966539400955?text=السلام%20عليكم،%20أرغب%20بطلب%20باقة%20افتتاح%20ترف%20العود%20بسعر%20300%20ريال"
+target="_blank"
+class="order"
+>
+
+اطلب باقة الافتتاح الآن 🤎
+
+</a>
+
+
+</main>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================= -->
+
+<footer class="footer">
+
+© 2026
+
+<strong>
+ترف العود
+</strong>
+
+— لأن العود ترف
+
+</footer>
+
+
+</body>
+
+</html>
