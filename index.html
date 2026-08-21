@@ -2677,61 +2677,644 @@ document.getElementById("checkoutModal")
 }
 
 </style>
-<!-- =========================
-     نافذة الترحيب
-========================= -->
+<!-- ==================================================
+     باقة افتتاح ترف العود
+================================================== -->
 
-<div id="welcomePopup" class="welcome-popup">
+<section class="opening-offer" id="openingOffer">
 
-    <div class="welcome-box">
+    <div class="offer-badge">
+        🔥 عرض افتتاح حصري
+    </div>
 
-        <button
-            class="welcome-close"
-            onclick="closeWelcome()"
-            aria-label="إغلاق"
+    <h2 class="offer-title">
+        باقة ترف العود
+    </h2>
+
+    <p class="offer-subtitle">
+        50 جرام من كل نوع × 3 أنواع
+    </p>
+
+
+    <!-- صورة العرض -->
+
+    <div class="offer-image">
+
+        <img
+            src="images/image_111.png"
+            alt="باقة ترف العود"
         >
-            ×
-        </button>
-
-        <div class="welcome-logo">
-            ترف العود
-        </div>
-
-        <div class="welcome-line"></div>
-
-        <h2>
-            يامرحبا ترحيبة كلها أطياب 🤍
-        </h2>
-
-        <p>
-            أحلى من العنبر وأزكى من العود
-        </p>
-
-        <p class="welcome-text">
-            حيّاكم الله في متجر ترف العود،
-            حيث الفخامة تبدأ من أول نفحة.
-        </p>
-
-        <button
-            class="welcome-offer-btn"
-            onclick="goToOffers()"
-        >
-            🔥 توجه للعروض
-        </button>
-
-        <button
-            class="welcome-shop-btn"
-            onclick="closeWelcome()"
-        >
-            دخول المتجر
-        </button>
 
     </div>
 
-</div>
+
+    <!-- كروت الأعواد -->
+
+    <div class="oud-cards">
+
+        <!-- دقة مروكي -->
+
+        <div class="oud-card">
+
+            <div class="oud-icon">
+                🪵
+            </div>
+
+            <h3>
+                دقة مروكي
+            </h3>
+
+            <div class="weight">
+                50 جرام
+            </div>
+
+            <p>
+                عود مروكي فاخر برائحة عميقة
+                وثبات مميز لعشاق الفخامة.
+            </p>
+
+        </div>
+
+
+        <!-- مروكي سيوفي -->
+
+        <div class="oud-card">
+
+            <div class="oud-icon">
+                🪵
+            </div>
+
+            <h3>
+                مروكي سيوفي
+            </h3>
+
+            <div class="weight">
+                50 جرام
+            </div>
+
+            <p>
+                رائحة قوية وفاخرة،
+                اختيار مميز للمجالس والمناسبات.
+            </p>
+
+        </div>
+
+
+        <!-- كلمتان أزرق -->
+
+        <div class="oud-card">
+
+            <div class="oud-icon">
+                🪵
+            </div>
+
+            <h3>
+                كلمتان أزرق
+            </h3>
+
+            <div class="weight">
+                50 جرام
+            </div>
+
+            <p>
+                عود طبيعي بنفحة راقية
+                لمحبي الروائح المميزة.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- السعر -->
+
+    <div class="price-area">
+
+        <div class="old-price">
+            سابقاً
+            <del>610 ريال</del>
+        </div>
+
+        <div class="new-price">
+            300
+            <span>ريال فقط</span>
+        </div>
+
+        <div class="discount">
+            خصم 50.8%
+        </div>
+
+        <div class="saving">
+            وفّر 310 ريال 🔥
+        </div>
+
+    </div>
+
+
+    <div class="offer-note">
+        بمناسبة افتتاح متجر ترف العود
+        <br>
+        عرض حصري لفترة محدودة
+    </div>
+
+
+    <a
+        href="https://wa.me/966539400955?text=السلام%20عليكم،%20أرغب%20بطلب%20باقة%20افتتاح%20ترَف%20العود"
+        target="_blank"
+        class="offer-button"
+    >
+        اطلب الباقة الآن 🤎
+    </a>
+
+</section>
 
 
 <style>
+
+/* ==========================================
+   الحاوية الرئيسية
+========================================== */
+
+.opening-offer{
+
+    max-width:1050px;
+
+    margin:50px auto;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17110c,
+            #3b2a1a,
+            #17110c
+        );
+
+    border:1px solid rgba(224,190,119,.45);
+
+    box-shadow:
+        0 25px 70px rgba(42,28,15,.28);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+/* زخارف */
+
+.opening-offer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border:1px solid rgba(224,190,119,.12);
+
+    border-radius:50%;
+
+    top:-220px;
+    right:-120px;
+
+}
+
+.opening-offer::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border:1px solid rgba(224,190,119,.10);
+
+    border-radius:50%;
+
+    bottom:-210px;
+    left:-120px;
+
+}
+
+
+/* ==========================================
+   العنوان
+========================================== */
+
+.offer-badge{
+
+    position:relative;
+    z-index:2;
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4c27d,
+            #b48740
+        );
+
+    color:#21170d;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.2);
+
+}
+
+.offer-title{
+
+    position:relative;
+    z-index:2;
+
+    margin:18px 0 4px;
+
+    color:#e4c27d;
+
+    font-size:34px;
+
+    font-weight:900;
+
+}
+
+.offer-subtitle{
+
+    position:relative;
+    z-index:2;
+
+    color:#eadcc5;
+
+    font-size:15px;
+
+}
+
+
+/* ==========================================
+   صورة العرض
+========================================== */
+
+.offer-image{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:30px auto;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(224,190,119,.35);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.35);
+
+    background:#241a11;
+
+}
+
+.offer-image img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:cover;
+
+}
+
+
+/* ==========================================
+   كروت الأعواد
+========================================== */
+
+.oud-cards{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    margin:30px auto;
+
+    max-width:900px;
+
+}
+
+.oud-card{
+
+    padding:25px 18px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    border:
+        1px solid rgba(224,190,119,.22);
+
+    transition:.3s ease;
+
+}
+
+.oud-card:hover{
+
+    transform:translateY(-5px);
+
+    background:
+        rgba(255,255,255,.08);
+
+    border-color:
+        rgba(224,190,119,.45);
+
+}
+
+.oud-icon{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.oud-card h3{
+
+    margin:0;
+
+    color:#e1bd74;
+
+    font-size:19px;
+
+}
+
+.weight{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:5px 13px;
+
+    border-radius:50px;
+
+    background:#302217;
+
+    color:#dfc48f;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.oud-card p{
+
+    margin-top:13px;
+
+    color:#bfae96;
+
+    font-size:12px;
+
+    line-height:2;
+
+}
+
+
+/* ==========================================
+   الأسعار
+========================================== */
+
+.price-area{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:30px;
+
+}
+
+.old-price{
+
+    color:#aa9b87;
+
+    font-size:15px;
+
+}
+
+.old-price del{
+
+    color:#a99883;
+
+}
+
+.new-price{
+
+    margin-top:6px;
+
+    color:#f0d18a;
+
+    font-size:62px;
+
+    line-height:1;
+
+    font-weight:900;
+
+}
+
+.new-price span{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.discount{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 20px;
+
+    border-radius:50px;
+
+    background:#9c3025;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
+
+.saving{
+
+    margin-top:12px;
+
+    color:#e5cc9c;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+   الملاحظة
+========================================== */
+
+.offer-note{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:20px 0;
+
+    color:#bbaa92;
+
+    font-size:12px;
+
+    line-height:2;
+
+}
+
+
+/* ==========================================
+   زر الطلب
+========================================== */
+
+.offer-button{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-block;
+
+    padding:15px 45px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3c17b,
+            #b98b42
+        );
+
+    color:#21170d;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:900;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    transition:.3s ease;
+
+}
+
+.offer-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+/* ==========================================
+   الجوال
+========================================== */
+
+@media(max-width:750px){
+
+    .oud-cards{
+
+        grid-template-columns:1fr;
+
+        max-width:500px;
+
+    }
+
+    .offer-title{
+
+        font-size:28px;
+
+    }
+
+    .new-price{
+
+        font-size:52px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .opening-offer{
+
+        margin:30px 10px;
+
+        padding:35px 15px;
+
+    }
+
+    .offer-image{
+
+        margin-top:25px;
+
+    }
+
+    .oud-card{
+
+        padding:22px 16px;
+
+    }
+
+}
+
+</style>
 
 /* خلفية النافذة */
 
