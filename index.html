@@ -2377,3 +2377,303 @@ document.getElementById("checkoutModal")
 
 </body>
 </html>
+<!-- =========================
+     عرض افتتاح ترف العود
+========================= -->
+
+<section class="opening-offer">
+
+    <div class="offer-badge">
+        🔥 عرض افتتاح حصري 🔥
+    </div>
+
+    <h2>
+        باقة ترف العود
+    </h2>
+
+    <p class="offer-subtitle">
+        50 جرام من كل نوع × 3 أنواع
+    </p>
+
+    <div class="offer-products">
+        <span>دقة مروكي</span>
+        <span>مروكي سيوفي</span>
+        <span>كلمتان أزرق</span>
+    </div>
+
+    <div class="old-price">
+        سابقاً <del>610 ريال</del>
+    </div>
+
+    <div class="new-price">
+        300
+        <span>ريال فقط</span>
+    </div>
+
+    <div class="discount">
+        خصم 50.8%
+    </div>
+
+    <div class="saving">
+        وفّر 310 ريال 🔥
+    </div>
+
+    <p class="offer-note">
+        بمناسبة افتتاح متجر ترف العود
+        <br>
+        الكمية محدودة والعرض لفترة محدودة
+    </p>
+
+    <a
+        href="https://wa.me/966539400955?text=السلام%20عليكم،%20أرغب%20بطلب%20باقة%20افتتاح%20ترَف%20العود"
+        target="_blank"
+        class="offer-button"
+    >
+        اطلب الباقة الآن
+    </a>
+
+</section>
+
+<style>
+
+.opening-offer{
+    position:relative;
+    max-width:850px;
+    margin:45px auto;
+    padding:45px 25px;
+    text-align:center;
+    border-radius:28px;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17110c,
+            #3a2919,
+            #17110c
+        );
+
+    border:1px solid rgba(220,185,112,.45);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.25);
+}
+
+.opening-offer::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(221,188,117,.15);
+    border-radius:50%;
+    top:-180px;
+    right:-100px;
+}
+
+.opening-offer::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border:1px solid rgba(221,188,117,.12);
+    border-radius:50%;
+    bottom:-160px;
+    left:-100px;
+}
+
+.offer-badge{
+    position:relative;
+    z-index:2;
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:50px;
+
+    background:#d5ae61;
+    color:#21170d;
+
+    font-size:13px;
+    font-weight:800;
+
+    box-shadow:
+        0 5px 20px rgba(213,174,97,.25);
+}
+
+.opening-offer h2{
+    position:relative;
+    z-index:2;
+
+    margin:20px 0 5px;
+
+    color:#e4c27b;
+    font-size:32px;
+    font-weight:800;
+}
+
+.offer-subtitle{
+    position:relative;
+    z-index:2;
+
+    margin:5px 0 20px;
+
+    color:#f1e4cd;
+    font-size:16px;
+}
+
+.offer-products{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    margin-bottom:25px;
+}
+
+.offer-products span{
+    padding:8px 15px;
+
+    border:1px solid rgba(220,185,112,.35);
+    border-radius:50px;
+
+    color:#dbc49d;
+    background:rgba(255,255,255,.04);
+
+    font-size:12px;
+}
+
+.old-price{
+    position:relative;
+    z-index:2;
+
+    color:#bcae9b;
+    font-size:15px;
+}
+
+.old-price del{
+    color:#b7a999;
+}
+
+.new-price{
+    position:relative;
+    z-index:2;
+
+    margin-top:5px;
+
+    color:#f0d18a;
+
+    font-size:58px;
+    line-height:1;
+    font-weight:900;
+}
+
+.new-price span{
+    font-size:18px;
+    font-weight:600;
+}
+
+.discount{
+    position:relative;
+    z-index:2;
+
+    display:inline-block;
+
+    margin-top:15px;
+    padding:7px 17px;
+
+    border-radius:50px;
+
+    background:#9d3025;
+    color:#fff;
+
+    font-size:14px;
+    font-weight:800;
+}
+
+.saving{
+    position:relative;
+    z-index:2;
+
+    margin-top:12px;
+
+    color:#e8d1a5;
+    font-size:14px;
+    font-weight:700;
+}
+
+.offer-note{
+    position:relative;
+    z-index:2;
+
+    margin:20px 0;
+
+    color:#bfae96;
+    font-size:12px;
+    line-height:2;
+}
+
+.offer-button{
+    position:relative;
+    z-index:2;
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3c17b,
+            #b88b3e
+        );
+
+    color:#21170d;
+
+    text-decoration:none;
+
+    font-size:15px;
+    font-weight:800;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    transition:.3s ease;
+}
+
+.offer-button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.35);
+}
+
+@media(max-width:600px){
+
+    .opening-offer{
+        margin:30px 10px;
+        padding:35px 18px;
+    }
+
+    .opening-offer h2{
+        font-size:27px;
+    }
+
+    .new-price{
+        font-size:50px;
+    }
+
+    .offer-products{
+        gap:7px;
+    }
+
+    .offer-products span{
+        font-size:11px;
+        padding:7px 11px;
+    }
+
+}
+
+</style>
