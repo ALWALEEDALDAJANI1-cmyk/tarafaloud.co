@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>خدمة العملاء | ترف العود</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#f4eee4;
+    color:#2d2116;
+}
+
+.header{
+    position:relative;
+    padding:38px 20px;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(
+        135deg,
+        #17100b,
+        #392719,
+        #17100b
+    );
+}
+
+.back{
+    position:absolute;
+    right:20px;
+    top:22px;
+    color:#e2c078;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.logo{
+    color:#e1bd76;
+    font-size:34px;
+    font-weight:800;
+}
+
+.subtitle{
+    margin-top:7px;
+    color:#cbbba5;
+    font-size:13px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:50px 18px 70px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h1{
+    font-size:30px;
+    color:#352518;
+}
+
+.title p{
+    margin-top:10px;
+    color:#806b53;
+    font-size:14px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(2,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:
+    0 10px 30px rgba(60,40,20,.12);
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#2b1b10;
+    color:#e1bd76;
+    font-size:30px;
+}
+
+.contact-card h2{
+    color:#382719;
+    font-size:19px;
+}
+
+.contact-card p{
+    margin-top:10px;
+    color:#796651;
+    font-size:12px;
+    line-height:2;
+}
+
+.contact-button{
+    display:block;
+    margin-top:18px;
+    padding:13px;
+    border-radius:12px;
+    text-decoration:none;
+    background:
+    linear-gradient(
+        135deg,
+        #3b2a1b,
+        #17100b
+    );
+    color:#e2c078;
+    font-size:13px;
+    font-weight:800;
+}
+
+.whatsapp{
+    background:
+    linear-gradient(
+        135deg,
+        #287b43,
+        #14552b
+    );
+    color:white;
+}
+
+.info-box{
+    margin-top:25px;
+    padding:25px;
+    border-radius:20px;
+    background:#fffaf3;
+    border:1px solid rgba(150,110,55,.15);
+    text-align:center;
+}
+
+.info-box h2{
+    color:#8d6429;
+    font-size:19px;
+}
+
+.info-box p{
+    margin-top:10px;
+    color:#756451;
+    font-size:12px;
+    line-height:2;
+}
+
+.footer{
+    padding:30px;
+    text-align:center;
+    background:#17100b;
+    color:#9e907d;
+    font-size:12px;
+}
+
+.footer strong{
+    color:#d8b66f;
+}
+
+@media(max-width:600px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+<a
+href="index.html"
+class="back"
+>
+← الرئيسية
+</a>
+
+<div class="logo">
+ترف العود
+</div>
+
+<div class="subtitle">
+خدمة العملاء
+</div>
+
+</header>
+
+
+<main class="container">
+
+<div class="title">
+
+<h1>
+كيف نقدر نخدمك؟
+</h1>
+
+<p>
+فريق ترف العود يسعده خدمتك والإجابة عن استفساراتك
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<!-- واتساب -->
+
+<div class="contact-card">
+
+<div class="icon">
+☏
+</div>
+
+<h2>
+واتساب
+</h2>
+
+<p>
+للطلبات والاستفسارات
+والتواصل المباشر معنا.
+</p>
+
+<a
+href="https://wa.me/966539400955"
+target="_blank"
+class="contact-button whatsapp"
+>
+تواصل عبر واتساب
+</a>
+
+</div>
+
+
+<!-- الهاتف -->
+
+<div class="contact-card">
+
+<div class="icon">
+☎
+</div>
+
+<h2>
+اتصال مباشر
+</h2>
+
+<p>
+تقدر تتواصل معنا مباشرة
+خلال أوقات خدمة العملاء.
+</p>
+
+<a
+href="tel:0539400955"
+class="contact-button"
+>
+اتصل بنا
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="info-box">
+
+<h2>
+🤎 ترف العود
+</h2>
+
+<p>
+نسعد بخدمتك ونحرص أن تكون تجربتك
+مع ترف العود على قدر اسمنا.
+<br>
+لأن العود ترف.
+</p>
+
+</div>
+
+</main>
+
+
+<footer class="footer">
+
+© 2026
+
+<strong>
+ترف العود
+</strong>
+
+— لأن العود ترف
+
+</footer>
+
+</body>
+
+</html>
