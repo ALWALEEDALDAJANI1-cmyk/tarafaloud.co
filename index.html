@@ -2677,3 +2677,398 @@ document.getElementById("checkoutModal")
 }
 
 </style>
+<!-- =========================
+     نافذة الترحيب
+========================= -->
+
+<div id="welcomePopup" class="welcome-popup">
+
+    <div class="welcome-box">
+
+        <button
+            class="welcome-close"
+            onclick="closeWelcome()"
+            aria-label="إغلاق"
+        >
+            ×
+        </button>
+
+        <div class="welcome-logo">
+            ترف العود
+        </div>
+
+        <div class="welcome-line"></div>
+
+        <h2>
+            يامرحبا ترحيبة كلها أطياب 🤍
+        </h2>
+
+        <p>
+            أحلى من العنبر وأزكى من العود
+        </p>
+
+        <p class="welcome-text">
+            حيّاكم الله في متجر ترف العود،
+            حيث الفخامة تبدأ من أول نفحة.
+        </p>
+
+        <button
+            class="welcome-offer-btn"
+            onclick="goToOffers()"
+        >
+            🔥 توجه للعروض
+        </button>
+
+        <button
+            class="welcome-shop-btn"
+            onclick="closeWelcome()"
+        >
+            دخول المتجر
+        </button>
+
+    </div>
+
+</div>
+
+
+<style>
+
+/* خلفية النافذة */
+
+.welcome-popup{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(15,10,6,.78);
+
+    backdrop-filter:blur(8px);
+
+    animation:welcomeFade .35s ease;
+}
+
+
+/* الصندوق */
+
+.welcome-box{
+    position:relative;
+
+    width:100%;
+    max-width:470px;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17110c,
+            #382719,
+            #17110c
+        );
+
+    border:1px solid rgba(222,188,116,.45);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.5);
+
+    animation:welcomeUp .5s ease;
+}
+
+
+/* الدوائر الزخرفية */
+
+.welcome-box::before{
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border:1px solid rgba(222,188,116,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+    right:-70px;
+}
+
+.welcome-box::after{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    border:1px solid rgba(222,188,116,.1);
+
+    border-radius:50%;
+
+    bottom:-90px;
+    left:-60px;
+}
+
+
+/* زر الإغلاق */
+
+.welcome-close{
+    position:absolute;
+
+    top:12px;
+    left:15px;
+
+    width:35px;
+    height:35px;
+
+    border:0;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:#d9c29a;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    z-index:5;
+}
+
+
+/* الشعار */
+
+.welcome-logo{
+    position:relative;
+    z-index:2;
+
+    color:#e1bd74;
+
+    font-size:34px;
+    font-weight:900;
+}
+
+
+/* الخط */
+
+.welcome-line{
+    position:relative;
+    z-index:2;
+
+    width:65px;
+    height:2px;
+
+    margin:12px auto 20px;
+
+    border-radius:20px;
+
+    background:#d3ad63;
+}
+
+
+/* الترحيب */
+
+.welcome-box h2{
+    position:relative;
+    z-index:2;
+
+    margin:0;
+
+    color:#f4ead9;
+
+    font-size:20px;
+    line-height:1.8;
+}
+
+.welcome-box p{
+    position:relative;
+    z-index:2;
+
+    margin-top:8px;
+
+    color:#d6c3a5;
+
+    font-size:14px;
+}
+
+.welcome-text{
+    max-width:340px;
+
+    margin:20px auto 25px !important;
+
+    color:#aa987f !important;
+
+    line-height:2;
+    font-size:12px !important;
+}
+
+
+/* زر العروض */
+
+.welcome-offer-btn{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+
+    padding:15px;
+
+    border:0;
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2bf78,
+            #ae8138
+        );
+
+    color:#21170d;
+
+    font-family:inherit;
+
+    font-size:15px;
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    transition:.3s ease;
+}
+
+.welcome-offer-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* دخول المتجر */
+
+.welcome-shop-btn{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:12px;
+
+    border:1px solid rgba(222,188,116,.3);
+
+    border-radius:14px;
+
+    background:transparent;
+
+    color:#cdbb9e;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    cursor:pointer;
+}
+
+
+/* الحركات */
+
+@keyframes welcomeFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes welcomeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+
+/* الجوال */
+
+@media(max-width:500px){
+
+    .welcome-box{
+        padding:38px 20px;
+    }
+
+    .welcome-logo{
+        font-size:30px;
+    }
+
+    .welcome-box h2{
+        font-size:18px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+function closeWelcome(){
+
+    const popup =
+        document.getElementById("welcomePopup");
+
+    popup.style.opacity = "0";
+
+    setTimeout(function(){
+
+        popup.style.display = "none";
+
+    },300);
+
+}
+
+
+function goToOffers(){
+
+    closeWelcome();
+
+    setTimeout(function(){
+
+        const offer =
+            document.querySelector(".opening-offer");
+
+        if(offer){
+
+            offer.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        }
+
+    },350);
+
+}
+
+</script>
